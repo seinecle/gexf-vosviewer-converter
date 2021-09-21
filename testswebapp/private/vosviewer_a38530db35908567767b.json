@@ -1,0 +1,2158 @@
+
+{
+    "metadata": {
+        "author(s)": "",
+        "date of creation": "",
+        "description of the data": "Made with nocodefunctions.com",
+        "title of the visualization": "",
+        "further info": ""
+    },
+    "network": {
+        "items": [
+            {
+                "id": "0",
+                "label": "Myriel",
+                "gender": "M",
+                "x": -95.2743148803711,
+                "y": -46.711082458496094,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "1",
+                "label": "Napoleon",
+                "gender": "M",
+                "x": -48.15507507324219,
+                "y": 45.006343841552734,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "2",
+                "label": "MlleBaptistine",
+                "gender": "F",
+                "x": -25.879743576049805,
+                "y": 61.148780822753906,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "3",
+                "label": "MmeMagloire",
+                "gender": "F",
+                "x": 8.465163230895996,
+                "y": 13.662047386169434,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "4",
+                "label": "CountessDeLo",
+                "gender": "F",
+                "x": 72.72745513916016,
+                "y": -87.029541015625,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "5",
+                "label": "Geborand",
+                "gender": "F",
+                "x": -93.04595184326172,
+                "y": 5.309268474578857,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "6",
+                "label": "Champtercier",
+                "gender": "M",
+                "x": -21.922136306762695,
+                "y": -0.9501949548721313,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "7",
+                "label": "Cravatte",
+                "gender": "M",
+                "x": 68.75736999511719,
+                "y": -73.84778594970703,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "8",
+                "label": "Count",
+                "gender": "M",
+                "x": -99.86609649658203,
+                "y": -36.3464241027832,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "9",
+                "label": "OldMan",
+                "gender": "M",
+                "x": -32.38715744018555,
+                "y": 32.165340423583984,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "10",
+                "label": "Labarre",
+                "gender": "M",
+                "x": -74.82239532470703,
+                "y": 3.2839393615722656,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "11",
+                "label": "Valjean",
+                "gender": "M",
+                "x": 42.094852447509766,
+                "y": 98.3075180053711,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "12",
+                "label": "Marguerite",
+                "gender": "F",
+                "x": -90.82796478271484,
+                "y": -87.4798583984375,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "13",
+                "label": "MmeDeR",
+                "gender": "F",
+                "x": 1.117410659790039,
+                "y": 21.49803924560547,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "14",
+                "label": "Isabeau",
+                "gender": "M",
+                "x": -53.71370315551758,
+                "y": -59.519527435302734,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "15",
+                "label": "Gervais",
+                "gender": "M",
+                "x": 32.557796478271484,
+                "y": 40.02653884887695,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "16",
+                "label": "Tholomyes",
+                "gender": "M",
+                "x": 33.7813720703125,
+                "y": -50.73193359375,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "17",
+                "label": "Listolier",
+                "gender": "M",
+                "x": -1.2040750980377197,
+                "y": 83.51420593261719,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "18",
+                "label": "Fameuil",
+                "gender": "M",
+                "x": 56.21236038208008,
+                "y": -49.665672302246094,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "19",
+                "label": "Blacheville",
+                "gender": "M",
+                "x": -17.152503967285156,
+                "y": 55.239112854003906,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "20",
+                "label": "Favourite",
+                "gender": "F",
+                "x": -80.08989715576172,
+                "y": -64.48572540283203,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "21",
+                "label": "Dahlia",
+                "gender": "F",
+                "x": -65.09832000732422,
+                "y": 92.58369445800781,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "22",
+                "label": "Zephine",
+                "gender": "F",
+                "x": -17.03683090209961,
+                "y": 16.558059692382812,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "23",
+                "label": "Fantine",
+                "gender": "F",
+                "x": 61.45695877075195,
+                "y": 51.55768966674805,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "24",
+                "label": "MmeThenardier",
+                "gender": "F",
+                "x": 46.42900466918945,
+                "y": 40.30363464355469,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "26",
+                "label": "Cosette",
+                "gender": "F",
+                "x": -2.118438482284546,
+                "y": 17.795310974121094,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "27",
+                "label": "Javert",
+                "gender": "M",
+                "x": 99.2607650756836,
+                "y": 56.205501556396484,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "28",
+                "label": "Fauchelevent",
+                "gender": "M",
+                "x": -89.89236450195312,
+                "y": -40.87940216064453,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "29",
+                "label": "Bamatabois",
+                "gender": "M",
+                "x": -57.55574417114258,
+                "y": 78.75506591796875,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "30",
+                "label": "Perpetue",
+                "gender": "F",
+                "x": 82.30133056640625,
+                "y": -96.27977752685547,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "31",
+                "label": "Simplice",
+                "gender": "F",
+                "x": -42.90287780761719,
+                "y": -90.60179901123047,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "32",
+                "label": "Scaufflaire",
+                "gender": "M",
+                "x": 64.73348999023438,
+                "y": 53.158470153808594,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "33",
+                "label": "Woman1",
+                "gender": "F",
+                "x": 26.7904052734375,
+                "y": -39.123863220214844,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "34",
+                "label": "Judge",
+                "gender": "M",
+                "x": 79.70880126953125,
+                "y": 20.91417694091797,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "35",
+                "label": "Champmathieu",
+                "gender": "M",
+                "x": -23.889848709106445,
+                "y": 61.4859504699707,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "36",
+                "label": "Brevet",
+                "gender": "M",
+                "x": -86.70632934570312,
+                "y": -75.18495178222656,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "37",
+                "label": "Chenildieu",
+                "gender": "M",
+                "x": 45.48481369018555,
+                "y": -92.42266082763672,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "38",
+                "label": "Cochepaille",
+                "gender": "M",
+                "x": -43.283660888671875,
+                "y": -44.31027603149414,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "40",
+                "label": "Boulatruelle",
+                "gender": "M",
+                "x": 86.56183624267578,
+                "y": -20.327356338500977,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "41",
+                "label": "Eponine",
+                "gender": "F",
+                "x": 3.6951088905334473,
+                "y": 94.75363159179688,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "42",
+                "label": "Anzelma",
+                "gender": "F",
+                "x": -67.07528686523438,
+                "y": -59.082645416259766,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "43",
+                "label": "Woman2",
+                "gender": "F",
+                "x": 58.58381652832031,
+                "y": 58.689697265625,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "44",
+                "label": "MotherInnocent",
+                "gender": "F",
+                "x": -22.30040740966797,
+                "y": -3.861252546310425,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "45",
+                "label": "Gribier",
+                "gender": "M",
+                "x": -34.893863677978516,
+                "y": -85.91956329345703,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "47",
+                "label": "MmeBurgon",
+                "gender": "F",
+                "x": -27.39175033569336,
+                "y": 5.610493183135986,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "48",
+                "label": "Gavroche",
+                "gender": "M",
+                "x": -73.41671752929688,
+                "y": -78.20674133300781,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "50",
+                "label": "Magnon",
+                "gender": "F",
+                "x": 52.28224563598633,
+                "y": -80.3084716796875,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "51",
+                "label": "MlleGillenormand",
+                "gender": "F",
+                "x": -44.057456970214844,
+                "y": 47.11606216430664,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "52",
+                "label": "MmePontmercy",
+                "gender": "F",
+                "x": -16.839344024658203,
+                "y": -71.1723861694336,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "53",
+                "label": "MlleVaubois",
+                "gender": "F",
+                "x": -32.573333740234375,
+                "y": 2.885632038116455,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "56",
+                "label": "BaronessT",
+                "gender": "F",
+                "x": 38.0517692565918,
+                "y": 7.97446870803833,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "57",
+                "label": "Mabeuf",
+                "gender": "M",
+                "x": 1.8072288036346436,
+                "y": 80.54641723632812,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "58",
+                "label": "Enjolras",
+                "gender": "M",
+                "x": -94.55311584472656,
+                "y": 75.32171630859375,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "59",
+                "label": "Combeferre",
+                "gender": "M",
+                "x": -36.96232223510742,
+                "y": -31.977031707763672,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "60",
+                "label": "Prouvaire",
+                "gender": "M",
+                "x": 56.93207931518555,
+                "y": -17.73310089111328,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "61",
+                "label": "Feuilly",
+                "gender": "M",
+                "x": 36.6646842956543,
+                "y": 53.48420715332031,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "62",
+                "label": "Courfeyrac",
+                "gender": "M",
+                "x": 16.55187225341797,
+                "y": 4.909561634063721,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "63",
+                "label": "Bahorel",
+                "gender": "M",
+                "x": 58.9492301940918,
+                "y": -29.476640701293945,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "64",
+                "label": "Bossuet",
+                "gender": "M",
+                "x": 2.736130952835083,
+                "y": 16.90532112121582,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "65",
+                "label": "Joly",
+                "gender": "M",
+                "x": -89.46836853027344,
+                "y": -47.02760314941406,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "66",
+                "label": "Grantaire",
+                "gender": "M",
+                "x": 46.40980911254883,
+                "y": 89.34042358398438,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "67",
+                "label": "MotherPlutarch",
+                "gender": "F",
+                "x": -80.39241790771484,
+                "y": -63.48453140258789,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "68",
+                "label": "Gueulemer",
+                "gender": "M",
+                "x": -71.83740997314453,
+                "y": 85.35747528076172,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "69",
+                "label": "Babet",
+                "gender": "M",
+                "x": 76.96500396728516,
+                "y": 69.46076202392578,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "70",
+                "label": "Claquesous",
+                "gender": "M",
+                "x": -77.13650512695312,
+                "y": 95.58333587646484,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "71",
+                "label": "Montparnasse",
+                "gender": "M",
+                "x": -11.13553237915039,
+                "y": -23.52412986755371,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "72",
+                "label": "Toussaint",
+                "gender": "M",
+                "x": -8.136739730834961,
+                "y": 94.98056030273438,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "73",
+                "label": "Child1",
+                "gender": "M",
+                "x": -76.3714599609375,
+                "y": -43.21316146850586,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "74",
+                "label": "Child2",
+                "gender": "M",
+                "x": -79.0648422241211,
+                "y": -7.435975551605225,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "75",
+                "label": "Brujon",
+                "gender": "M",
+                "x": 43.93846893310547,
+                "y": 92.28643798828125,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "76",
+                "label": "MmeHucheloup",
+                "gender": "F",
+                "x": -33.63740158081055,
+                "y": 92.49470520019531,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "55",
+                "label": "Marius",
+                "gender": "M",
+                "x": -40.78076934814453,
+                "y": -8.807419776916504,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "25",
+                "label": "Thenardier,Jondrette",
+                "gender": "M",
+                "x": 42.0899658203125,
+                "y": 88.3828353881836,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            },
+            {
+                "id": "54",
+                "label": "LtGillenormand",
+                "gender": "M",
+                "x": 81.12687683105469,
+                "y": -0.6569929122924805,
+                "weights": {
+                    "size": 1.0
+                },
+                "scores": {
+                }
+            }
+        ],
+        "links": [
+            {
+                "source_id": "1",
+                "target_id": "0",
+                "strength": 1.0
+            },
+            {
+                "source_id": "2",
+                "target_id": "0",
+                "strength": 8.0
+            },
+            {
+                "source_id": "3",
+                "target_id": "0",
+                "strength": 10.0
+            },
+            {
+                "source_id": "3",
+                "target_id": "2",
+                "strength": 6.0
+            },
+            {
+                "source_id": "4",
+                "target_id": "0",
+                "strength": 1.0
+            },
+            {
+                "source_id": "5",
+                "target_id": "0",
+                "strength": 1.0
+            },
+            {
+                "source_id": "6",
+                "target_id": "0",
+                "strength": 1.0
+            },
+            {
+                "source_id": "7",
+                "target_id": "0",
+                "strength": 1.0
+            },
+            {
+                "source_id": "8",
+                "target_id": "0",
+                "strength": 2.0
+            },
+            {
+                "source_id": "9",
+                "target_id": "0",
+                "strength": 1.0
+            },
+            {
+                "source_id": "11",
+                "target_id": "0",
+                "strength": 5.0
+            },
+            {
+                "source_id": "11",
+                "target_id": "2",
+                "strength": 3.0
+            },
+            {
+                "source_id": "11",
+                "target_id": "3",
+                "strength": 3.0
+            },
+            {
+                "source_id": "11",
+                "target_id": "10",
+                "strength": 1.0
+            },
+            {
+                "source_id": "12",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "13",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "14",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "15",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "17",
+                "target_id": "16",
+                "strength": 4.0
+            },
+            {
+                "source_id": "18",
+                "target_id": "16",
+                "strength": 4.0
+            },
+            {
+                "source_id": "18",
+                "target_id": "17",
+                "strength": 4.0
+            },
+            {
+                "source_id": "19",
+                "target_id": "16",
+                "strength": 4.0
+            },
+            {
+                "source_id": "19",
+                "target_id": "17",
+                "strength": 4.0
+            },
+            {
+                "source_id": "19",
+                "target_id": "18",
+                "strength": 4.0
+            },
+            {
+                "source_id": "20",
+                "target_id": "16",
+                "strength": 3.0
+            },
+            {
+                "source_id": "20",
+                "target_id": "17",
+                "strength": 3.0
+            },
+            {
+                "source_id": "20",
+                "target_id": "18",
+                "strength": 3.0
+            },
+            {
+                "source_id": "20",
+                "target_id": "19",
+                "strength": 4.0
+            },
+            {
+                "source_id": "21",
+                "target_id": "16",
+                "strength": 3.0
+            },
+            {
+                "source_id": "21",
+                "target_id": "17",
+                "strength": 3.0
+            },
+            {
+                "source_id": "21",
+                "target_id": "18",
+                "strength": 3.0
+            },
+            {
+                "source_id": "21",
+                "target_id": "19",
+                "strength": 3.0
+            },
+            {
+                "source_id": "21",
+                "target_id": "20",
+                "strength": 5.0
+            },
+            {
+                "source_id": "22",
+                "target_id": "16",
+                "strength": 3.0
+            },
+            {
+                "source_id": "22",
+                "target_id": "17",
+                "strength": 3.0
+            },
+            {
+                "source_id": "22",
+                "target_id": "18",
+                "strength": 3.0
+            },
+            {
+                "source_id": "22",
+                "target_id": "19",
+                "strength": 3.0
+            },
+            {
+                "source_id": "22",
+                "target_id": "20",
+                "strength": 4.0
+            },
+            {
+                "source_id": "22",
+                "target_id": "21",
+                "strength": 4.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "11",
+                "strength": 9.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "12",
+                "strength": 2.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "16",
+                "strength": 3.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "17",
+                "strength": 3.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "18",
+                "strength": 3.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "19",
+                "strength": 3.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "20",
+                "strength": 4.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "21",
+                "strength": 4.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "22",
+                "strength": 4.0
+            },
+            {
+                "source_id": "24",
+                "target_id": "11",
+                "strength": 7.0
+            },
+            {
+                "source_id": "24",
+                "target_id": "23",
+                "strength": 2.0
+            },
+            {
+                "source_id": "26",
+                "target_id": "11",
+                "strength": 31.0
+            },
+            {
+                "source_id": "26",
+                "target_id": "16",
+                "strength": 1.0
+            },
+            {
+                "source_id": "26",
+                "target_id": "24",
+                "strength": 4.0
+            },
+            {
+                "source_id": "26",
+                "target_id": "25",
+                "strength": 1.0
+            },
+            {
+                "source_id": "27",
+                "target_id": "11",
+                "strength": 17.0
+            },
+            {
+                "source_id": "27",
+                "target_id": "23",
+                "strength": 5.0
+            },
+            {
+                "source_id": "27",
+                "target_id": "24",
+                "strength": 1.0
+            },
+            {
+                "source_id": "27",
+                "target_id": "26",
+                "strength": 1.0
+            },
+            {
+                "source_id": "27",
+                "target_id": "25",
+                "strength": 5.0
+            },
+            {
+                "source_id": "28",
+                "target_id": "11",
+                "strength": 8.0
+            },
+            {
+                "source_id": "28",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "29",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "29",
+                "target_id": "23",
+                "strength": 1.0
+            },
+            {
+                "source_id": "29",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "30",
+                "target_id": "23",
+                "strength": 1.0
+            },
+            {
+                "source_id": "31",
+                "target_id": "11",
+                "strength": 3.0
+            },
+            {
+                "source_id": "31",
+                "target_id": "23",
+                "strength": 2.0
+            },
+            {
+                "source_id": "31",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "31",
+                "target_id": "30",
+                "strength": 2.0
+            },
+            {
+                "source_id": "32",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "33",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "33",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "34",
+                "target_id": "11",
+                "strength": 3.0
+            },
+            {
+                "source_id": "34",
+                "target_id": "29",
+                "strength": 2.0
+            },
+            {
+                "source_id": "35",
+                "target_id": "11",
+                "strength": 3.0
+            },
+            {
+                "source_id": "35",
+                "target_id": "29",
+                "strength": 2.0
+            },
+            {
+                "source_id": "35",
+                "target_id": "34",
+                "strength": 3.0
+            },
+            {
+                "source_id": "36",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "36",
+                "target_id": "29",
+                "strength": 1.0
+            },
+            {
+                "source_id": "36",
+                "target_id": "34",
+                "strength": 2.0
+            },
+            {
+                "source_id": "36",
+                "target_id": "35",
+                "strength": 2.0
+            },
+            {
+                "source_id": "37",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "37",
+                "target_id": "29",
+                "strength": 1.0
+            },
+            {
+                "source_id": "37",
+                "target_id": "34",
+                "strength": 2.0
+            },
+            {
+                "source_id": "37",
+                "target_id": "35",
+                "strength": 2.0
+            },
+            {
+                "source_id": "37",
+                "target_id": "36",
+                "strength": 2.0
+            },
+            {
+                "source_id": "38",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "38",
+                "target_id": "29",
+                "strength": 1.0
+            },
+            {
+                "source_id": "38",
+                "target_id": "34",
+                "strength": 2.0
+            },
+            {
+                "source_id": "38",
+                "target_id": "35",
+                "strength": 2.0
+            },
+            {
+                "source_id": "38",
+                "target_id": "36",
+                "strength": 2.0
+            },
+            {
+                "source_id": "38",
+                "target_id": "37",
+                "strength": 2.0
+            },
+            {
+                "source_id": "40",
+                "target_id": "25",
+                "strength": 1.0
+            },
+            {
+                "source_id": "41",
+                "target_id": "24",
+                "strength": 2.0
+            },
+            {
+                "source_id": "41",
+                "target_id": "25",
+                "strength": 3.0
+            },
+            {
+                "source_id": "42",
+                "target_id": "24",
+                "strength": 1.0
+            },
+            {
+                "source_id": "42",
+                "target_id": "41",
+                "strength": 2.0
+            },
+            {
+                "source_id": "42",
+                "target_id": "25",
+                "strength": 2.0
+            },
+            {
+                "source_id": "43",
+                "target_id": "11",
+                "strength": 3.0
+            },
+            {
+                "source_id": "43",
+                "target_id": "26",
+                "strength": 1.0
+            },
+            {
+                "source_id": "43",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "44",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "44",
+                "target_id": "28",
+                "strength": 3.0
+            },
+            {
+                "source_id": "45",
+                "target_id": "28",
+                "strength": 2.0
+            },
+            {
+                "source_id": "47",
+                "target_id": "25",
+                "strength": 1.0
+            },
+            {
+                "source_id": "48",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "48",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "48",
+                "target_id": "47",
+                "strength": 2.0
+            },
+            {
+                "source_id": "48",
+                "target_id": "25",
+                "strength": 1.0
+            },
+            {
+                "source_id": "50",
+                "target_id": "24",
+                "strength": 1.0
+            },
+            {
+                "source_id": "50",
+                "target_id": "54",
+                "strength": 1.0
+            },
+            {
+                "source_id": "51",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "51",
+                "target_id": "26",
+                "strength": 2.0
+            },
+            {
+                "source_id": "51",
+                "target_id": "54",
+                "strength": 9.0
+            },
+            {
+                "source_id": "52",
+                "target_id": "51",
+                "strength": 1.0
+            },
+            {
+                "source_id": "52",
+                "target_id": "55",
+                "strength": 1.0
+            },
+            {
+                "source_id": "53",
+                "target_id": "51",
+                "strength": 1.0
+            },
+            {
+                "source_id": "56",
+                "target_id": "55",
+                "strength": 1.0
+            },
+            {
+                "source_id": "56",
+                "target_id": "54",
+                "strength": 1.0
+            },
+            {
+                "source_id": "57",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "57",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "57",
+                "target_id": "55",
+                "strength": 1.0
+            },
+            {
+                "source_id": "58",
+                "target_id": "11",
+                "strength": 4.0
+            },
+            {
+                "source_id": "58",
+                "target_id": "27",
+                "strength": 6.0
+            },
+            {
+                "source_id": "58",
+                "target_id": "48",
+                "strength": 7.0
+            },
+            {
+                "source_id": "58",
+                "target_id": "57",
+                "strength": 1.0
+            },
+            {
+                "source_id": "58",
+                "target_id": "55",
+                "strength": 7.0
+            },
+            {
+                "source_id": "59",
+                "target_id": "48",
+                "strength": 6.0
+            },
+            {
+                "source_id": "59",
+                "target_id": "57",
+                "strength": 2.0
+            },
+            {
+                "source_id": "59",
+                "target_id": "58",
+                "strength": 15.0
+            },
+            {
+                "source_id": "59",
+                "target_id": "55",
+                "strength": 5.0
+            },
+            {
+                "source_id": "60",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "60",
+                "target_id": "58",
+                "strength": 4.0
+            },
+            {
+                "source_id": "60",
+                "target_id": "59",
+                "strength": 2.0
+            },
+            {
+                "source_id": "61",
+                "target_id": "48",
+                "strength": 2.0
+            },
+            {
+                "source_id": "61",
+                "target_id": "57",
+                "strength": 1.0
+            },
+            {
+                "source_id": "61",
+                "target_id": "58",
+                "strength": 6.0
+            },
+            {
+                "source_id": "61",
+                "target_id": "59",
+                "strength": 5.0
+            },
+            {
+                "source_id": "61",
+                "target_id": "60",
+                "strength": 2.0
+            },
+            {
+                "source_id": "61",
+                "target_id": "55",
+                "strength": 1.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "48",
+                "strength": 7.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "57",
+                "strength": 2.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "58",
+                "strength": 17.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "59",
+                "strength": 13.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "60",
+                "strength": 3.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "61",
+                "strength": 6.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "55",
+                "strength": 9.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "48",
+                "strength": 5.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "57",
+                "strength": 2.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "58",
+                "strength": 4.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "59",
+                "strength": 5.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "60",
+                "strength": 2.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "61",
+                "strength": 3.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "62",
+                "strength": 6.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "55",
+                "strength": 1.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "48",
+                "strength": 5.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "57",
+                "strength": 1.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "58",
+                "strength": 10.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "59",
+                "strength": 9.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "60",
+                "strength": 2.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "61",
+                "strength": 6.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "62",
+                "strength": 12.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "63",
+                "strength": 4.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "55",
+                "strength": 5.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "48",
+                "strength": 3.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "57",
+                "strength": 1.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "58",
+                "strength": 5.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "59",
+                "strength": 5.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "60",
+                "strength": 2.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "61",
+                "strength": 5.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "62",
+                "strength": 5.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "63",
+                "strength": 5.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "64",
+                "strength": 7.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "55",
+                "strength": 2.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "58",
+                "strength": 3.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "59",
+                "strength": 1.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "60",
+                "strength": 1.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "61",
+                "strength": 1.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "62",
+                "strength": 2.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "63",
+                "strength": 1.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "64",
+                "strength": 3.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "65",
+                "strength": 2.0
+            },
+            {
+                "source_id": "67",
+                "target_id": "57",
+                "strength": 3.0
+            },
+            {
+                "source_id": "68",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "68",
+                "target_id": "24",
+                "strength": 1.0
+            },
+            {
+                "source_id": "68",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "68",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "68",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "68",
+                "target_id": "25",
+                "strength": 5.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "24",
+                "strength": 1.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "27",
+                "strength": 2.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "68",
+                "strength": 6.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "25",
+                "strength": 6.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "24",
+                "strength": 1.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "58",
+                "strength": 1.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "68",
+                "strength": 4.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "69",
+                "strength": 4.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "25",
+                "strength": 4.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "68",
+                "strength": 2.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "69",
+                "strength": 2.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "70",
+                "strength": 2.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "25",
+                "strength": 1.0
+            },
+            {
+                "source_id": "72",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "72",
+                "target_id": "26",
+                "strength": 2.0
+            },
+            {
+                "source_id": "72",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "73",
+                "target_id": "48",
+                "strength": 2.0
+            },
+            {
+                "source_id": "74",
+                "target_id": "48",
+                "strength": 2.0
+            },
+            {
+                "source_id": "74",
+                "target_id": "73",
+                "strength": 3.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "68",
+                "strength": 3.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "69",
+                "strength": 3.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "70",
+                "strength": 1.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "71",
+                "strength": 1.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "25",
+                "strength": 3.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "58",
+                "strength": 1.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "62",
+                "strength": 1.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "63",
+                "strength": 1.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "64",
+                "strength": 1.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "65",
+                "strength": 1.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "66",
+                "strength": 1.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "11",
+                "strength": 19.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "16",
+                "strength": 1.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "26",
+                "strength": 21.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "41",
+                "strength": 5.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "48",
+                "strength": 4.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "51",
+                "strength": 6.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "25",
+                "strength": 2.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "54",
+                "strength": 12.0
+            },
+            {
+                "source_id": "25",
+                "target_id": "11",
+                "strength": 12.0
+            },
+            {
+                "source_id": "25",
+                "target_id": "23",
+                "strength": 1.0
+            },
+            {
+                "source_id": "25",
+                "target_id": "24",
+                "strength": 13.0
+            },
+            {
+                "source_id": "54",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "54",
+                "target_id": "26",
+                "strength": 3.0
+            }
+        ]
+    },
+    "config": {
+        "terminology": {
+            "item": "item_name",
+            "items": "",
+            "link": "link_name",
+            "links": "",
+            "link_strength": "link strength name",
+            "total_link_strength": ""
+        },
+        "templates": {
+            "item_description": "<div class='description_heading'>item_name</div><div class='description_label'>{label}</div><div class='description_text'>id: {id}, label: {label}, gender: {gender}</div>",
+            "link_description": "<div class='description_heading'>link_name</div>"
+        }
+    }
+}
