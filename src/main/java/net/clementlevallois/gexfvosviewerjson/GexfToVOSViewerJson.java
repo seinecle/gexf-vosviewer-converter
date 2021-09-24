@@ -266,9 +266,12 @@ public class GexfToVOSViewerJson {
                 itemBuilder.add("label", node.getLabel());
             }
 
-            Iterator<String> nodeAttributeKeysIterator = node.getAttributeKeys().iterator();
-            while (nodeAttributeKeysIterator.hasNext()) {
-                String nodeAttributeKey = nodeAttributeKeysIterator.next();
+            Iterator<Column> nodeAttributeColumnsIterator = node.getAttributeColumns().iterator();
+            while (nodeAttributeColumnsIterator.hasNext()) {
+                Column nodeAttributeColumn = nodeAttributeColumnsIterator.next();
+                String nodeAttributeKey = nodeAttributeColumn.getId();
+                String nodeAttributeTitle = nodeAttributeColumn.getTitle();
+                
                 switch (nodeAttributeKey) {
                     case "x":
                     case "y":
@@ -276,34 +279,34 @@ public class GexfToVOSViewerJson {
                         break;
                     default:
                         if (node.getAttribute(nodeAttributeKey) instanceof String) {
-                            itemBuilder.add(nodeAttributeKey, (String) node.getAttribute(nodeAttributeKey));
+                            itemBuilder.add(nodeAttributeTitle, (String) node.getAttribute(nodeAttributeKey));
                         } else if (nodeAttributesThatCanBeWeight.contains(nodeAttributeKey)) {
                             Object attribute = node.getAttribute(nodeAttributeKey);
                             if (attribute instanceof Double) {
-                                weightsBuilder.add(nodeAttributeKey, (Double) attribute);
+                                weightsBuilder.add(nodeAttributeTitle, (Double) attribute);
                             }
                             if (attribute instanceof Float) {
-                                weightsBuilder.add(nodeAttributeKey, (Float) attribute);
+                                weightsBuilder.add(nodeAttributeTitle, (Float) attribute);
                             }
                             if (attribute instanceof Long) {
-                                weightsBuilder.add(nodeAttributeKey, (Long) attribute);
+                                weightsBuilder.add(nodeAttributeTitle, (Long) attribute);
                             }
                             if (attribute instanceof Integer && !nodeAttributeKey.equals(modularityColumnName)) {
-                                weightsBuilder.add(nodeAttributeKey, (Integer) attribute);
+                                weightsBuilder.add(nodeAttributeTitle, (Integer) attribute);
                             }
                         } else {
                             Object attribute = node.getAttribute(nodeAttributeKey);
                             if (attribute instanceof Double) {
-                                scoresBuilder.add(nodeAttributeKey, (Double) attribute);
+                                scoresBuilder.add(nodeAttributeTitle, (Double) attribute);
                             }
                             if (attribute instanceof Float) {
-                                scoresBuilder.add(nodeAttributeKey, (Float) attribute);
+                                scoresBuilder.add(nodeAttributeTitle, (Float) attribute);
                             }
                             if (attribute instanceof Long) {
-                                scoresBuilder.add(nodeAttributeKey, (Long) attribute);
+                                scoresBuilder.add(nodeAttributeTitle, (Long) attribute);
                             }
                             if (attribute instanceof Integer && !nodeAttributeKey.equals(modularityColumnName)) {
-                                scoresBuilder.add(nodeAttributeKey, (Integer) attribute);
+                                scoresBuilder.add(nodeAttributeTitle, (Integer) attribute);
                             }
                             // if the attribute corresponds to the modularity_class column in Gephi, this should convert to the "cluster" attribute in vosviewer.
                             // +1 because the Gephi communities are zero-based, vosviewer clusters are 1-based.

@@ -66,5 +66,18 @@
             <artifactId>javax.json</artifactId>
             <version>1.1.4</version>
         </dependency>
+        <dependency>
+            <groupId>it.uniroma1.dis.wsngroup.gexf4j</groupId>
+            <artifactId>gexf4j</artifactId>
+            <version>1.2.0</version>
+            <type>jar</type>
+            <!--this exclusion is necessary (I think!) as the lib is following Java 9 Modules and 2 dependencies are conflicting-->
+            <exclusions>
+                <exclusion>
+                    <groupId>jakarta.xml.bind</groupId>
+                    <artifactId>jakarta.xml.bind-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 </project>
