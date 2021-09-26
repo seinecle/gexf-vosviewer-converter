@@ -27,6 +27,7 @@ public class Test {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         String gexfFile = "miserables_result.gexf";
         GexfToVOSViewerJson converter = new GexfToVOSViewerJson(gexfFile);
+        converter.setMaxNumberNodes(500);
         converter.setTerminologyData(new Terminology());
         converter.getTerminologyData().setItem("Term");
         converter.getTerminologyData().setItems("Terms");
@@ -35,7 +36,7 @@ public class Test {
         converter.getTerminologyData().setLink_strength("Number of co-occurrences");
         converter.getTerminologyData().setTotal_link_strength("Total number of co-occurrences");
         converter.setMetadataData(new Metadata());
-        converter.getMetadataData().setAuthorCanBePlural("Clément Levallois");
+        converter.getMetadataData().setAuthorCanBePlural("");
         converter.getMetadataData().setDescriptionOfData("Made with nocodefunctions.com");
         String convertToJson = converter.convertToJson();
         BufferedWriter bw = Files.newBufferedWriter(Path.of("result.json"), StandardCharsets.UTF_8, StandardOpenOption.CREATE);

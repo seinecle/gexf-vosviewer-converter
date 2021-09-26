@@ -15,12 +15,10 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import java.util.TreeMap;
 import javax.json.Json;
 import javax.json.JsonArrayBuilder;
 import javax.json.JsonObjectBuilder;
@@ -72,6 +70,7 @@ public class GexfToVOSViewerJson {
     TemplateLink templateLinkData;
     Integer maxNumberNodes;
     Set<Node> nodesToKeep = new HashSet();
+    boolean keepAll = false;
     InputStream is;
 
     public GexfToVOSViewerJson(String filePath) {
@@ -92,8 +91,12 @@ public class GexfToVOSViewerJson {
         }
         vvJsonInitiate();
 
-        if (maxNumberNodes != null) {
+        if (maxNumberNodes != null && gm.getGraph().getNodeCount() > maxNumberNodes) {
             listNodesToKeep(maxNumberNodes);
+        }
+
+        if (maxNumberNodes != null && gm.getGraph().getNodeCount() <= maxNumberNodes) {
+            keepAll = true;
         }
 
         templateItemData = new TemplateItem();
@@ -250,9 +253,9 @@ public class GexfToVOSViewerJson {
         }
 
         // iterating through all nodes and their attributes and creating the corresponding items and values in vosviewer json
-        for (Object nodeObject: toArray){
-            Node node = (Node)nodeObject;
-            if (maxNumberNodes != null && !nodesToKeep.contains(node)) {
+        for (Object nodeObject : toArray) {
+            Node node = (Node) nodeObject;
+            if (maxNumberNodes != null && !keepAll && !nodesToKeep.contains(node)) {
                 continue;
             }
             itemBuilder = Json.createObjectBuilder();
@@ -271,7 +274,7 @@ public class GexfToVOSViewerJson {
                 Column nodeAttributeColumn = nodeAttributeColumnsIterator.next();
                 String nodeAttributeKey = nodeAttributeColumn.getId();
                 String nodeAttributeTitle = nodeAttributeColumn.getTitle();
-                
+
                 switch (nodeAttributeKey) {
                     case "x":
                     case "y":
@@ -349,7 +352,7 @@ public class GexfToVOSViewerJson {
         Object[] toArray = gm.getGraph().getEdges().toCollection().toArray();
         for (Object edgeObject : toArray) {
             Edge edge = (Edge) edgeObject;
-            if (maxNumberNodes != null && (!nodesToKeep.contains(edge.getSource()) | !nodesToKeep.contains(edge.getTarget()))) {
+            if (maxNumberNodes != null && !keepAll && (!nodesToKeep.contains(edge.getSource()) | !nodesToKeep.contains(edge.getTarget()))) {
                 continue;
             }
 
@@ -403,9 +406,9 @@ public class GexfToVOSViewerJson {
 
     private void listNodesToKeep(Integer maxNumberNodes) {
         Map<Edge, Double> edgesAndWeight = new HashMap();
-        Iterator<Edge> iteratorEdges = gm.getGraph().getEdges().iterator();
-        while (iteratorEdges.hasNext()) {
-            Edge next = iteratorEdges.next();
+        Object[] toArray = gm.getGraph().getEdges().toCollection().toArray();
+        for (Object o : toArray) {
+            Edge next = (Edge) o;
             edgesAndWeight.put(next, next.getWeight());
         }
 
