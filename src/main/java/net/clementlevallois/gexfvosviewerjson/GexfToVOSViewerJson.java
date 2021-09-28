@@ -320,7 +320,13 @@ public class GexfToVOSViewerJson {
                         break;
                 }
             }
-            weightsBuilder.add("size", node.size());
+
+            // size of the node is supposed to be a positive number, so it should be included in "weights"
+            // but in practice, gexf files can include nodes with a negative size ->  <viz:size value="-0.71428585"></viz:size>
+            // these rare cases break the parsing of the VOSviewer json file
+            // so we include the node size attribute in scores, which can be negative
+            
+            scoresBuilder.add("viz_size", node.size());
 
             if (!node.getAttributeKeys().contains("x") && !node.getAttributeKeys().contains("y")) {
                 itemBuilder.add("x", (Float) node.x());

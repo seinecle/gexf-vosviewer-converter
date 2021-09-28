@@ -12,7 +12,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
-import org.gephi.graph.api.GraphModel;
 
 /**
  *
@@ -25,7 +24,7 @@ public class Test {
      * @throws java.io.FileNotFoundException
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        String gexfFile = "miserables_result.gexf";
+        String gexfFile = "C:\\Users\\levallois\\Downloads\\Vostest places.gexf";
         GexfToVOSViewerJson converter = new GexfToVOSViewerJson(gexfFile);
         converter.setMaxNumberNodes(500);
         converter.setTerminologyData(new Terminology());
@@ -39,7 +38,7 @@ public class Test {
         converter.getMetadataData().setAuthorCanBePlural("");
         converter.getMetadataData().setDescriptionOfData("Made with nocodefunctions.com");
         String convertToJson = converter.convertToJson();
-        BufferedWriter bw = Files.newBufferedWriter(Path.of("result.json"), StandardCharsets.UTF_8, StandardOpenOption.CREATE);
+        BufferedWriter bw = Files.newBufferedWriter(Path.of("result.json"), StandardCharsets.UTF_8);
         bw.write(convertToJson);
         bw.close();
     }

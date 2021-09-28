@@ -10,2578 +10,1262 @@
     "network": {
         "items": [
             {
-                "id": "11",
-                "label": "Valjean",
-                "Id": "11",
-                "Label": "Valjean",
-                "Gender": "M",
-                "x": 3.9424664974212646,
-                "y": -18.661415100097656,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 1532.1511417031543,
-                    "Harmonic Closeness Centrality": 0.7442922374429224,
-                    "Closeness Centrality": 0.6576576576576577,
-                    "size": 80.0
-                },
-                "scores": {
-                }
-            },
-            {
                 "id": "0",
-                "label": "Myriel",
+                "label": "Los Angeles, CA",
                 "Id": "0",
-                "Label": "Myriel",
-                "Gender": "M",
-                "x": -194.7209930419922,
-                "y": -70.15167999267578,
+                "Label": "Los Angeles, CA",
+                "node_type": "LA-Hollywood",
+                "x": -4461.4599609375,
+                "y": -2943.4677734375,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 483.0,
-                    "Harmonic Closeness Centrality": 0.4988584474885843,
-                    "Closeness Centrality": 0.437125748502994,
-                    "size": 28.643230438232422
+                    "latitude": 34.05349,
+                    "size": 35.0
                 },
                 "scores": {
-                }
-            },
-            {
-                "id": "23",
-                "label": "Fantine",
-                "Id": "23",
-                "Label": "Fantine",
-                "Gender": "F",
-                "x": 99.95536041259766,
-                "y": -184.15789794921875,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 359.37027514968696,
-                    "Harmonic Closeness Centrality": 0.5490867579908677,
-                    "Closeness Centrality": 0.47096774193548385,
-                    "size": 22.59145736694336
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "48",
-                "label": "Gavroche",
-                "Id": "48",
-                "Label": "Gavroche",
-                "Gender": "M",
-                "x": 83.93999481201172,
-                "y": 204.5308837890625,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 351.58888588191985,
-                    "Harmonic Closeness Centrality": 0.6118721461187215,
-                    "Closeness Centrality": 0.5177304964539007,
-                    "size": 22.210552215576172
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "55",
-                "label": "Marius",
-                "Id": "55",
-                "Label": "Marius",
-                "Gender": "M",
-                "x": 16.897310256958008,
-                "y": 95.2494125366211,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 331.39179892175224,
-                    "Harmonic Closeness Centrality": 0.6027397260273972,
-                    "Closeness Centrality": 0.5328467153284672,
-                    "size": 21.221887588500977
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "25",
-                "label": "Thenardier,Jondrette",
-                "Id": "25",
-                "Label": "Thenardier,Jondrette",
-                "Gender": "M",
-                "x": 111.0673599243164,
-                "y": 12.1546049118042,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 196.859155120765,
-                    "Harmonic Closeness Centrality": 0.58675799086758,
-                    "Closeness Centrality": 0.5214285714285715,
-                    "size": 14.6364107131958
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "27",
-                "label": "Javert",
-                "Id": "27",
-                "Label": "Javert",
-                "Gender": "M",
-                "x": 54.11460494995117,
-                "y": -8.48230266571045,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 141.49811964781006,
-                    "Harmonic Closeness Centrality": 0.591324200913242,
-                    "Closeness Centrality": 0.5214285714285715,
-                    "size": 11.926445007324219
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "58",
-                "label": "Enjolras",
-                "Id": "58",
-                "Label": "Enjolras",
-                "Gender": "M",
-                "x": 25.527978897094727,
-                "y": 188.53382873535156,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 120.41734472098251,
-                    "Harmonic Closeness Centrality": 0.5593607305936072,
-                    "Closeness Centrality": 0.4866666666666667,
-                    "size": 10.894523620605469
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "16",
-                "label": "Tholomyes",
-                "Id": "16",
-                "Label": "Tholomyes",
-                "Gender": "M",
-                "x": 133.3392791748047,
-                "y": -251.60523986816406,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 106.27697563874035,
-                    "Harmonic Closeness Centrality": 0.46118721461187184,
-                    "Closeness Centrality": 0.3945945945945946,
-                    "size": 10.202341079711914
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "51",
-                "label": "MlleGillenormand",
-                "Id": "51",
-                "Label": "MlleGillenormand",
-                "Gender": "F",
-                "x": -35.57248306274414,
-                "y": 76.70965576171875,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 90.50238095238093,
-                    "Harmonic Closeness Centrality": 0.4840182648401827,
-                    "Closeness Centrality": 0.44242424242424244,
-                    "size": 9.43016242980957
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "64",
-                "label": "Bossuet",
-                "Id": "64",
-                "Label": "Bossuet",
-                "Gender": "M",
-                "x": -2.382457971572876,
-                "y": 220.1424102783203,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 86.79532364780039,
-                    "Harmonic Closeness Centrality": 0.5456621004566209,
-                    "Closeness Centrality": 0.48026315789473684,
-                    "size": 9.248699188232422
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "24",
-                "label": "MmeThenardier",
-                "Id": "24",
-                "Label": "MmeThenardier",
-                "Gender": "F",
-                "x": 98.31236267089844,
-                "y": -17.877565383911133,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 81.01165528657789,
-                    "Harmonic Closeness Centrality": 0.5273972602739725,
-                    "Closeness Centrality": 0.46794871794871795,
-                    "size": 8.965583801269531
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "57",
-                "label": "Mabeuf",
-                "Id": "57",
-                "Label": "Mabeuf",
-                "Gender": "M",
-                "x": 81.80142211914062,
-                "y": 294.626708984375,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 75.5845238095238,
-                    "Harmonic Closeness Centrality": 0.47374429223744285,
-                    "Closeness Centrality": 0.3967391304347826,
-                    "size": 8.699921607971191
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "28",
-                "label": "Fauchelevent",
-                "Id": "28",
-                "Label": "Fauchelevent",
-                "Gender": "M",
-                "x": -39.67911911010742,
-                "y": -43.41533279418945,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 72.5,
-                    "Harmonic Closeness Centrality": 0.44406392694063895,
-                    "Closeness Centrality": 0.40782122905027934,
-                    "size": 8.548932075500488
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "54",
-                "label": "LtGillenormand",
-                "Id": "54",
-                "Label": "LtGillenormand",
-                "Gender": "M",
-                "x": -8.404716491699219,
-                "y": 67.649169921875,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 47.30106516290728,
-                    "Harmonic Closeness Centrality": 0.4840182648401828,
-                    "Closeness Centrality": 0.44242424242424244,
-                    "size": 7.315423965454102
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "26",
-                "label": "Cosette",
-                "Id": "26",
-                "Label": "Cosette",
-                "Gender": "F",
-                "x": 13.543310165405273,
-                "y": 22.457805633544922,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 47.18836996336997,
-                    "Harmonic Closeness Centrality": 0.5342465753424659,
-                    "Closeness Centrality": 0.48344370860927155,
-                    "size": 7.309907913208008
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "41",
-                "label": "Eponine",
-                "Id": "41",
-                "Label": "Eponine",
-                "Gender": "F",
-                "x": 124.36919403076172,
-                "y": 84.1110610961914,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 33.628408253253454,
-                    "Harmonic Closeness Centrality": 0.47716894977168955,
-                    "Closeness Centrality": 0.4010989010989011,
-                    "size": 6.64613676071167
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "31",
-                "label": "Simplice",
-                "Id": "31",
-                "Label": "Simplice",
-                "Gender": "F",
-                "x": 74.6530990600586,
-                "y": -122.75647735595703,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 23.491507512095748,
-                    "Harmonic Closeness Centrality": 0.4600456621004564,
-                    "Closeness Centrality": 0.42441860465116277,
-                    "size": 6.149927616119385
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "29",
-                "label": "Bamatabois",
-                "Id": "29",
-                "Label": "Bamatabois",
-                "Gender": "M",
-                "x": -45.932796478271484,
-                "y": -169.20535278320312,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 22.91666666666667,
-                    "Harmonic Closeness Centrality": 0.48744292237442916,
-                    "Closeness Centrality": 0.43452380952380953,
-                    "size": 6.12178897857666
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "62",
-                "label": "Courfeyrac",
-                "Id": "62",
-                "Label": "Courfeyrac",
-                "Gender": "M",
-                "x": 28.93648338317871,
-                "y": 209.7089080810547,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 14.070955798587379,
-                    "Harmonic Closeness Centrality": 0.48744292237442916,
-                    "Closeness Centrality": 0.4010989010989011,
-                    "size": 5.688784599304199
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "70",
-                "label": "Claquesous",
-                "Id": "70",
-                "Label": "Claquesous",
-                "Gender": "M",
-                "x": 180.7467803955078,
-                "y": 23.497093200683594,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 13.856141957457748,
-                    "Harmonic Closeness Centrality": 0.5182648401826484,
-                    "Closeness Centrality": 0.4620253164556962,
-                    "size": 5.678268909454346
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "68",
-                "label": "Gueulemer",
-                "Id": "68",
-                "Label": "Gueulemer",
-                "Gender": "M",
-                "x": 175.84600830078125,
-                "y": 46.77641296386719,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 12.951380052695843,
-                    "Harmonic Closeness Centrality": 0.5228310502283104,
-                    "Closeness Centrality": 0.46794871794871795,
-                    "size": 5.6339802742004395
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "69",
-                "label": "Babet",
-                "Id": "69",
-                "Label": "Babet",
-                "Gender": "M",
-                "x": 157.65126037597656,
-                "y": 37.63224411010742,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 12.951380052695843,
-                    "Harmonic Closeness Centrality": 0.5228310502283104,
-                    "Closeness Centrality": 0.46794871794871795,
-                    "size": 5.6339802742004395
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "71",
-                "label": "Montparnasse",
-                "Id": "71",
-                "Label": "Montparnasse",
-                "Gender": "M",
-                "x": 197.36770629882812,
-                "y": 79.34325408935547,
-                "weights": {
-                    "Eccentricity": 3.0,
-                    "Betweenness Centrality": 10.540415140415138,
-                    "Harmonic Closeness Centrality": 0.5136986301369864,
-                    "Closeness Centrality": 0.4620253164556962,
-                    "size": 5.515961647033691
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "63",
-                "label": "Bahorel",
-                "Id": "63",
-                "Label": "Bahorel",
-                "Gender": "M",
-                "x": 44.048274993896484,
-                "y": 262.8517761230469,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 5.538562314878104,
-                    "Harmonic Closeness Centrality": 0.476027397260274,
-                    "Closeness Centrality": 0.3945945945945946,
-                    "size": 5.271117210388184
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "65",
-                "label": "Joly",
-                "Id": "65",
-                "Label": "Joly",
-                "Gender": "M",
-                "x": 17.412540435791016,
-                "y": 252.63685607910156,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 5.538562314878104,
-                    "Harmonic Closeness Centrality": 0.476027397260274,
-                    "Closeness Centrality": 0.3945945945945946,
-                    "size": 5.271117210388184
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "59",
-                "label": "Combeferre",
-                "Id": "59",
-                "Label": "Combeferre",
-                "Gender": "M",
-                "x": 42.340633392333984,
-                "y": 229.31097412109375,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 3.1406926406926403,
-                    "Harmonic Closeness Centrality": 0.4691780821917808,
-                    "Closeness Centrality": 0.3924731182795699,
-                    "size": 5.1537394523620605
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "61",
-                "label": "Feuilly",
-                "Id": "61",
-                "Label": "Feuilly",
-                "Gender": "M",
-                "x": 2.4101827144622803,
-                "y": 239.57167053222656,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 3.1406926406926403,
-                    "Harmonic Closeness Centrality": 0.4691780821917808,
-                    "Closeness Centrality": 0.3924731182795699,
-                    "size": 5.1537394523620605
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "75",
-                "label": "Brujon",
-                "Id": "75",
-                "Label": "Brujon",
-                "Gender": "M",
-                "x": 210.4113006591797,
-                "y": 57.02845001220703,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.75,
-                    "Harmonic Closeness Centrality": 0.43721461187214605,
-                    "Closeness Centrality": 0.3802083333333333,
-                    "size": 5.036713123321533
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "50",
-                "label": "Magnon",
-                "Id": "50",
-                "Label": "Magnon",
-                "Gender": "F",
-                "x": 103.54317474365234,
-                "y": -56.21803665161133,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.6190476190476191,
-                    "Harmonic Closeness Centrality": 0.36529680365296785,
-                    "Closeness Centrality": 0.33796296296296297,
-                    "size": 5.030303001403809
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "66",
-                "label": "Grantaire",
-                "Id": "66",
-                "Label": "Grantaire",
-                "Gender": "M",
-                "x": -0.6085054278373718,
-                "y": 299.8772888183594,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.42857142857142855,
-                    "Harmonic Closeness Centrality": 0.4372146118721461,
-                    "Closeness Centrality": 0.3613861386138614,
-                    "size": 5.020978927612305
-                },
-                "scores": {
+                    "longitude": -118.245323,
+                    "node_size": 40,
+                    "count": 2341
                 }
             },
             {
                 "id": "1",
-                "label": "Napoleon",
+                "label": "San Jose, CA",
                 "Id": "1",
-                "Label": "Napoleon",
-                "Gender": "M",
-                "x": -313.8893127441406,
-                "y": -74.66645812988281,
+                "Label": "San Jose, CA",
+                "node_type": "San Jose-Mountain View",
+                "x": -5732.09423828125,
+                "y": -1531.0517578125,
                 "weights": {
-                    "Eccentricity": 5.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3280821917808218,
-                    "Closeness Centrality": 0.3054393305439331,
-                    "size": 5.0
+                    "latitude": 37.33865,
+                    "size": 31.428571701049805
                 },
                 "scores": {
-                }
-            },
-            {
-                "id": "2",
-                "label": "MlleBaptistine",
-                "Id": "2",
-                "Label": "MlleBaptistine",
-                "Gender": "F",
-                "x": -153.10845947265625,
-                "y": -47.0938606262207,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.4509132420091321,
-                    "Closeness Centrality": 0.41954022988505746,
-                    "size": 5.0
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "3",
-                "label": "MmeMagloire",
-                "Id": "3",
-                "Label": "MmeMagloire",
-                "Gender": "F",
-                "x": -163.97239685058594,
-                "y": -58.897525787353516,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.4509132420091321,
-                    "Closeness Centrality": 0.41954022988505746,
-                    "size": 5.0
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "4",
-                "label": "CountessDeLo",
-                "Id": "4",
-                "Label": "CountessDeLo",
-                "Gender": "F",
-                "x": -287.4805908203125,
-                "y": -122.27689361572266,
-                "weights": {
-                    "Eccentricity": 5.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3280821917808218,
-                    "Closeness Centrality": 0.3054393305439331,
-                    "size": 5.0
-                },
-                "scores": {
-                }
-            },
-            {
-                "id": "5",
-                "label": "Geborand",
-                "Id": "5",
-                "Label": "Geborand",
-                "Gender": "F",
-                "x": -299.49688720703125,
-                "y": -58.968353271484375,
-                "weights": {
-                    "Eccentricity": 5.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3280821917808218,
-                    "Closeness Centrality": 0.3054393305439331,
-                    "size": 5.0
-                },
-                "scores": {
+                    "longitude": -121.885422,
+                    "node_size": 35,
+                    "count": 1361
                 }
             },
             {
                 "id": "6",
-                "label": "Champtercier",
+                "label": "Chicago, IL",
                 "Id": "6",
-                "Label": "Champtercier",
-                "Gender": "M",
-                "x": -285.7261047363281,
-                "y": -85.77159881591797,
+                "Label": "Chicago, IL",
+                "node_type": "Chicago-Evanston",
+                "x": 6224.44970703125,
+                "y": 529.8662109375,
                 "weights": {
-                    "Eccentricity": 5.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3280821917808218,
-                    "Closeness Centrality": 0.3054393305439331,
-                    "size": 5.0
+                    "latitude": 41.884251,
+                    "size": 31.428571701049805
                 },
                 "scores": {
+                    "longitude": -87.632446,
+                    "node_size": 35,
+                    "count": 1318
                 }
             },
             {
-                "id": "7",
-                "label": "Cravatte",
-                "Id": "7",
-                "Label": "Cravatte",
-                "Gender": "M",
-                "x": -311.0502624511719,
-                "y": -98.20096588134766,
+                "id": "PL_Denver, CO",
+                "label": "Denver, CO",
+                "Id": "PL_Denver, CO",
+                "Label": "Denver, CO",
+                "node_type": "place",
+                "x": 164.81541442871094,
+                "y": -459.212890625,
                 "weights": {
-                    "Eccentricity": 5.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3280821917808218,
-                    "Closeness Centrality": 0.3054393305439331,
-                    "size": 5.0
+                    "latitude": 39.740009,
+                    "size": 27.85714340209961
                 },
                 "scores": {
+                    "longitude": -104.99202,
+                    "node_size": 30,
+                    "count": 413
                 }
             },
             {
-                "id": "8",
-                "label": "Count",
-                "Id": "8",
-                "Label": "Count",
-                "Gender": "M",
-                "x": -242.35147094726562,
-                "y": -73.4554672241211,
+                "id": "PL_Cleveland, OH",
+                "label": "Cleveland, OH",
+                "Id": "PL_Cleveland, OH",
+                "Label": "Cleveland, OH",
+                "node_type": "place",
+                "x": 8298.49609375,
+                "y": 352.43359375,
                 "weights": {
-                    "Eccentricity": 5.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3280821917808218,
-                    "Closeness Centrality": 0.3054393305439331,
-                    "size": 5.0
+                    "latitude": 41.5047,
+                    "size": 27.85714340209961
                 },
                 "scores": {
+                    "longitude": -81.690742,
+                    "node_size": 30,
+                    "count": 480
                 }
             },
             {
-                "id": "9",
-                "label": "OldMan",
-                "Id": "9",
-                "Label": "OldMan",
-                "Gender": "M",
-                "x": -280.9762268066406,
-                "y": -107.5222396850586,
+                "id": "5",
+                "label": "Minneapolis, MN",
+                "Id": "5",
+                "Label": "Minneapolis, MN",
+                "node_type": "Minneapolis-StPaul",
+                "x": 4258.341796875,
+                "y": 2017.9638671875,
                 "weights": {
-                    "Eccentricity": 5.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3280821917808218,
-                    "Closeness Centrality": 0.3054393305439331,
-                    "size": 5.0
+                    "latitude": 44.979031,
+                    "size": 24.285715103149414
                 },
                 "scores": {
-                }
-            },
-            {
-                "id": "10",
-                "label": "Labarre",
-                "Id": "10",
-                "Label": "Labarre",
-                "Gender": "M",
-                "x": -117.53526306152344,
-                "y": -14.214648246765137,
-                "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.42123287671232845,
-                    "Closeness Centrality": 0.3989071038251366,
-                    "size": 5.0
-                },
-                "scores": {
+                    "longitude": -93.264931,
+                    "node_size": 25,
+                    "count": 278
                 }
             },
             {
                 "id": "12",
-                "label": "Marguerite",
+                "label": "Nyssa, OR",
                 "Id": "12",
-                "Label": "Marguerite",
-                "Gender": "F",
-                "x": 54.93228530883789,
-                "y": -173.8525390625,
+                "Label": "Nyssa, OR",
+                "node_type": "Nyssa-Ontario-Vale",
+                "x": -4025.2451171875,
+                "y": 1479.1708984375,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.4463470319634701,
-                    "Closeness Centrality": 0.41954022988505746,
-                    "size": 5.0
+                    "latitude": 43.876801,
+                    "size": 24.285715103149414
                 },
                 "scores": {
+                    "longitude": -116.995659,
+                    "node_size": 25,
+                    "count": 300
+                }
+            },
+            {
+                "id": "7",
+                "label": "New York, NY",
+                "Id": "7",
+                "Label": "New York, NY",
+                "node_type": "place",
+                "x": 10993.6328125,
+                "y": 13.7822265625,
+                "weights": {
+                    "latitude": 40.77407,
+                    "size": 24.285715103149414
+                },
+                "scores": {
+                    "longitude": -73.969742,
+                    "node_size": 25,
+                    "count": 316
+                }
+            },
+            {
+                "id": "PL_San Francisco, CA",
+                "label": "San Francisco, CA",
+                "Id": "PL_San Francisco, CA",
+                "Label": "San Francisco, CA",
+                "node_type": "place",
+                "x": -5918.57177734375,
+                "y": -1337.9794921875,
+                "weights": {
+                    "latitude": 37.777119,
+                    "size": 24.285715103149414
+                },
+                "scores": {
+                    "longitude": -122.41964,
+                    "node_size": 25,
+                    "count": 330
+                }
+            },
+            {
+                "id": "PL_Spokane, WA",
+                "label": "Spokane, WA",
+                "Id": "PL_Spokane, WA",
+                "Label": "Spokane, WA",
+                "node_type": "place",
+                "x": -4170.67236328125,
+                "y": 3371.9716796875,
+                "weights": {
+                    "latitude": 47.657261,
+                    "size": 24.285715103149414
+                },
+                "scores": {
+                    "longitude": -117.412277,
+                    "node_size": 25,
+                    "count": 347
+                }
+            },
+            {
+                "id": "PL_Detroit, MI",
+                "label": "Detroit, MI",
+                "Id": "PL_Detroit, MI",
+                "Label": "Detroit, MI",
+                "node_type": "place",
+                "x": 7824.724609375,
+                "y": 740.388671875,
+                "weights": {
+                    "latitude": 42.33168,
+                    "size": 20.71428680419922
+                },
+                "scores": {
+                    "longitude": -83.047997,
+                    "node_size": 20,
+                    "count": 20
+                }
+            },
+            {
+                "id": "PL_Salt Lake City, UT",
+                "label": "Salt Lake City, UT",
+                "Id": "PL_Salt Lake City, UT",
+                "Label": "Salt Lake City, UT",
+                "node_type": "place",
+                "x": -2242.4130859375,
+                "y": 7.4404296875,
+                "weights": {
+                    "latitude": 40.76031,
+                    "size": 20.71428680419922
+                },
+                "scores": {
+                    "longitude": -111.888222,
+                    "node_size": 20,
+                    "count": 20
+                }
+            },
+            {
+                "id": "2",
+                "label": "Sacramento, CA",
+                "Id": "2",
+                "Label": "Sacramento, CA",
+                "node_type": "place",
+                "x": -5594.37939453125,
+                "y": -981.7490234375,
+                "weights": {
+                    "latitude": 38.57933,
+                    "size": 20.71428680419922
+                },
+                "scores": {
+                    "longitude": -121.490898,
+                    "node_size": 20,
+                    "count": 20
+                }
+            },
+            {
+                "id": "3",
+                "label": "Fort Logan, CO",
+                "Id": "3",
+                "Label": "Fort Logan, CO",
+                "node_type": "place",
+                "x": 146.51947021484375,
+                "y": -504.5595703125,
+                "weights": {
+                    "latitude": 39.640041,
+                    "size": 20.71428680419922
+                },
+                "scores": {
+                    "longitude": -105.044434,
+                    "node_size": 20,
+                    "count": 20
+                }
+            },
+            {
+                "id": "PL_Cheyenne, WY",
+                "label": "Cheyenne, WY",
+                "Id": "PL_Cheyenne, WY",
+                "Label": "Cheyenne, WY",
+                "node_type": "place",
+                "x": 224.3238067626953,
+                "y": 180.5166015625,
+                "weights": {
+                    "latitude": 41.134811,
+                    "size": 17.14285659790039
+                },
+                "scores": {
+                    "longitude": -104.821541,
+                    "node_size": 15,
+                    "count": 15
+                }
+            },
+            {
+                "id": "9",
+                "label": "Seattle, WA",
+                "Id": "9",
+                "Label": "Seattle, WA",
+                "node_type": "place",
+                "x": -5887.09033203125,
+                "y": 3344.1611328125,
+                "weights": {
+                    "latitude": 47.603569,
+                    "size": 17.14285659790039
+                },
+                "scores": {
+                    "longitude": -122.329453,
+                    "node_size": 15,
+                    "count": 15
+                }
+            },
+            {
+                "id": "PL_Bridgeton, NJ",
+                "label": "Bridgeton, NJ",
+                "Id": "PL_Bridgeton, NJ",
+                "Label": "Bridgeton, NJ",
+                "node_type": "place",
+                "x": 10552.302734375,
+                "y": -599.865234375,
+                "weights": {
+                    "latitude": 39.42947,
+                    "size": 17.14285659790039
+                },
+                "scores": {
+                    "longitude": -75.234062,
+                    "node_size": 15,
+                    "count": 15
+                }
+            },
+            {
+                "id": "11",
+                "label": "Weiser, ID",
+                "Id": "11",
+                "Label": "Weiser, ID",
+                "node_type": "place",
+                "x": -4016.32080078125,
+                "y": 1658.4755859375,
+                "weights": {
+                    "latitude": 44.245918,
+                    "size": 17.14285659790039
+                },
+                "scores": {
+                    "longitude": -116.970093,
+                    "node_size": 15,
+                    "count": 15
                 }
             },
             {
                 "id": "13",
-                "label": "MmeDeR",
+                "label": "Ogden, UT",
                 "Id": "13",
-                "Label": "MmeDeR",
-                "Gender": "F",
-                "x": -103.11703491210938,
-                "y": -26.212688446044922,
+                "Label": "Ogden, UT",
+                "node_type": "place",
+                "x": -2271.12744140625,
+                "y": 221.115234375,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.42123287671232845,
-                    "Closeness Centrality": 0.3989071038251366,
-                    "size": 5.0
+                    "latitude": 41.22235,
+                    "size": 17.14285659790039
                 },
                 "scores": {
+                    "longitude": -111.970482,
+                    "node_size": 15,
+                    "count": 15
                 }
             },
             {
-                "id": "14",
-                "label": "Isabeau",
-                "Id": "14",
-                "Label": "Isabeau",
-                "Gender": "M",
-                "x": -119.87759399414062,
-                "y": 4.440521717071533,
+                "id": "PL_Idaho Falls, ID",
+                "label": "Idaho Falls, ID",
+                "Id": "PL_Idaho Falls, ID",
+                "Label": "Idaho Falls, ID",
+                "node_type": "place",
+                "x": -2296.089111328125,
+                "y": 1293.4287109375,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.42123287671232845,
-                    "Closeness Centrality": 0.3989071038251366,
-                    "size": 5.0
+                    "latitude": 43.492001,
+                    "size": 13.571428298950195
                 },
                 "scores": {
+                    "longitude": -112.041992,
+                    "node_size": 10,
+                    "count": 61
                 }
             },
             {
-                "id": "15",
-                "label": "Gervais",
-                "Id": "15",
-                "Label": "Gervais",
-                "Gender": "M",
-                "x": -95.71784973144531,
-                "y": -36.938377380371094,
+                "id": "PL_Powell, WY",
+                "label": "Powell, WY",
+                "Id": "PL_Powell, WY",
+                "Label": "Powell, WY",
+                "node_type": "<null value>",
+                "x": -1150.1097412109375,
+                "y": 1906.8974609375,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.42123287671232845,
-                    "Closeness Centrality": 0.3989071038251366,
-                    "size": 5.0
+                    "latitude": 44.753521,
+                    "size": 13.571428298950195
                 },
                 "scores": {
+                    "longitude": -108.759003,
+                    "node_size": 10,
+                    "count": 55
                 }
             },
             {
-                "id": "17",
-                "label": "Listolier",
-                "Id": "17",
-                "Label": "Listolier",
-                "Gender": "M",
-                "x": 155.3692169189453,
-                "y": -303.90594482421875,
+                "id": "PL_Billings, MT",
+                "label": "Billings, MT",
+                "Id": "PL_Billings, MT",
+                "Label": "Billings, MT",
+                "node_type": "<null value>",
+                "x": -1061.7220458984375,
+                "y": 2418.0068359375,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.40296803652967983,
-                    "Closeness Centrality": 0.3476190476190476,
-                    "size": 5.0
+                    "latitude": 45.78397,
+                    "size": 13.571428298950195
                 },
                 "scores": {
+                    "longitude": -108.505791,
+                    "node_size": 10,
+                    "count": 52
                 }
             },
             {
-                "id": "18",
-                "label": "Fameuil",
-                "Id": "18",
-                "Label": "Fameuil",
-                "Gender": "M",
-                "x": 123.88944244384766,
-                "y": -294.7387390136719,
+                "id": "PL_Des Moines, IA",
+                "label": "Des Moines, IA",
+                "Id": "PL_Des Moines, IA",
+                "Label": "Des Moines, IA",
+                "node_type": "place",
+                "x": 4135.9189453125,
+                "y": 392.1064453125,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.40296803652967983,
-                    "Closeness Centrality": 0.3476190476190476,
-                    "size": 5.0
+                    "latitude": 41.58976,
+                    "size": 13.571428298950195
                 },
                 "scores": {
+                    "longitude": -93.615646,
+                    "node_size": 10,
+                    "count": 62
                 }
             },
             {
-                "id": "19",
-                "label": "Blacheville",
-                "Id": "19",
-                "Label": "Blacheville",
-                "Gender": "M",
-                "x": 168.8678741455078,
-                "y": -285.6449279785156,
+                "id": "PL_Hood River, OR",
+                "label": "Hood River, OR",
+                "Id": "PL_Hood River, OR",
+                "Label": "Hood River, OR",
+                "node_type": "place",
+                "x": -5601.30126953125,
+                "y": 2380.4306640625,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.40296803652967983,
-                    "Closeness Centrality": 0.3476190476190476,
-                    "size": 5.0
+                    "latitude": 45.70885,
+                    "size": 13.571428298950195
                 },
                 "scores": {
+                    "longitude": -121.510727,
+                    "node_size": 10,
+                    "count": 71
                 }
             },
             {
-                "id": "20",
-                "label": "Favourite",
-                "Id": "20",
-                "Label": "Favourite",
-                "Gender": "F",
-                "x": 159.18429565429688,
-                "y": -264.23468017578125,
+                "id": "PL_Tooele, UT",
+                "label": "Tooele, UT",
+                "Id": "PL_Tooele, UT",
+                "Label": "Tooele, UT",
+                "node_type": "<null value>",
+                "x": -2385.63818359375,
+                "y": -97.1494140625,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.40296803652967983,
-                    "Closeness Centrality": 0.3476190476190476,
-                    "size": 5.0
+                    "latitude": 40.53297,
+                    "size": 13.571428298950195
                 },
                 "scores": {
+                    "longitude": -112.298531,
+                    "node_size": 10,
+                    "count": 54
                 }
             },
             {
-                "id": "21",
-                "label": "Dahlia",
-                "Id": "21",
-                "Label": "Dahlia",
-                "Gender": "F",
-                "x": 140.4734649658203,
-                "y": -273.32684326171875,
+                "id": "PL_Brigham City, UT",
+                "label": "Brigham City, UT",
+                "Id": "PL_Brigham City, UT",
+                "Label": "Brigham City, UT",
+                "node_type": "place",
+                "x": -2286.925048828125,
+                "y": 355.7021484375,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.40296803652967983,
-                    "Closeness Centrality": 0.3476190476190476,
-                    "size": 5.0
+                    "latitude": 41.511711,
+                    "size": 13.571428298950195
                 },
                 "scores": {
+                    "longitude": -112.015739,
+                    "node_size": 10,
+                    "count": 67
                 }
             },
             {
-                "id": "22",
-                "label": "Zephine",
-                "Id": "22",
-                "Label": "Zephine",
-                "Gender": "F",
-                "x": 113.90728759765625,
-                "y": -283.6431884765625,
+                "id": "PL_Philadelphia, PA",
+                "label": "Philadelphia, PA",
+                "Id": "PL_Philadelphia, PA",
+                "Label": "Philadelphia, PA",
+                "node_type": "place",
+                "x": 10577.39453125,
+                "y": -362.73046875,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.40296803652967983,
-                    "Closeness Centrality": 0.3476190476190476,
-                    "size": 5.0
+                    "latitude": 39.952221,
+                    "size": 13.571428298950195
                 },
                 "scores": {
+                    "longitude": -75.162178,
+                    "node_size": 10,
+                    "count": 75
                 }
             },
             {
-                "id": "30",
-                "label": "Perpetue",
-                "Id": "30",
-                "Label": "Perpetue",
-                "Gender": "F",
-                "x": 130.13829040527344,
-                "y": -171.3949737548828,
+                "id": "8",
+                "label": "Wapato, WA",
+                "Id": "8",
+                "Label": "Wapato, WA",
+                "node_type": "place",
+                "x": -5220.7431640625,
+                "y": 2752.2822265625,
                 "weights": {
-                    "Eccentricity": 5.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3543378995433788,
-                    "Closeness Centrality": 0.3230088495575221,
-                    "size": 5.0
+                    "latitude": 46.447788,
+                    "size": 13.571428298950195
                 },
                 "scores": {
+                    "longitude": -120.420509,
+                    "node_size": 10,
+                    "count": 75
                 }
             },
             {
-                "id": "32",
-                "label": "Scaufflaire",
-                "Id": "32",
-                "Label": "Scaufflaire",
-                "Gender": "M",
-                "x": -81.49409484863281,
-                "y": -86.99244689941406,
+                "id": "PL_Cincinnati, OH",
+                "label": "Cincinnati, OH",
+                "Id": "PL_Cincinnati, OH",
+                "Label": "Cincinnati, OH",
+                "node_type": "place",
+                "x": 7316.43896484375,
+                "y": -745.20703125,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.42123287671232845,
-                    "Closeness Centrality": 0.3989071038251366,
-                    "size": 5.0
+                    "latitude": 39.10712,
+                    "size": 13.571428298950195
                 },
                 "scores": {
+                    "longitude": -84.504128,
+                    "node_size": 10,
+                    "count": 90
                 }
             },
             {
-                "id": "33",
-                "label": "Woman1",
-                "Id": "33",
-                "Label": "Woman1",
-                "Gender": "F",
-                "x": 12.843257904052734,
-                "y": -80.9785385131836,
+                "id": "PL_Whitefish, MT",
+                "label": "Whitefish, MT",
+                "Id": "PL_Whitefish, MT",
+                "Label": "Whitefish, MT",
+                "node_type": "place",
+                "x": -3097.3623046875,
+                "y": 3765.2392578125,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.42808219178082163,
-                    "Closeness Centrality": 0.4010989010989011,
-                    "size": 5.0
+                    "latitude": 48.41061,
+                    "size": 13.571428298950195
                 },
                 "scores": {
+                    "longitude": -114.337471,
+                    "node_size": 10,
+                    "count": 86
                 }
             },
             {
-                "id": "34",
-                "label": "Judge",
-                "Id": "34",
-                "Label": "Judge",
-                "Gender": "M",
-                "x": -76.90447235107422,
-                "y": -158.4622344970703,
+                "id": "10",
+                "label": "Clark Fork, ID",
+                "Id": "10",
+                "Label": "Clark Fork, ID",
+                "node_type": "<null value>",
+                "x": -3739.546630859375,
+                "y": 3626.5927734375,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.45547945205479423,
-                    "Closeness Centrality": 0.4101123595505618,
-                    "size": 5.0
+                    "latitude": 48.146271,
+                    "size": 13.571428298950195
                 },
                 "scores": {
+                    "longitude": -116.177193,
+                    "node_size": 10,
+                    "count": 54
                 }
             },
             {
-                "id": "35",
-                "label": "Champmathieu",
-                "Id": "35",
-                "Label": "Champmathieu",
-                "Gender": "M",
-                "x": -85.77401733398438,
-                "y": -144.60459899902344,
+                "id": "PL_Laramie, WY",
+                "label": "Laramie, WY",
+                "Id": "PL_Laramie, WY",
+                "Label": "Laramie, WY",
+                "node_type": "place",
+                "x": -44.04011154174805,
+                "y": 262.1904296875,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.45547945205479423,
-                    "Closeness Centrality": 0.4101123595505618,
-                    "size": 5.0
+                    "latitude": 41.310799,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -105.590347,
+                    "node_size": 5,
+                    "count": 30
                 }
             },
             {
-                "id": "36",
-                "label": "Brevet",
-                "Id": "36",
-                "Label": "Brevet",
-                "Gender": "M",
-                "x": -110.935302734375,
-                "y": -160.89212036132812,
+                "id": "PL_Boulder, CO",
+                "label": "Boulder, CO",
+                "Id": "PL_Boulder, CO",
+                "Label": "Boulder, CO",
+                "node_type": "place",
+                "x": 64.55567169189453,
+                "y": -333.7939453125,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.45547945205479423,
-                    "Closeness Centrality": 0.4101123595505618,
-                    "size": 5.0
+                    "latitude": 40.015739,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -105.279243,
+                    "node_size": 5,
+                    "count": 33
                 }
             },
             {
-                "id": "37",
-                "label": "Chenildieu",
-                "Id": "37",
-                "Label": "Chenildieu",
-                "Gender": "M",
-                "x": -85.76007080078125,
-                "y": -187.5395050048828,
+                "id": "4",
+                "label": "Fort Lupton, CO",
+                "Id": "4",
+                "Label": "Fort Lupton, CO",
+                "node_type": "place",
+                "x": 227.3358917236328,
+                "y": -304.6689453125,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.45547945205479423,
-                    "Closeness Centrality": 0.4101123595505618,
-                    "size": 5.0
+                    "latitude": 40.079609,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -104.812912,
+                    "node_size": 5,
+                    "count": 45
                 }
             },
             {
-                "id": "38",
-                "label": "Cochepaille",
-                "Id": "38",
-                "Label": "Cochepaille",
-                "Gender": "M",
-                "x": -110.68998718261719,
-                "y": -177.4259033203125,
+                "id": "PL_Logan, MT",
+                "label": "Logan, MT",
+                "Id": "PL_Logan, MT",
+                "Label": "Logan, MT",
+                "node_type": "place",
+                "x": -2081.731201171875,
+                "y": 2468.2783203125,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.45547945205479423,
-                    "Closeness Centrality": 0.4101123595505618,
-                    "size": 5.0
+                    "latitude": 45.884312,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -111.427902,
+                    "node_size": 5,
+                    "count": 41
                 }
             },
             {
-                "id": "40",
-                "label": "Boulatruelle",
-                "Id": "40",
-                "Label": "Boulatruelle",
-                "Gender": "M",
-                "x": 252.90875244140625,
-                "y": -30.592830657958984,
+                "id": "PL_Cody, WY",
+                "label": "Cody, WY",
+                "Id": "PL_Cody, WY",
+                "Label": "Cody, WY",
+                "node_type": "place",
+                "x": -1254.220703125,
+                "y": 1795.3193359375,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3652968036529678,
-                    "Closeness Centrality": 0.3443396226415094,
-                    "size": 5.0
+                    "latitude": 44.52608,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -109.057259,
+                    "node_size": 5,
+                    "count": 39
                 }
             },
             {
-                "id": "42",
-                "label": "Anzelma",
-                "Id": "42",
-                "Label": "Anzelma",
-                "Gender": "F",
-                "x": 162.19119262695312,
-                "y": -3.274167776107788,
+                "id": "PL_Kansas City, MO",
+                "label": "Kansas City, MO",
+                "Id": "PL_Kansas City, MO",
+                "Label": "Kansas City, MO",
+                "node_type": "place",
+                "x": 3798.21142578125,
+                "y": -746.857421875,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3869863013698628,
-                    "Closeness Centrality": 0.35436893203883496,
-                    "size": 5.0
+                    "latitude": 39.10345,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -94.583107,
+                    "node_size": 5,
+                    "count": 36
                 }
             },
             {
-                "id": "43",
-                "label": "Woman2",
-                "Id": "43",
-                "Label": "Woman2",
-                "Gender": "F",
-                "x": -8.66396713256836,
-                "y": -59.80815124511719,
+                "id": "PL_Portland, OR",
+                "label": "Portland, OR",
+                "Id": "PL_Portland, OR",
+                "Label": "Portland, OR",
+                "node_type": "place",
+                "x": -6007.9287109375,
+                "y": 2282.0986328125,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.43721461187214583,
-                    "Closeness Centrality": 0.40555555555555556,
-                    "size": 5.0
+                    "latitude": 45.511791,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -122.675629,
+                    "node_size": 5,
+                    "count": 26
                 }
             },
             {
-                "id": "44",
-                "label": "MotherInnocent",
-                "Id": "44",
-                "Label": "MotherInnocent",
-                "Gender": "F",
-                "x": -73.72925567626953,
-                "y": -52.85359573364258,
+                "id": "PL_Columbus, OH",
+                "label": "Columbus, OH",
+                "Id": "PL_Columbus, OH",
+                "Label": "Columbus, OH",
+                "node_type": "place",
+                "x": 7840.51953125,
+                "y": -358.28125,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.4303652968036527,
-                    "Closeness Centrality": 0.40331491712707185,
-                    "size": 5.0
+                    "latitude": 39.96199,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -83.002747,
+                    "node_size": 5,
+                    "count": 22
                 }
             },
             {
-                "id": "45",
-                "label": "Gribier",
-                "Id": "45",
-                "Label": "Gribier",
-                "Gender": "M",
-                "x": -92.41172790527344,
-                "y": -68.78112030029297,
+                "id": "PL_Caldwell, ID",
+                "label": "Caldwell, ID",
+                "Id": "PL_Caldwell, ID",
+                "Label": "Caldwell, ID",
+                "node_type": "place",
+                "x": -3919.45361328125,
+                "y": 1377.9638671875,
                 "weights": {
-                    "Eccentricity": 5.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.30753424657534234,
-                    "Closeness Centrality": 0.2908366533864542,
-                    "size": 5.0
+                    "latitude": 43.667439,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -116.692589,
+                    "node_size": 5,
+                    "count": 45
                 }
             },
             {
-                "id": "47",
-                "label": "MmeBurgon",
-                "Id": "47",
-                "Label": "MmeBurgon",
-                "Gender": "F",
-                "x": 153.01113891601562,
-                "y": 178.350830078125,
+                "id": "PL_Ann Arbor, MI",
+                "label": "Ann Arbor, MI",
+                "Id": "PL_Ann Arbor, MI",
+                "Label": "Ann Arbor, MI",
+                "node_type": "place",
+                "x": 7580.21484375,
+                "y": 716.9873046875,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.4029680365296803,
-                    "Closeness Centrality": 0.37055837563451777,
-                    "size": 5.0
+                    "latitude": 42.282101,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -83.748466,
+                    "node_size": 5,
+                    "count": 44
                 }
             },
             {
-                "id": "52",
-                "label": "MmePontmercy",
-                "Id": "52",
-                "Label": "MmePontmercy",
-                "Gender": "F",
-                "x": -108.40374755859375,
-                "y": 123.28861236572266,
+                "id": "PL_Milwaukee, WI",
+                "label": "Milwaukee, WI",
+                "Id": "PL_Milwaukee, WI",
+                "Label": "Milwaukee, WI",
+                "node_type": "place",
+                "x": 6128.65771484375,
+                "y": 1077.7060546875,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3801369863013698,
-                    "Closeness Centrality": 0.3526570048309179,
-                    "size": 5.0
+                    "latitude": 43.042,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -87.90687,
+                    "node_size": 5,
+                    "count": 29
                 }
             },
             {
-                "id": "53",
-                "label": "MlleVaubois",
-                "Id": "53",
-                "Label": "MlleVaubois",
-                "Gender": "F",
-                "x": -161.67916870117188,
-                "y": 112.8858871459961,
+                "id": "PL_Albuquerque, NM",
+                "label": "Albuquerque, NM",
+                "Id": "PL_Albuquerque, NM",
+                "Label": "Albuquerque, NM",
+                "node_type": "place",
+                "x": -413.5964660644531,
+                "y": -2506.5166015625,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3253424657534245,
-                    "Closeness Centrality": 0.3080168776371308,
-                    "size": 5.0
+                    "latitude": 35.084229,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -106.649048,
+                    "node_size": 5,
+                    "count": 27
                 }
             },
             {
-                "id": "56",
-                "label": "BaronessT",
-                "Id": "56",
-                "Label": "BaronessT",
-                "Gender": "F",
-                "x": -83.65634155273438,
-                "y": 112.43489837646484,
+                "id": "PL_Granada, CO",
+                "label": "Granada, CO",
+                "Id": "PL_Granada, CO",
+                "Label": "Granada, CO",
+                "node_type": "place",
+                "x": 1100.906005859375,
+                "y": -1210.6904296875,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.3801369863013697,
-                    "Closeness Centrality": 0.3526570048309179,
-                    "size": 5.0
+                    "latitude": 38.064781,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -102.310318,
+                    "node_size": 5,
+                    "count": 41
                 }
             },
             {
-                "id": "60",
-                "label": "Prouvaire",
-                "Id": "60",
-                "Label": "Prouvaire",
-                "Gender": "M",
-                "x": -13.037967681884766,
-                "y": 268.0501708984375,
+                "id": "PL_Fresno, CA",
+                "label": "Fresno, CA",
+                "Id": "PL_Fresno, CA",
+                "Label": "Fresno, CA",
+                "node_type": "place",
+                "x": -4999.1630859375,
+                "y": -1792.5498046875,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.430365296803653,
-                    "Closeness Centrality": 0.35960591133004927,
-                    "size": 5.0
+                    "latitude": 36.740681,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -119.785728,
+                    "node_size": 5,
+                    "count": 21
                 }
             },
             {
-                "id": "67",
-                "label": "MotherPlutarch",
-                "Id": "67",
-                "Label": "MotherPlutarch",
-                "Gender": "F",
-                "x": 102.99083709716797,
-                "y": 347.0633239746094,
+                "id": "PL_Lincoln, NE",
+                "label": "Lincoln, NE",
+                "Id": "PL_Lincoln, NE",
+                "Label": "Lincoln, NE",
+                "node_type": "place",
+                "x": 3056.72900390625,
+                "y": 32.0185546875,
                 "weights": {
-                    "Eccentricity": 5.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.31347031963470307,
-                    "Closeness Centrality": 0.28515625,
-                    "size": 5.0
+                    "latitude": 40.813622,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -96.707298,
+                    "node_size": 5,
+                    "count": 30
                 }
             },
             {
-                "id": "72",
-                "label": "Toussaint",
-                "Id": "72",
-                "Label": "Toussaint",
-                "Gender": "M",
-                "x": 41.21391296386719,
-                "y": -67.49861145019531,
+                "id": "PL_Omaha, NE",
+                "label": "Omaha, NE",
+                "Id": "PL_Omaha, NE",
+                "Label": "Omaha, NE",
+                "node_type": "place",
+                "x": 3324.371337890625,
+                "y": 238.87109375,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.43721461187214583,
-                    "Closeness Centrality": 0.40555555555555556,
-                    "size": 5.0
+                    "latitude": 41.2606,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -95.940559,
+                    "node_size": 5,
+                    "count": 29
                 }
             },
             {
-                "id": "73",
-                "label": "Child1",
-                "Id": "73",
-                "Label": "Child1",
-                "Gender": "M",
-                "x": 161.75392150878906,
-                "y": 287.1788330078125,
+                "id": "PL_Cozad, NE",
+                "label": "Cozad, NE",
+                "Id": "PL_Cozad, NE",
+                "Label": "Cozad, NE",
+                "node_type": "place",
+                "x": 1912.5284423828125,
+                "y": 53.212890625,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.37785388127853886,
-                    "Closeness Centrality": 0.3443396226415094,
-                    "size": 5.0
+                    "latitude": 40.859558,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -99.985191,
+                    "node_size": 5,
+                    "count": 31
                 }
             },
             {
-                "id": "74",
-                "label": "Child2",
-                "Id": "74",
-                "Label": "Child2",
-                "Gender": "M",
-                "x": 157.7982177734375,
-                "y": 296.6003112792969,
+                "id": "PL_St. Louis, MO",
+                "label": "St. Louis, MO",
+                "Id": "PL_St. Louis, MO",
+                "Label": "St. Louis, MO",
+                "node_type": "place",
+                "x": 5328.357421875,
+                "y": -960.1435546875,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.37785388127853886,
-                    "Closeness Centrality": 0.3443396226415094,
-                    "size": 5.0
+                    "latitude": 38.6277,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -90.199562,
+                    "node_size": 5,
+                    "count": 47
                 }
             },
             {
-                "id": "76",
-                "label": "MmeHucheloup",
-                "Id": "76",
-                "Label": "MmeHucheloup",
-                "Gender": "F",
-                "x": 21.0892276763916,
-                "y": 342.502197265625,
+                "id": "PL_Boston, MA",
+                "label": "Boston, MA",
+                "Id": "PL_Boston, MA",
+                "Label": "Boston, MA",
+                "node_type": "place",
+                "x": 12010.462890625,
+                "y": 753.1318359375,
                 "weights": {
-                    "Eccentricity": 4.0,
-                    "Betweenness Centrality": 0.0,
-                    "Harmonic Closeness Centrality": 0.4166666666666667,
-                    "Closeness Centrality": 0.35609756097560974,
-                    "size": 5.0
+                    "latitude": 42.358662,
+                    "size": 10.0
                 },
                 "scores": {
+                    "longitude": -71.05674,
+                    "node_size": 5,
+                    "count": 30
+                }
+            },
+            {
+                "id": "PL_Campbell, CA",
+                "label": "Campbell, CA",
+                "Id": "PL_Campbell, CA",
+                "Label": "Campbell, CA",
+                "node_type": "place",
+                "x": -6350.275390625,
+                "y": 106.3779296875,
+                "weights": {
+                    "latitude": 40.97465,
+                    "size": 10.0
+                },
+                "scores": {
+                    "longitude": -123.65638,
+                    "node_size": 5,
+                    "count": 42
+                }
+            },
+            {
+                "id": "PL_Richfield, UT",
+                "label": "Richfield, UT",
+                "Id": "PL_Richfield, UT",
+                "Label": "Richfield, UT",
+                "node_type": "place",
+                "x": -2311.024169921875,
+                "y": -895.8046875,
+                "weights": {
+                    "latitude": 38.771549,
+                    "size": 10.0
+                },
+                "scores": {
+                    "longitude": -112.084778,
+                    "node_size": 5,
+                    "count": 21
+                }
+            },
+            {
+                "id": "PL_Crystal City, TX",
+                "label": "Crystal City, TX",
+                "Id": "PL_Crystal City, TX",
+                "Label": "Crystal City, TX",
+                "node_type": "place",
+                "x": 1967.1949462890625,
+                "y": -5142.3837890625,
+                "weights": {
+                    "latitude": 28.678089,
+                    "size": 10.0
+                },
+                "scores": {
+                    "longitude": -99.828583,
+                    "node_size": 5,
+                    "count": 41
+                }
+            },
+            {
+                "id": "PL_Heart Mountain",
+                "label": "Heart Mountain, WY",
+                "Id": "PL_Heart Mountain",
+                "Label": "Heart Mountain, WY",
+                "node_type": "place",
+                "x": -1275.685791015625,
+                "y": 1863.6845703125,
+                "weights": {
+                    "latitude": 44.665539,
+                    "size": -0.7142858505249023
+                },
+                "scores": {
+                    "longitude": -109.118752
+                }
+            },
+            {
+                "id": "PL_Japan",
+                "label": "Japan",
+                "Id": "PL_Japan",
+                "Label": "Japan",
+                "node_type": "place",
+                "x": 25781.25,
+                "y": -1991.9091796875,
+                "weights": {
+                    "latitude": 36.281647,
+                    "size": -0.7142858505249023
+                },
+                "scores": {
+                    "longitude": 139.077271
                 }
             }
         ],
         "links": [
             {
-                "source_id": "1",
-                "target_id": "0",
-                "strength": 1.0
-            },
-            {
-                "source_id": "2",
-                "target_id": "0",
-                "strength": 8.0
-            },
-            {
-                "source_id": "3",
-                "target_id": "0",
-                "strength": 10.0
-            },
-            {
-                "source_id": "3",
-                "target_id": "2",
-                "strength": 6.0
-            },
-            {
-                "source_id": "4",
-                "target_id": "0",
-                "strength": 1.0
-            },
-            {
-                "source_id": "5",
-                "target_id": "0",
-                "strength": 1.0
-            },
-            {
-                "source_id": "6",
-                "target_id": "0",
-                "strength": 1.0
-            },
-            {
-                "source_id": "7",
-                "target_id": "0",
-                "strength": 1.0
-            },
-            {
-                "source_id": "8",
-                "target_id": "0",
-                "strength": 2.0
-            },
-            {
-                "source_id": "9",
-                "target_id": "0",
-                "strength": 1.0
-            },
-            {
-                "source_id": "11",
-                "target_id": "0",
-                "strength": 5.0
-            },
-            {
-                "source_id": "11",
-                "target_id": "2",
-                "strength": 3.0
-            },
-            {
-                "source_id": "11",
-                "target_id": "3",
-                "strength": 3.0
-            },
-            {
-                "source_id": "11",
-                "target_id": "10",
-                "strength": 1.0
-            },
-            {
-                "source_id": "12",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "13",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "14",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "15",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "17",
-                "target_id": "16",
-                "strength": 4.0
-            },
-            {
-                "source_id": "18",
-                "target_id": "16",
-                "strength": 4.0
-            },
-            {
-                "source_id": "18",
-                "target_id": "17",
-                "strength": 4.0
-            },
-            {
-                "source_id": "19",
-                "target_id": "16",
-                "strength": 4.0
-            },
-            {
-                "source_id": "19",
-                "target_id": "17",
-                "strength": 4.0
-            },
-            {
-                "source_id": "19",
-                "target_id": "18",
-                "strength": 4.0
-            },
-            {
-                "source_id": "20",
-                "target_id": "16",
-                "strength": 3.0
-            },
-            {
-                "source_id": "20",
-                "target_id": "17",
-                "strength": 3.0
-            },
-            {
-                "source_id": "20",
-                "target_id": "18",
-                "strength": 3.0
-            },
-            {
-                "source_id": "20",
-                "target_id": "19",
-                "strength": 4.0
-            },
-            {
-                "source_id": "21",
-                "target_id": "16",
-                "strength": 3.0
-            },
-            {
-                "source_id": "21",
-                "target_id": "17",
-                "strength": 3.0
-            },
-            {
-                "source_id": "21",
-                "target_id": "18",
-                "strength": 3.0
-            },
-            {
-                "source_id": "21",
-                "target_id": "19",
-                "strength": 3.0
-            },
-            {
-                "source_id": "21",
-                "target_id": "20",
-                "strength": 5.0
-            },
-            {
-                "source_id": "22",
-                "target_id": "16",
-                "strength": 3.0
-            },
-            {
-                "source_id": "22",
-                "target_id": "17",
-                "strength": 3.0
-            },
-            {
-                "source_id": "22",
-                "target_id": "18",
-                "strength": 3.0
-            },
-            {
-                "source_id": "22",
-                "target_id": "19",
-                "strength": 3.0
-            },
-            {
-                "source_id": "22",
-                "target_id": "20",
-                "strength": 4.0
-            },
-            {
-                "source_id": "22",
-                "target_id": "21",
-                "strength": 4.0
-            },
-            {
-                "source_id": "23",
-                "target_id": "11",
-                "strength": 9.0
-            },
-            {
-                "source_id": "23",
-                "target_id": "12",
-                "strength": 2.0
-            },
-            {
-                "source_id": "23",
-                "target_id": "16",
-                "strength": 3.0
-            },
-            {
-                "source_id": "23",
-                "target_id": "17",
-                "strength": 3.0
-            },
-            {
-                "source_id": "23",
-                "target_id": "18",
-                "strength": 3.0
-            },
-            {
-                "source_id": "23",
-                "target_id": "19",
-                "strength": 3.0
-            },
-            {
-                "source_id": "23",
-                "target_id": "20",
-                "strength": 4.0
-            },
-            {
-                "source_id": "23",
-                "target_id": "21",
-                "strength": 4.0
-            },
-            {
-                "source_id": "23",
-                "target_id": "22",
-                "strength": 4.0
-            },
-            {
-                "source_id": "24",
-                "target_id": "11",
-                "strength": 7.0
-            },
-            {
-                "source_id": "24",
-                "target_id": "23",
-                "strength": 2.0
-            },
-            {
-                "source_id": "26",
-                "target_id": "11",
-                "strength": 31.0
-            },
-            {
-                "source_id": "26",
-                "target_id": "16",
-                "strength": 1.0
-            },
-            {
-                "source_id": "26",
-                "target_id": "24",
-                "strength": 4.0
-            },
-            {
-                "source_id": "26",
-                "target_id": "25",
-                "strength": 1.0
-            },
-            {
-                "source_id": "27",
-                "target_id": "11",
-                "strength": 17.0
-            },
-            {
-                "source_id": "27",
-                "target_id": "23",
-                "strength": 5.0
-            },
-            {
-                "source_id": "27",
-                "target_id": "24",
-                "strength": 1.0
-            },
-            {
-                "source_id": "27",
-                "target_id": "26",
-                "strength": 1.0
-            },
-            {
-                "source_id": "27",
-                "target_id": "25",
-                "strength": 5.0
-            },
-            {
-                "source_id": "28",
-                "target_id": "11",
-                "strength": 8.0
-            },
-            {
-                "source_id": "28",
-                "target_id": "27",
-                "strength": 1.0
-            },
-            {
-                "source_id": "29",
-                "target_id": "11",
-                "strength": 2.0
-            },
-            {
-                "source_id": "29",
-                "target_id": "23",
-                "strength": 1.0
-            },
-            {
-                "source_id": "29",
-                "target_id": "27",
-                "strength": 1.0
-            },
-            {
-                "source_id": "30",
-                "target_id": "23",
-                "strength": 1.0
-            },
-            {
-                "source_id": "31",
-                "target_id": "11",
-                "strength": 3.0
-            },
-            {
-                "source_id": "31",
-                "target_id": "23",
-                "strength": 2.0
-            },
-            {
-                "source_id": "31",
-                "target_id": "27",
-                "strength": 1.0
-            },
-            {
-                "source_id": "31",
-                "target_id": "30",
-                "strength": 2.0
-            },
-            {
-                "source_id": "32",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "33",
-                "target_id": "11",
-                "strength": 2.0
-            },
-            {
-                "source_id": "33",
-                "target_id": "27",
-                "strength": 1.0
-            },
-            {
-                "source_id": "34",
-                "target_id": "11",
-                "strength": 3.0
-            },
-            {
-                "source_id": "34",
-                "target_id": "29",
-                "strength": 2.0
-            },
-            {
-                "source_id": "35",
-                "target_id": "11",
-                "strength": 3.0
-            },
-            {
-                "source_id": "35",
-                "target_id": "29",
-                "strength": 2.0
-            },
-            {
-                "source_id": "35",
-                "target_id": "34",
-                "strength": 3.0
-            },
-            {
-                "source_id": "36",
-                "target_id": "11",
-                "strength": 2.0
-            },
-            {
-                "source_id": "36",
-                "target_id": "29",
-                "strength": 1.0
-            },
-            {
-                "source_id": "36",
-                "target_id": "34",
-                "strength": 2.0
-            },
-            {
-                "source_id": "36",
-                "target_id": "35",
-                "strength": 2.0
-            },
-            {
-                "source_id": "37",
-                "target_id": "11",
-                "strength": 2.0
-            },
-            {
-                "source_id": "37",
-                "target_id": "29",
-                "strength": 1.0
-            },
-            {
-                "source_id": "37",
-                "target_id": "34",
-                "strength": 2.0
-            },
-            {
-                "source_id": "37",
-                "target_id": "35",
-                "strength": 2.0
-            },
-            {
-                "source_id": "37",
-                "target_id": "36",
-                "strength": 2.0
-            },
-            {
-                "source_id": "38",
-                "target_id": "11",
-                "strength": 2.0
-            },
-            {
-                "source_id": "38",
-                "target_id": "29",
-                "strength": 1.0
-            },
-            {
-                "source_id": "38",
-                "target_id": "34",
-                "strength": 2.0
-            },
-            {
-                "source_id": "38",
-                "target_id": "35",
-                "strength": 2.0
-            },
-            {
-                "source_id": "38",
-                "target_id": "36",
-                "strength": 2.0
-            },
-            {
-                "source_id": "38",
-                "target_id": "37",
-                "strength": 2.0
-            },
-            {
-                "source_id": "40",
-                "target_id": "25",
-                "strength": 1.0
-            },
-            {
-                "source_id": "41",
-                "target_id": "24",
-                "strength": 2.0
-            },
-            {
-                "source_id": "41",
-                "target_id": "25",
-                "strength": 3.0
-            },
-            {
-                "source_id": "42",
-                "target_id": "24",
-                "strength": 1.0
-            },
-            {
-                "source_id": "42",
-                "target_id": "41",
-                "strength": 2.0
-            },
-            {
-                "source_id": "42",
-                "target_id": "25",
-                "strength": 2.0
-            },
-            {
-                "source_id": "43",
-                "target_id": "11",
-                "strength": 3.0
-            },
-            {
-                "source_id": "43",
-                "target_id": "26",
-                "strength": 1.0
-            },
-            {
-                "source_id": "43",
-                "target_id": "27",
-                "strength": 1.0
-            },
-            {
-                "source_id": "44",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "44",
-                "target_id": "28",
-                "strength": 3.0
-            },
-            {
-                "source_id": "45",
-                "target_id": "28",
-                "strength": 2.0
-            },
-            {
-                "source_id": "47",
-                "target_id": "25",
-                "strength": 1.0
-            },
-            {
-                "source_id": "48",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "48",
-                "target_id": "27",
-                "strength": 1.0
-            },
-            {
-                "source_id": "48",
-                "target_id": "47",
-                "strength": 2.0
-            },
-            {
-                "source_id": "48",
-                "target_id": "25",
-                "strength": 1.0
-            },
-            {
-                "source_id": "50",
-                "target_id": "24",
-                "strength": 1.0
-            },
-            {
-                "source_id": "50",
-                "target_id": "54",
-                "strength": 1.0
-            },
-            {
-                "source_id": "51",
-                "target_id": "11",
-                "strength": 2.0
-            },
-            {
-                "source_id": "51",
-                "target_id": "26",
-                "strength": 2.0
-            },
-            {
-                "source_id": "51",
-                "target_id": "54",
-                "strength": 9.0
-            },
-            {
-                "source_id": "52",
-                "target_id": "51",
-                "strength": 1.0
-            },
-            {
-                "source_id": "52",
-                "target_id": "55",
-                "strength": 1.0
-            },
-            {
-                "source_id": "53",
-                "target_id": "51",
-                "strength": 1.0
-            },
-            {
-                "source_id": "56",
-                "target_id": "55",
-                "strength": 1.0
-            },
-            {
-                "source_id": "56",
-                "target_id": "54",
-                "strength": 1.0
-            },
-            {
-                "source_id": "57",
-                "target_id": "41",
-                "strength": 1.0
-            },
-            {
-                "source_id": "57",
-                "target_id": "48",
-                "strength": 1.0
-            },
-            {
-                "source_id": "57",
-                "target_id": "55",
-                "strength": 1.0
-            },
-            {
-                "source_id": "58",
-                "target_id": "11",
-                "strength": 4.0
-            },
-            {
-                "source_id": "58",
-                "target_id": "27",
-                "strength": 6.0
-            },
-            {
-                "source_id": "58",
-                "target_id": "48",
-                "strength": 7.0
-            },
-            {
-                "source_id": "58",
-                "target_id": "57",
-                "strength": 1.0
-            },
-            {
-                "source_id": "58",
-                "target_id": "55",
-                "strength": 7.0
-            },
-            {
-                "source_id": "59",
-                "target_id": "48",
-                "strength": 6.0
-            },
-            {
-                "source_id": "59",
-                "target_id": "57",
-                "strength": 2.0
-            },
-            {
-                "source_id": "59",
-                "target_id": "58",
-                "strength": 15.0
-            },
-            {
-                "source_id": "59",
-                "target_id": "55",
-                "strength": 5.0
-            },
-            {
-                "source_id": "60",
-                "target_id": "48",
-                "strength": 1.0
-            },
-            {
-                "source_id": "60",
-                "target_id": "58",
-                "strength": 4.0
-            },
-            {
-                "source_id": "60",
-                "target_id": "59",
-                "strength": 2.0
-            },
-            {
-                "source_id": "61",
-                "target_id": "48",
-                "strength": 2.0
-            },
-            {
-                "source_id": "61",
-                "target_id": "57",
-                "strength": 1.0
-            },
-            {
-                "source_id": "61",
-                "target_id": "58",
-                "strength": 6.0
-            },
-            {
-                "source_id": "61",
-                "target_id": "59",
-                "strength": 5.0
-            },
-            {
-                "source_id": "61",
-                "target_id": "60",
-                "strength": 2.0
-            },
-            {
-                "source_id": "61",
-                "target_id": "55",
-                "strength": 1.0
-            },
-            {
-                "source_id": "62",
-                "target_id": "41",
-                "strength": 1.0
-            },
-            {
-                "source_id": "62",
-                "target_id": "48",
-                "strength": 7.0
-            },
-            {
-                "source_id": "62",
-                "target_id": "57",
-                "strength": 2.0
-            },
-            {
-                "source_id": "62",
-                "target_id": "58",
-                "strength": 17.0
-            },
-            {
-                "source_id": "62",
-                "target_id": "59",
-                "strength": 13.0
-            },
-            {
-                "source_id": "62",
-                "target_id": "60",
-                "strength": 3.0
-            },
-            {
-                "source_id": "62",
-                "target_id": "61",
-                "strength": 6.0
-            },
-            {
-                "source_id": "62",
-                "target_id": "55",
-                "strength": 9.0
-            },
-            {
-                "source_id": "63",
-                "target_id": "48",
-                "strength": 5.0
-            },
-            {
-                "source_id": "63",
-                "target_id": "57",
-                "strength": 2.0
-            },
-            {
-                "source_id": "63",
-                "target_id": "58",
-                "strength": 4.0
-            },
-            {
-                "source_id": "63",
-                "target_id": "59",
-                "strength": 5.0
-            },
-            {
-                "source_id": "63",
-                "target_id": "60",
-                "strength": 2.0
-            },
-            {
-                "source_id": "63",
-                "target_id": "61",
-                "strength": 3.0
-            },
-            {
-                "source_id": "63",
-                "target_id": "62",
-                "strength": 6.0
-            },
-            {
-                "source_id": "63",
-                "target_id": "55",
-                "strength": 1.0
-            },
-            {
-                "source_id": "64",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "64",
-                "target_id": "48",
-                "strength": 5.0
-            },
-            {
-                "source_id": "64",
-                "target_id": "57",
-                "strength": 1.0
-            },
-            {
-                "source_id": "64",
-                "target_id": "58",
-                "strength": 10.0
-            },
-            {
-                "source_id": "64",
-                "target_id": "59",
-                "strength": 9.0
-            },
-            {
-                "source_id": "64",
-                "target_id": "60",
-                "strength": 2.0
-            },
-            {
-                "source_id": "64",
-                "target_id": "61",
-                "strength": 6.0
-            },
-            {
-                "source_id": "64",
-                "target_id": "62",
-                "strength": 12.0
-            },
-            {
-                "source_id": "64",
-                "target_id": "63",
-                "strength": 4.0
-            },
-            {
-                "source_id": "64",
-                "target_id": "55",
-                "strength": 5.0
-            },
-            {
-                "source_id": "65",
-                "target_id": "48",
-                "strength": 3.0
-            },
-            {
-                "source_id": "65",
-                "target_id": "57",
-                "strength": 1.0
-            },
-            {
-                "source_id": "65",
-                "target_id": "58",
-                "strength": 5.0
-            },
-            {
-                "source_id": "65",
-                "target_id": "59",
-                "strength": 5.0
-            },
-            {
-                "source_id": "65",
-                "target_id": "60",
-                "strength": 2.0
-            },
-            {
-                "source_id": "65",
-                "target_id": "61",
-                "strength": 5.0
-            },
-            {
-                "source_id": "65",
-                "target_id": "62",
-                "strength": 5.0
-            },
-            {
-                "source_id": "65",
-                "target_id": "63",
-                "strength": 5.0
-            },
-            {
-                "source_id": "65",
-                "target_id": "64",
-                "strength": 7.0
-            },
-            {
-                "source_id": "65",
-                "target_id": "55",
-                "strength": 2.0
-            },
-            {
-                "source_id": "66",
-                "target_id": "48",
-                "strength": 1.0
-            },
-            {
-                "source_id": "66",
-                "target_id": "58",
-                "strength": 3.0
-            },
-            {
-                "source_id": "66",
-                "target_id": "59",
-                "strength": 1.0
-            },
-            {
-                "source_id": "66",
-                "target_id": "60",
-                "strength": 1.0
-            },
-            {
-                "source_id": "66",
-                "target_id": "61",
-                "strength": 1.0
-            },
-            {
-                "source_id": "66",
-                "target_id": "62",
-                "strength": 2.0
-            },
-            {
-                "source_id": "66",
-                "target_id": "63",
-                "strength": 1.0
-            },
-            {
-                "source_id": "66",
-                "target_id": "64",
-                "strength": 3.0
-            },
-            {
-                "source_id": "66",
-                "target_id": "65",
-                "strength": 2.0
-            },
-            {
-                "source_id": "67",
-                "target_id": "57",
-                "strength": 3.0
-            },
-            {
-                "source_id": "68",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "68",
-                "target_id": "24",
-                "strength": 1.0
-            },
-            {
-                "source_id": "68",
-                "target_id": "27",
-                "strength": 1.0
-            },
-            {
-                "source_id": "68",
-                "target_id": "41",
-                "strength": 1.0
-            },
-            {
-                "source_id": "68",
-                "target_id": "48",
-                "strength": 1.0
-            },
-            {
-                "source_id": "68",
-                "target_id": "25",
-                "strength": 5.0
-            },
-            {
-                "source_id": "69",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "69",
-                "target_id": "24",
-                "strength": 1.0
-            },
-            {
-                "source_id": "69",
-                "target_id": "27",
-                "strength": 2.0
-            },
-            {
-                "source_id": "69",
-                "target_id": "41",
-                "strength": 1.0
-            },
-            {
-                "source_id": "69",
-                "target_id": "48",
-                "strength": 1.0
-            },
-            {
-                "source_id": "69",
-                "target_id": "68",
-                "strength": 6.0
-            },
-            {
-                "source_id": "69",
-                "target_id": "25",
-                "strength": 6.0
-            },
-            {
-                "source_id": "70",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "70",
-                "target_id": "24",
-                "strength": 1.0
-            },
-            {
-                "source_id": "70",
-                "target_id": "27",
-                "strength": 1.0
-            },
-            {
-                "source_id": "70",
-                "target_id": "41",
-                "strength": 1.0
-            },
-            {
-                "source_id": "70",
-                "target_id": "58",
-                "strength": 1.0
-            },
-            {
-                "source_id": "70",
-                "target_id": "68",
-                "strength": 4.0
-            },
-            {
-                "source_id": "70",
-                "target_id": "69",
-                "strength": 4.0
-            },
-            {
-                "source_id": "70",
-                "target_id": "25",
-                "strength": 4.0
-            },
-            {
-                "source_id": "71",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "71",
-                "target_id": "27",
-                "strength": 1.0
-            },
-            {
-                "source_id": "71",
-                "target_id": "41",
-                "strength": 1.0
-            },
-            {
-                "source_id": "71",
-                "target_id": "48",
-                "strength": 1.0
-            },
-            {
-                "source_id": "71",
-                "target_id": "68",
-                "strength": 2.0
-            },
-            {
-                "source_id": "71",
-                "target_id": "69",
-                "strength": 2.0
-            },
-            {
-                "source_id": "71",
-                "target_id": "70",
-                "strength": 2.0
-            },
-            {
-                "source_id": "71",
-                "target_id": "25",
-                "strength": 1.0
-            },
-            {
-                "source_id": "72",
-                "target_id": "11",
-                "strength": 1.0
-            },
-            {
-                "source_id": "72",
-                "target_id": "26",
-                "strength": 2.0
-            },
-            {
-                "source_id": "72",
-                "target_id": "27",
-                "strength": 1.0
-            },
-            {
-                "source_id": "73",
-                "target_id": "48",
-                "strength": 2.0
-            },
-            {
-                "source_id": "74",
-                "target_id": "48",
-                "strength": 2.0
-            },
-            {
-                "source_id": "74",
-                "target_id": "73",
-                "strength": 3.0
-            },
-            {
-                "source_id": "75",
-                "target_id": "41",
-                "strength": 1.0
-            },
-            {
-                "source_id": "75",
-                "target_id": "48",
-                "strength": 1.0
-            },
-            {
-                "source_id": "75",
-                "target_id": "68",
-                "strength": 3.0
-            },
-            {
-                "source_id": "75",
-                "target_id": "69",
-                "strength": 3.0
-            },
-            {
-                "source_id": "75",
-                "target_id": "70",
-                "strength": 1.0
-            },
-            {
-                "source_id": "75",
-                "target_id": "71",
-                "strength": 1.0
-            },
-            {
-                "source_id": "75",
-                "target_id": "25",
-                "strength": 3.0
-            },
-            {
-                "source_id": "76",
-                "target_id": "48",
-                "strength": 1.0
-            },
-            {
-                "source_id": "76",
-                "target_id": "58",
-                "strength": 1.0
-            },
-            {
-                "source_id": "76",
-                "target_id": "62",
-                "strength": 1.0
-            },
-            {
-                "source_id": "76",
-                "target_id": "63",
-                "strength": 1.0
-            },
-            {
-                "source_id": "76",
-                "target_id": "64",
-                "strength": 1.0
-            },
-            {
-                "source_id": "76",
-                "target_id": "65",
-                "strength": 1.0
-            },
-            {
-                "source_id": "76",
-                "target_id": "66",
-                "strength": 1.0
-            },
-            {
-                "source_id": "55",
-                "target_id": "11",
-                "strength": 19.0
-            },
-            {
-                "source_id": "55",
-                "target_id": "16",
-                "strength": 1.0
-            },
-            {
-                "source_id": "55",
-                "target_id": "26",
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Fresno, CA",
                 "strength": 21.0
             },
             {
-                "source_id": "55",
-                "target_id": "41",
-                "strength": 5.0
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Crystal City, TX",
+                "strength": 41.0
             },
             {
-                "source_id": "55",
-                "target_id": "48",
-                "strength": 4.0
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Albuquerque, NM",
+                "strength": 27.0
             },
             {
-                "source_id": "55",
-                "target_id": "51",
-                "strength": 6.0
+                "source_id": "PL_Heart Mountain",
+                "target_id": "9",
+                "strength": 28.0
             },
             {
-                "source_id": "55",
-                "target_id": "25",
-                "strength": 2.0
+                "source_id": "PL_Heart Mountain",
+                "target_id": "13",
+                "strength": 35.0
             },
             {
-                "source_id": "55",
-                "target_id": "54",
-                "strength": 12.0
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Columbus, OH",
+                "strength": 22.0
             },
             {
-                "source_id": "25",
+                "source_id": "PL_Heart Mountain",
                 "target_id": "11",
-                "strength": 12.0
+                "strength": 53.0
             },
             {
-                "source_id": "25",
-                "target_id": "23",
-                "strength": 1.0
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Portland, OR",
+                "strength": 26.0
             },
             {
-                "source_id": "25",
-                "target_id": "24",
-                "strength": 13.0
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Des Moines, IA",
+                "strength": 62.0
             },
             {
-                "source_id": "54",
-                "target_id": "11",
-                "strength": 2.0
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Lincoln, NE",
+                "strength": 30.0
             },
             {
-                "source_id": "54",
-                "target_id": "26",
-                "strength": 3.0
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Richfield, UT",
+                "strength": 21.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Granada, CO",
+                "strength": 41.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Kansas City, MO",
+                "strength": 35.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "5",
+                "strength": 72.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "10",
+                "strength": 26.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Japan",
+                "strength": 27.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Omaha, NE",
+                "strength": 29.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Ann Arbor, MI",
+                "strength": 44.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Cheyenne, WY",
+                "strength": 109.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Tooele, UT",
+                "strength": 54.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Laramie, WY",
+                "strength": 30.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Boulder, CO",
+                "strength": 33.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Milwaukee, WI",
+                "strength": 29.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Whitefish, MT",
+                "strength": 86.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "6",
+                "strength": 25.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Hood River, OR",
+                "strength": 71.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Campbell, CA",
+                "strength": 42.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "4",
+                "strength": 22.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_St. Louis, MO",
+                "strength": 47.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Cincinnati, OH",
+                "strength": 90.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Idaho Falls, ID",
+                "strength": 61.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Brigham City, UT",
+                "strength": 67.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Bridgeton, NJ",
+                "strength": 145.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "0",
+                "strength": 21.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "3",
+                "strength": 23.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Powell, WY",
+                "strength": 55.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Caldwell, ID",
+                "strength": 45.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Logan, MT",
+                "strength": 41.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Detroit, MI",
+                "strength": 166.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Boston, MA",
+                "strength": 30.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Philadelphia, PA",
+                "strength": 75.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Denver, CO",
+                "strength": 413.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "12",
+                "strength": 31.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Cozad, NE",
+                "strength": 31.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_San Francisco, CA",
+                "strength": 330.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Billings, MT",
+                "strength": 52.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Cleveland, OH",
+                "strength": 480.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "2",
+                "strength": 35.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Salt Lake City, UT",
+                "strength": 183.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Cody, WY",
+                "strength": 38.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "PL_Spokane, WA",
+                "strength": 347.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "8",
+                "strength": 27.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "7",
+                "strength": 21.0
+            },
+            {
+                "source_id": "PL_Heart Mountain",
+                "target_id": "1",
+                "strength": 27.0
             }
         ]
     },
@@ -2595,7 +1279,7 @@
             "total_link_strength": "Total number of co-occurrences"
         },
         "templates": {
-            "item_description": "<div class='description_heading'>Term</div><div class='description_label'>{label}</div><div class='description_text'>id: {id}, label: {label}, gender: {gender}</div>",
+            "item_description": "<div class='description_heading'>Term</div><div class='description_label'>{label}</div><div class='description_text'>id: {id}, label: {label}, node_type: {node_type}</div>",
             "link_description": "<div class='description_heading'>Co-occurrence</div>"
         }
     }
