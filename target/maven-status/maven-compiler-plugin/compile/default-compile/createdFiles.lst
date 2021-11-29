@@ -1,0 +1,7 @@
+net\clementlevallois\gexfvosviewerjson\TemplateItem.class
+net\clementlevallois\gexfvosviewerjson\TemplateLink.class
+net\clementlevallois\gexfvosviewerjson\Terminology.class
+net\clementlevallois\gexfvosviewerjson\Test.class
+net\clementlevallois\gexfvosviewerjson\GexfToVOSViewerJson.class
+net\clementlevallois\gexfvosviewerjson\VOSViewerJsonToGexf.class
+net\clementlevallois\gexfvosviewerjson\Metadata.class

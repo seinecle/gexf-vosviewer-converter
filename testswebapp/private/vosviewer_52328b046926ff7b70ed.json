@@ -1,0 +1,2602 @@
+
+{
+    "metadata": {
+        "author(s)": "",
+        "date of creation": "",
+        "description of the data": "Made with nocodefunctions.com",
+        "title of the visualization": "",
+        "further info": ""
+    },
+    "network": {
+        "items": [
+            {
+                "id": "11",
+                "label": "Valjean",
+                "Id": "11",
+                "Label": "Valjean",
+                "Gender": "M",
+                "x": 3.9424664974212646,
+                "y": -18.661415100097656,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 1532.1511417031543,
+                    "Harmonic Closeness Centrality": 0.7442922374429224,
+                    "Closeness Centrality": 0.6576576576576577
+                },
+                "scores": {
+                    "viz_size": 80.0
+                }
+            },
+            {
+                "id": "0",
+                "label": "Myriel",
+                "Id": "0",
+                "Label": "Myriel",
+                "Gender": "M",
+                "x": -194.7209930419922,
+                "y": -70.15167999267578,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 483.0,
+                    "Harmonic Closeness Centrality": 0.4988584474885843,
+                    "Closeness Centrality": 0.437125748502994
+                },
+                "scores": {
+                    "viz_size": 28.643230438232422
+                }
+            },
+            {
+                "id": "23",
+                "label": "Fantine",
+                "Id": "23",
+                "Label": "Fantine",
+                "Gender": "F",
+                "x": 99.95536041259766,
+                "y": -184.15789794921875,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 359.37027514968696,
+                    "Harmonic Closeness Centrality": 0.5490867579908677,
+                    "Closeness Centrality": 0.47096774193548385
+                },
+                "scores": {
+                    "viz_size": 22.59145736694336
+                }
+            },
+            {
+                "id": "48",
+                "label": "Gavroche",
+                "Id": "48",
+                "Label": "Gavroche",
+                "Gender": "M",
+                "x": 83.93999481201172,
+                "y": 204.5308837890625,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 351.58888588191985,
+                    "Harmonic Closeness Centrality": 0.6118721461187215,
+                    "Closeness Centrality": 0.5177304964539007
+                },
+                "scores": {
+                    "viz_size": 22.210552215576172
+                }
+            },
+            {
+                "id": "55",
+                "label": "Marius",
+                "Id": "55",
+                "Label": "Marius",
+                "Gender": "M",
+                "x": 16.897310256958008,
+                "y": 95.2494125366211,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 331.39179892175224,
+                    "Harmonic Closeness Centrality": 0.6027397260273972,
+                    "Closeness Centrality": 0.5328467153284672
+                },
+                "scores": {
+                    "viz_size": 21.221887588500977
+                }
+            },
+            {
+                "id": "25",
+                "label": "Thenardier,Jondrette",
+                "Id": "25",
+                "Label": "Thenardier,Jondrette",
+                "Gender": "M",
+                "x": 111.0673599243164,
+                "y": 12.1546049118042,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 196.859155120765,
+                    "Harmonic Closeness Centrality": 0.58675799086758,
+                    "Closeness Centrality": 0.5214285714285715
+                },
+                "scores": {
+                    "viz_size": 14.6364107131958
+                }
+            },
+            {
+                "id": "27",
+                "label": "Javert",
+                "Id": "27",
+                "Label": "Javert",
+                "Gender": "M",
+                "x": 54.11460494995117,
+                "y": -8.48230266571045,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 141.49811964781006,
+                    "Harmonic Closeness Centrality": 0.591324200913242,
+                    "Closeness Centrality": 0.5214285714285715
+                },
+                "scores": {
+                    "viz_size": 11.926445007324219
+                }
+            },
+            {
+                "id": "58",
+                "label": "Enjolras",
+                "Id": "58",
+                "Label": "Enjolras",
+                "Gender": "M",
+                "x": 25.527978897094727,
+                "y": 188.53382873535156,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 120.41734472098251,
+                    "Harmonic Closeness Centrality": 0.5593607305936072,
+                    "Closeness Centrality": 0.4866666666666667
+                },
+                "scores": {
+                    "viz_size": 10.894523620605469
+                }
+            },
+            {
+                "id": "16",
+                "label": "Tholomyes",
+                "Id": "16",
+                "Label": "Tholomyes",
+                "Gender": "M",
+                "x": 133.3392791748047,
+                "y": -251.60523986816406,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 106.27697563874035,
+                    "Harmonic Closeness Centrality": 0.46118721461187184,
+                    "Closeness Centrality": 0.3945945945945946
+                },
+                "scores": {
+                    "viz_size": 10.202341079711914
+                }
+            },
+            {
+                "id": "51",
+                "label": "MlleGillenormand",
+                "Id": "51",
+                "Label": "MlleGillenormand",
+                "Gender": "F",
+                "x": -35.57248306274414,
+                "y": 76.70965576171875,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 90.50238095238093,
+                    "Harmonic Closeness Centrality": 0.4840182648401827,
+                    "Closeness Centrality": 0.44242424242424244
+                },
+                "scores": {
+                    "viz_size": 9.43016242980957
+                }
+            },
+            {
+                "id": "64",
+                "label": "Bossuet",
+                "Id": "64",
+                "Label": "Bossuet",
+                "Gender": "M",
+                "x": -2.382457971572876,
+                "y": 220.1424102783203,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 86.79532364780039,
+                    "Harmonic Closeness Centrality": 0.5456621004566209,
+                    "Closeness Centrality": 0.48026315789473684
+                },
+                "scores": {
+                    "viz_size": 9.248699188232422
+                }
+            },
+            {
+                "id": "24",
+                "label": "MmeThenardier",
+                "Id": "24",
+                "Label": "MmeThenardier",
+                "Gender": "F",
+                "x": 98.31236267089844,
+                "y": -17.877565383911133,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 81.01165528657789,
+                    "Harmonic Closeness Centrality": 0.5273972602739725,
+                    "Closeness Centrality": 0.46794871794871795
+                },
+                "scores": {
+                    "viz_size": 8.965583801269531
+                }
+            },
+            {
+                "id": "57",
+                "label": "Mabeuf",
+                "Id": "57",
+                "Label": "Mabeuf",
+                "Gender": "M",
+                "x": 81.80142211914062,
+                "y": 294.626708984375,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 75.5845238095238,
+                    "Harmonic Closeness Centrality": 0.47374429223744285,
+                    "Closeness Centrality": 0.3967391304347826
+                },
+                "scores": {
+                    "viz_size": 8.699921607971191
+                }
+            },
+            {
+                "id": "28",
+                "label": "Fauchelevent",
+                "Id": "28",
+                "Label": "Fauchelevent",
+                "Gender": "M",
+                "x": -39.67911911010742,
+                "y": -43.41533279418945,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 72.5,
+                    "Harmonic Closeness Centrality": 0.44406392694063895,
+                    "Closeness Centrality": 0.40782122905027934
+                },
+                "scores": {
+                    "viz_size": 8.548932075500488
+                }
+            },
+            {
+                "id": "54",
+                "label": "LtGillenormand",
+                "Id": "54",
+                "Label": "LtGillenormand",
+                "Gender": "M",
+                "x": -8.404716491699219,
+                "y": 67.649169921875,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 47.30106516290728,
+                    "Harmonic Closeness Centrality": 0.4840182648401828,
+                    "Closeness Centrality": 0.44242424242424244
+                },
+                "scores": {
+                    "viz_size": 7.315423965454102
+                }
+            },
+            {
+                "id": "26",
+                "label": "Cosette",
+                "Id": "26",
+                "Label": "Cosette",
+                "Gender": "F",
+                "x": 13.543310165405273,
+                "y": 22.457805633544922,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 47.18836996336997,
+                    "Harmonic Closeness Centrality": 0.5342465753424659,
+                    "Closeness Centrality": 0.48344370860927155
+                },
+                "scores": {
+                    "viz_size": 7.309907913208008
+                }
+            },
+            {
+                "id": "41",
+                "label": "Eponine",
+                "Id": "41",
+                "Label": "Eponine",
+                "Gender": "F",
+                "x": 124.36919403076172,
+                "y": 84.1110610961914,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 33.628408253253454,
+                    "Harmonic Closeness Centrality": 0.47716894977168955,
+                    "Closeness Centrality": 0.4010989010989011
+                },
+                "scores": {
+                    "viz_size": 6.64613676071167
+                }
+            },
+            {
+                "id": "31",
+                "label": "Simplice",
+                "Id": "31",
+                "Label": "Simplice",
+                "Gender": "F",
+                "x": 74.6530990600586,
+                "y": -122.75647735595703,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 23.491507512095748,
+                    "Harmonic Closeness Centrality": 0.4600456621004564,
+                    "Closeness Centrality": 0.42441860465116277
+                },
+                "scores": {
+                    "viz_size": 6.149927616119385
+                }
+            },
+            {
+                "id": "29",
+                "label": "Bamatabois",
+                "Id": "29",
+                "Label": "Bamatabois",
+                "Gender": "M",
+                "x": -45.932796478271484,
+                "y": -169.20535278320312,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 22.91666666666667,
+                    "Harmonic Closeness Centrality": 0.48744292237442916,
+                    "Closeness Centrality": 0.43452380952380953
+                },
+                "scores": {
+                    "viz_size": 6.12178897857666
+                }
+            },
+            {
+                "id": "62",
+                "label": "Courfeyrac",
+                "Id": "62",
+                "Label": "Courfeyrac",
+                "Gender": "M",
+                "x": 28.93648338317871,
+                "y": 209.7089080810547,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 14.070955798587379,
+                    "Harmonic Closeness Centrality": 0.48744292237442916,
+                    "Closeness Centrality": 0.4010989010989011
+                },
+                "scores": {
+                    "viz_size": 5.688784599304199
+                }
+            },
+            {
+                "id": "70",
+                "label": "Claquesous",
+                "Id": "70",
+                "Label": "Claquesous",
+                "Gender": "M",
+                "x": 180.7467803955078,
+                "y": 23.497093200683594,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 13.856141957457748,
+                    "Harmonic Closeness Centrality": 0.5182648401826484,
+                    "Closeness Centrality": 0.4620253164556962
+                },
+                "scores": {
+                    "viz_size": 5.678268909454346
+                }
+            },
+            {
+                "id": "68",
+                "label": "Gueulemer",
+                "Id": "68",
+                "Label": "Gueulemer",
+                "Gender": "M",
+                "x": 175.84600830078125,
+                "y": 46.77641296386719,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 12.951380052695843,
+                    "Harmonic Closeness Centrality": 0.5228310502283104,
+                    "Closeness Centrality": 0.46794871794871795
+                },
+                "scores": {
+                    "viz_size": 5.6339802742004395
+                }
+            },
+            {
+                "id": "69",
+                "label": "Babet",
+                "Id": "69",
+                "Label": "Babet",
+                "Gender": "M",
+                "x": 157.65126037597656,
+                "y": 37.63224411010742,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 12.951380052695843,
+                    "Harmonic Closeness Centrality": 0.5228310502283104,
+                    "Closeness Centrality": 0.46794871794871795
+                },
+                "scores": {
+                    "viz_size": 5.6339802742004395
+                }
+            },
+            {
+                "id": "71",
+                "label": "Montparnasse",
+                "Id": "71",
+                "Label": "Montparnasse",
+                "Gender": "M",
+                "x": 197.36770629882812,
+                "y": 79.34325408935547,
+                "weights": {
+                    "Eccentricity": 3.0,
+                    "Betweenness Centrality": 10.540415140415138,
+                    "Harmonic Closeness Centrality": 0.5136986301369864,
+                    "Closeness Centrality": 0.4620253164556962
+                },
+                "scores": {
+                    "viz_size": 5.515961647033691
+                }
+            },
+            {
+                "id": "63",
+                "label": "Bahorel",
+                "Id": "63",
+                "Label": "Bahorel",
+                "Gender": "M",
+                "x": 44.048274993896484,
+                "y": 262.8517761230469,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 5.538562314878104,
+                    "Harmonic Closeness Centrality": 0.476027397260274,
+                    "Closeness Centrality": 0.3945945945945946
+                },
+                "scores": {
+                    "viz_size": 5.271117210388184
+                }
+            },
+            {
+                "id": "65",
+                "label": "Joly",
+                "Id": "65",
+                "Label": "Joly",
+                "Gender": "M",
+                "x": 17.412540435791016,
+                "y": 252.63685607910156,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 5.538562314878104,
+                    "Harmonic Closeness Centrality": 0.476027397260274,
+                    "Closeness Centrality": 0.3945945945945946
+                },
+                "scores": {
+                    "viz_size": 5.271117210388184
+                }
+            },
+            {
+                "id": "59",
+                "label": "Combeferre",
+                "Id": "59",
+                "Label": "Combeferre",
+                "Gender": "M",
+                "x": 42.340633392333984,
+                "y": 229.31097412109375,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 3.1406926406926403,
+                    "Harmonic Closeness Centrality": 0.4691780821917808,
+                    "Closeness Centrality": 0.3924731182795699
+                },
+                "scores": {
+                    "viz_size": 5.1537394523620605
+                }
+            },
+            {
+                "id": "61",
+                "label": "Feuilly",
+                "Id": "61",
+                "Label": "Feuilly",
+                "Gender": "M",
+                "x": 2.4101827144622803,
+                "y": 239.57167053222656,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 3.1406926406926403,
+                    "Harmonic Closeness Centrality": 0.4691780821917808,
+                    "Closeness Centrality": 0.3924731182795699
+                },
+                "scores": {
+                    "viz_size": 5.1537394523620605
+                }
+            },
+            {
+                "id": "75",
+                "label": "Brujon",
+                "Id": "75",
+                "Label": "Brujon",
+                "Gender": "M",
+                "x": 210.4113006591797,
+                "y": 57.02845001220703,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.75,
+                    "Harmonic Closeness Centrality": 0.43721461187214605,
+                    "Closeness Centrality": 0.3802083333333333
+                },
+                "scores": {
+                    "viz_size": 5.036713123321533
+                }
+            },
+            {
+                "id": "50",
+                "label": "Magnon",
+                "Id": "50",
+                "Label": "Magnon",
+                "Gender": "F",
+                "x": 103.54317474365234,
+                "y": -56.21803665161133,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.6190476190476191,
+                    "Harmonic Closeness Centrality": 0.36529680365296785,
+                    "Closeness Centrality": 0.33796296296296297
+                },
+                "scores": {
+                    "viz_size": 5.030303001403809
+                }
+            },
+            {
+                "id": "66",
+                "label": "Grantaire",
+                "Id": "66",
+                "Label": "Grantaire",
+                "Gender": "M",
+                "x": -0.6085054278373718,
+                "y": 299.8772888183594,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.42857142857142855,
+                    "Harmonic Closeness Centrality": 0.4372146118721461,
+                    "Closeness Centrality": 0.3613861386138614
+                },
+                "scores": {
+                    "viz_size": 5.020978927612305
+                }
+            },
+            {
+                "id": "1",
+                "label": "Napoleon",
+                "Id": "1",
+                "Label": "Napoleon",
+                "Gender": "M",
+                "x": -313.8893127441406,
+                "y": -74.66645812988281,
+                "weights": {
+                    "Eccentricity": 5.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3280821917808218,
+                    "Closeness Centrality": 0.3054393305439331
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "2",
+                "label": "MlleBaptistine",
+                "Id": "2",
+                "Label": "MlleBaptistine",
+                "Gender": "F",
+                "x": -153.10845947265625,
+                "y": -47.0938606262207,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.4509132420091321,
+                    "Closeness Centrality": 0.41954022988505746
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "3",
+                "label": "MmeMagloire",
+                "Id": "3",
+                "Label": "MmeMagloire",
+                "Gender": "F",
+                "x": -163.97239685058594,
+                "y": -58.897525787353516,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.4509132420091321,
+                    "Closeness Centrality": 0.41954022988505746
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "4",
+                "label": "CountessDeLo",
+                "Id": "4",
+                "Label": "CountessDeLo",
+                "Gender": "F",
+                "x": -287.4805908203125,
+                "y": -122.27689361572266,
+                "weights": {
+                    "Eccentricity": 5.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3280821917808218,
+                    "Closeness Centrality": 0.3054393305439331
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "5",
+                "label": "Geborand",
+                "Id": "5",
+                "Label": "Geborand",
+                "Gender": "F",
+                "x": -299.49688720703125,
+                "y": -58.968353271484375,
+                "weights": {
+                    "Eccentricity": 5.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3280821917808218,
+                    "Closeness Centrality": 0.3054393305439331
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "6",
+                "label": "Champtercier",
+                "Id": "6",
+                "Label": "Champtercier",
+                "Gender": "M",
+                "x": -285.7261047363281,
+                "y": -85.77159881591797,
+                "weights": {
+                    "Eccentricity": 5.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3280821917808218,
+                    "Closeness Centrality": 0.3054393305439331
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "7",
+                "label": "Cravatte",
+                "Id": "7",
+                "Label": "Cravatte",
+                "Gender": "M",
+                "x": -311.0502624511719,
+                "y": -98.20096588134766,
+                "weights": {
+                    "Eccentricity": 5.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3280821917808218,
+                    "Closeness Centrality": 0.3054393305439331
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "8",
+                "label": "Count",
+                "Id": "8",
+                "Label": "Count",
+                "Gender": "M",
+                "x": -242.35147094726562,
+                "y": -73.4554672241211,
+                "weights": {
+                    "Eccentricity": 5.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3280821917808218,
+                    "Closeness Centrality": 0.3054393305439331
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "9",
+                "label": "OldMan",
+                "Id": "9",
+                "Label": "OldMan",
+                "Gender": "M",
+                "x": -280.9762268066406,
+                "y": -107.5222396850586,
+                "weights": {
+                    "Eccentricity": 5.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3280821917808218,
+                    "Closeness Centrality": 0.3054393305439331
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "10",
+                "label": "Labarre",
+                "Id": "10",
+                "Label": "Labarre",
+                "Gender": "M",
+                "x": -117.53526306152344,
+                "y": -14.214648246765137,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.42123287671232845,
+                    "Closeness Centrality": 0.3989071038251366
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "12",
+                "label": "Marguerite",
+                "Id": "12",
+                "Label": "Marguerite",
+                "Gender": "F",
+                "x": 54.93228530883789,
+                "y": -173.8525390625,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.4463470319634701,
+                    "Closeness Centrality": 0.41954022988505746
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "13",
+                "label": "MmeDeR",
+                "Id": "13",
+                "Label": "MmeDeR",
+                "Gender": "F",
+                "x": -103.11703491210938,
+                "y": -26.212688446044922,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.42123287671232845,
+                    "Closeness Centrality": 0.3989071038251366
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "14",
+                "label": "Isabeau",
+                "Id": "14",
+                "Label": "Isabeau",
+                "Gender": "M",
+                "x": -119.87759399414062,
+                "y": 4.440521717071533,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.42123287671232845,
+                    "Closeness Centrality": 0.3989071038251366
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "15",
+                "label": "Gervais",
+                "Id": "15",
+                "Label": "Gervais",
+                "Gender": "M",
+                "x": -95.71784973144531,
+                "y": -36.938377380371094,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.42123287671232845,
+                    "Closeness Centrality": 0.3989071038251366
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "17",
+                "label": "Listolier",
+                "Id": "17",
+                "Label": "Listolier",
+                "Gender": "M",
+                "x": 155.3692169189453,
+                "y": -303.90594482421875,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.40296803652967983,
+                    "Closeness Centrality": 0.3476190476190476
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "18",
+                "label": "Fameuil",
+                "Id": "18",
+                "Label": "Fameuil",
+                "Gender": "M",
+                "x": 123.88944244384766,
+                "y": -294.7387390136719,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.40296803652967983,
+                    "Closeness Centrality": 0.3476190476190476
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "19",
+                "label": "Blacheville",
+                "Id": "19",
+                "Label": "Blacheville",
+                "Gender": "M",
+                "x": 168.8678741455078,
+                "y": -285.6449279785156,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.40296803652967983,
+                    "Closeness Centrality": 0.3476190476190476
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "20",
+                "label": "Favourite",
+                "Id": "20",
+                "Label": "Favourite",
+                "Gender": "F",
+                "x": 159.18429565429688,
+                "y": -264.23468017578125,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.40296803652967983,
+                    "Closeness Centrality": 0.3476190476190476
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "21",
+                "label": "Dahlia",
+                "Id": "21",
+                "Label": "Dahlia",
+                "Gender": "F",
+                "x": 140.4734649658203,
+                "y": -273.32684326171875,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.40296803652967983,
+                    "Closeness Centrality": 0.3476190476190476
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "22",
+                "label": "Zephine",
+                "Id": "22",
+                "Label": "Zephine",
+                "Gender": "F",
+                "x": 113.90728759765625,
+                "y": -283.6431884765625,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.40296803652967983,
+                    "Closeness Centrality": 0.3476190476190476
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "30",
+                "label": "Perpetue",
+                "Id": "30",
+                "Label": "Perpetue",
+                "Gender": "F",
+                "x": 130.13829040527344,
+                "y": -171.3949737548828,
+                "weights": {
+                    "Eccentricity": 5.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3543378995433788,
+                    "Closeness Centrality": 0.3230088495575221
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "32",
+                "label": "Scaufflaire",
+                "Id": "32",
+                "Label": "Scaufflaire",
+                "Gender": "M",
+                "x": -81.49409484863281,
+                "y": -86.99244689941406,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.42123287671232845,
+                    "Closeness Centrality": 0.3989071038251366
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "33",
+                "label": "Woman1",
+                "Id": "33",
+                "Label": "Woman1",
+                "Gender": "F",
+                "x": 12.843257904052734,
+                "y": -80.9785385131836,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.42808219178082163,
+                    "Closeness Centrality": 0.4010989010989011
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "34",
+                "label": "Judge",
+                "Id": "34",
+                "Label": "Judge",
+                "Gender": "M",
+                "x": -76.90447235107422,
+                "y": -158.4622344970703,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.45547945205479423,
+                    "Closeness Centrality": 0.4101123595505618
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "35",
+                "label": "Champmathieu",
+                "Id": "35",
+                "Label": "Champmathieu",
+                "Gender": "M",
+                "x": -85.77401733398438,
+                "y": -144.60459899902344,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.45547945205479423,
+                    "Closeness Centrality": 0.4101123595505618
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "36",
+                "label": "Brevet",
+                "Id": "36",
+                "Label": "Brevet",
+                "Gender": "M",
+                "x": -110.935302734375,
+                "y": -160.89212036132812,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.45547945205479423,
+                    "Closeness Centrality": 0.4101123595505618
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "37",
+                "label": "Chenildieu",
+                "Id": "37",
+                "Label": "Chenildieu",
+                "Gender": "M",
+                "x": -85.76007080078125,
+                "y": -187.5395050048828,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.45547945205479423,
+                    "Closeness Centrality": 0.4101123595505618
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "38",
+                "label": "Cochepaille",
+                "Id": "38",
+                "Label": "Cochepaille",
+                "Gender": "M",
+                "x": -110.68998718261719,
+                "y": -177.4259033203125,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.45547945205479423,
+                    "Closeness Centrality": 0.4101123595505618
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "40",
+                "label": "Boulatruelle",
+                "Id": "40",
+                "Label": "Boulatruelle",
+                "Gender": "M",
+                "x": 252.90875244140625,
+                "y": -30.592830657958984,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3652968036529678,
+                    "Closeness Centrality": 0.3443396226415094
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "42",
+                "label": "Anzelma",
+                "Id": "42",
+                "Label": "Anzelma",
+                "Gender": "F",
+                "x": 162.19119262695312,
+                "y": -3.274167776107788,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3869863013698628,
+                    "Closeness Centrality": 0.35436893203883496
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "43",
+                "label": "Woman2",
+                "Id": "43",
+                "Label": "Woman2",
+                "Gender": "F",
+                "x": -8.66396713256836,
+                "y": -59.80815124511719,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.43721461187214583,
+                    "Closeness Centrality": 0.40555555555555556
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "44",
+                "label": "MotherInnocent",
+                "Id": "44",
+                "Label": "MotherInnocent",
+                "Gender": "F",
+                "x": -73.72925567626953,
+                "y": -52.85359573364258,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.4303652968036527,
+                    "Closeness Centrality": 0.40331491712707185
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "45",
+                "label": "Gribier",
+                "Id": "45",
+                "Label": "Gribier",
+                "Gender": "M",
+                "x": -92.41172790527344,
+                "y": -68.78112030029297,
+                "weights": {
+                    "Eccentricity": 5.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.30753424657534234,
+                    "Closeness Centrality": 0.2908366533864542
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "47",
+                "label": "MmeBurgon",
+                "Id": "47",
+                "Label": "MmeBurgon",
+                "Gender": "F",
+                "x": 153.01113891601562,
+                "y": 178.350830078125,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.4029680365296803,
+                    "Closeness Centrality": 0.37055837563451777
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "52",
+                "label": "MmePontmercy",
+                "Id": "52",
+                "Label": "MmePontmercy",
+                "Gender": "F",
+                "x": -108.40374755859375,
+                "y": 123.28861236572266,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3801369863013698,
+                    "Closeness Centrality": 0.3526570048309179
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "53",
+                "label": "MlleVaubois",
+                "Id": "53",
+                "Label": "MlleVaubois",
+                "Gender": "F",
+                "x": -161.67916870117188,
+                "y": 112.8858871459961,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3253424657534245,
+                    "Closeness Centrality": 0.3080168776371308
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "56",
+                "label": "BaronessT",
+                "Id": "56",
+                "Label": "BaronessT",
+                "Gender": "F",
+                "x": -83.65634155273438,
+                "y": 112.43489837646484,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.3801369863013697,
+                    "Closeness Centrality": 0.3526570048309179
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "60",
+                "label": "Prouvaire",
+                "Id": "60",
+                "Label": "Prouvaire",
+                "Gender": "M",
+                "x": -13.037967681884766,
+                "y": 268.0501708984375,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.430365296803653,
+                    "Closeness Centrality": 0.35960591133004927
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "67",
+                "label": "MotherPlutarch",
+                "Id": "67",
+                "Label": "MotherPlutarch",
+                "Gender": "F",
+                "x": 102.99083709716797,
+                "y": 347.0633239746094,
+                "weights": {
+                    "Eccentricity": 5.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.31347031963470307,
+                    "Closeness Centrality": 0.28515625
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "72",
+                "label": "Toussaint",
+                "Id": "72",
+                "Label": "Toussaint",
+                "Gender": "M",
+                "x": 41.21391296386719,
+                "y": -67.49861145019531,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.43721461187214583,
+                    "Closeness Centrality": 0.40555555555555556
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "73",
+                "label": "Child1",
+                "Id": "73",
+                "Label": "Child1",
+                "Gender": "M",
+                "x": 161.75392150878906,
+                "y": 287.1788330078125,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.37785388127853886,
+                    "Closeness Centrality": 0.3443396226415094
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "74",
+                "label": "Child2",
+                "Id": "74",
+                "Label": "Child2",
+                "Gender": "M",
+                "x": 157.7982177734375,
+                "y": 296.6003112792969,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.37785388127853886,
+                    "Closeness Centrality": 0.3443396226415094
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            },
+            {
+                "id": "76",
+                "label": "MmeHucheloup",
+                "Id": "76",
+                "Label": "MmeHucheloup",
+                "Gender": "F",
+                "x": 21.0892276763916,
+                "y": 342.502197265625,
+                "weights": {
+                    "Eccentricity": 4.0,
+                    "Betweenness Centrality": 0.0,
+                    "Harmonic Closeness Centrality": 0.4166666666666667,
+                    "Closeness Centrality": 0.35609756097560974
+                },
+                "scores": {
+                    "viz_size": 5.0
+                }
+            }
+        ],
+        "links": [
+            {
+                "source_id": "1",
+                "target_id": "0",
+                "strength": 1.0
+            },
+            {
+                "source_id": "2",
+                "target_id": "0",
+                "strength": 8.0
+            },
+            {
+                "source_id": "3",
+                "target_id": "0",
+                "strength": 10.0
+            },
+            {
+                "source_id": "3",
+                "target_id": "2",
+                "strength": 6.0
+            },
+            {
+                "source_id": "4",
+                "target_id": "0",
+                "strength": 1.0
+            },
+            {
+                "source_id": "5",
+                "target_id": "0",
+                "strength": 1.0
+            },
+            {
+                "source_id": "6",
+                "target_id": "0",
+                "strength": 1.0
+            },
+            {
+                "source_id": "7",
+                "target_id": "0",
+                "strength": 1.0
+            },
+            {
+                "source_id": "8",
+                "target_id": "0",
+                "strength": 2.0
+            },
+            {
+                "source_id": "9",
+                "target_id": "0",
+                "strength": 1.0
+            },
+            {
+                "source_id": "11",
+                "target_id": "0",
+                "strength": 5.0
+            },
+            {
+                "source_id": "11",
+                "target_id": "2",
+                "strength": 3.0
+            },
+            {
+                "source_id": "11",
+                "target_id": "3",
+                "strength": 3.0
+            },
+            {
+                "source_id": "11",
+                "target_id": "10",
+                "strength": 1.0
+            },
+            {
+                "source_id": "12",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "13",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "14",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "15",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "17",
+                "target_id": "16",
+                "strength": 4.0
+            },
+            {
+                "source_id": "18",
+                "target_id": "16",
+                "strength": 4.0
+            },
+            {
+                "source_id": "18",
+                "target_id": "17",
+                "strength": 4.0
+            },
+            {
+                "source_id": "19",
+                "target_id": "16",
+                "strength": 4.0
+            },
+            {
+                "source_id": "19",
+                "target_id": "17",
+                "strength": 4.0
+            },
+            {
+                "source_id": "19",
+                "target_id": "18",
+                "strength": 4.0
+            },
+            {
+                "source_id": "20",
+                "target_id": "16",
+                "strength": 3.0
+            },
+            {
+                "source_id": "20",
+                "target_id": "17",
+                "strength": 3.0
+            },
+            {
+                "source_id": "20",
+                "target_id": "18",
+                "strength": 3.0
+            },
+            {
+                "source_id": "20",
+                "target_id": "19",
+                "strength": 4.0
+            },
+            {
+                "source_id": "21",
+                "target_id": "16",
+                "strength": 3.0
+            },
+            {
+                "source_id": "21",
+                "target_id": "17",
+                "strength": 3.0
+            },
+            {
+                "source_id": "21",
+                "target_id": "18",
+                "strength": 3.0
+            },
+            {
+                "source_id": "21",
+                "target_id": "19",
+                "strength": 3.0
+            },
+            {
+                "source_id": "21",
+                "target_id": "20",
+                "strength": 5.0
+            },
+            {
+                "source_id": "22",
+                "target_id": "16",
+                "strength": 3.0
+            },
+            {
+                "source_id": "22",
+                "target_id": "17",
+                "strength": 3.0
+            },
+            {
+                "source_id": "22",
+                "target_id": "18",
+                "strength": 3.0
+            },
+            {
+                "source_id": "22",
+                "target_id": "19",
+                "strength": 3.0
+            },
+            {
+                "source_id": "22",
+                "target_id": "20",
+                "strength": 4.0
+            },
+            {
+                "source_id": "22",
+                "target_id": "21",
+                "strength": 4.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "11",
+                "strength": 9.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "12",
+                "strength": 2.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "16",
+                "strength": 3.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "17",
+                "strength": 3.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "18",
+                "strength": 3.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "19",
+                "strength": 3.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "20",
+                "strength": 4.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "21",
+                "strength": 4.0
+            },
+            {
+                "source_id": "23",
+                "target_id": "22",
+                "strength": 4.0
+            },
+            {
+                "source_id": "24",
+                "target_id": "11",
+                "strength": 7.0
+            },
+            {
+                "source_id": "24",
+                "target_id": "23",
+                "strength": 2.0
+            },
+            {
+                "source_id": "26",
+                "target_id": "11",
+                "strength": 31.0
+            },
+            {
+                "source_id": "26",
+                "target_id": "16",
+                "strength": 1.0
+            },
+            {
+                "source_id": "26",
+                "target_id": "24",
+                "strength": 4.0
+            },
+            {
+                "source_id": "26",
+                "target_id": "25",
+                "strength": 1.0
+            },
+            {
+                "source_id": "27",
+                "target_id": "11",
+                "strength": 17.0
+            },
+            {
+                "source_id": "27",
+                "target_id": "23",
+                "strength": 5.0
+            },
+            {
+                "source_id": "27",
+                "target_id": "24",
+                "strength": 1.0
+            },
+            {
+                "source_id": "27",
+                "target_id": "26",
+                "strength": 1.0
+            },
+            {
+                "source_id": "27",
+                "target_id": "25",
+                "strength": 5.0
+            },
+            {
+                "source_id": "28",
+                "target_id": "11",
+                "strength": 8.0
+            },
+            {
+                "source_id": "28",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "29",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "29",
+                "target_id": "23",
+                "strength": 1.0
+            },
+            {
+                "source_id": "29",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "30",
+                "target_id": "23",
+                "strength": 1.0
+            },
+            {
+                "source_id": "31",
+                "target_id": "11",
+                "strength": 3.0
+            },
+            {
+                "source_id": "31",
+                "target_id": "23",
+                "strength": 2.0
+            },
+            {
+                "source_id": "31",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "31",
+                "target_id": "30",
+                "strength": 2.0
+            },
+            {
+                "source_id": "32",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "33",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "33",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "34",
+                "target_id": "11",
+                "strength": 3.0
+            },
+            {
+                "source_id": "34",
+                "target_id": "29",
+                "strength": 2.0
+            },
+            {
+                "source_id": "35",
+                "target_id": "11",
+                "strength": 3.0
+            },
+            {
+                "source_id": "35",
+                "target_id": "29",
+                "strength": 2.0
+            },
+            {
+                "source_id": "35",
+                "target_id": "34",
+                "strength": 3.0
+            },
+            {
+                "source_id": "36",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "36",
+                "target_id": "29",
+                "strength": 1.0
+            },
+            {
+                "source_id": "36",
+                "target_id": "34",
+                "strength": 2.0
+            },
+            {
+                "source_id": "36",
+                "target_id": "35",
+                "strength": 2.0
+            },
+            {
+                "source_id": "37",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "37",
+                "target_id": "29",
+                "strength": 1.0
+            },
+            {
+                "source_id": "37",
+                "target_id": "34",
+                "strength": 2.0
+            },
+            {
+                "source_id": "37",
+                "target_id": "35",
+                "strength": 2.0
+            },
+            {
+                "source_id": "37",
+                "target_id": "36",
+                "strength": 2.0
+            },
+            {
+                "source_id": "38",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "38",
+                "target_id": "29",
+                "strength": 1.0
+            },
+            {
+                "source_id": "38",
+                "target_id": "34",
+                "strength": 2.0
+            },
+            {
+                "source_id": "38",
+                "target_id": "35",
+                "strength": 2.0
+            },
+            {
+                "source_id": "38",
+                "target_id": "36",
+                "strength": 2.0
+            },
+            {
+                "source_id": "38",
+                "target_id": "37",
+                "strength": 2.0
+            },
+            {
+                "source_id": "40",
+                "target_id": "25",
+                "strength": 1.0
+            },
+            {
+                "source_id": "41",
+                "target_id": "24",
+                "strength": 2.0
+            },
+            {
+                "source_id": "41",
+                "target_id": "25",
+                "strength": 3.0
+            },
+            {
+                "source_id": "42",
+                "target_id": "24",
+                "strength": 1.0
+            },
+            {
+                "source_id": "42",
+                "target_id": "41",
+                "strength": 2.0
+            },
+            {
+                "source_id": "42",
+                "target_id": "25",
+                "strength": 2.0
+            },
+            {
+                "source_id": "43",
+                "target_id": "11",
+                "strength": 3.0
+            },
+            {
+                "source_id": "43",
+                "target_id": "26",
+                "strength": 1.0
+            },
+            {
+                "source_id": "43",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "44",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "44",
+                "target_id": "28",
+                "strength": 3.0
+            },
+            {
+                "source_id": "45",
+                "target_id": "28",
+                "strength": 2.0
+            },
+            {
+                "source_id": "47",
+                "target_id": "25",
+                "strength": 1.0
+            },
+            {
+                "source_id": "48",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "48",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "48",
+                "target_id": "47",
+                "strength": 2.0
+            },
+            {
+                "source_id": "48",
+                "target_id": "25",
+                "strength": 1.0
+            },
+            {
+                "source_id": "50",
+                "target_id": "24",
+                "strength": 1.0
+            },
+            {
+                "source_id": "50",
+                "target_id": "54",
+                "strength": 1.0
+            },
+            {
+                "source_id": "51",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "51",
+                "target_id": "26",
+                "strength": 2.0
+            },
+            {
+                "source_id": "51",
+                "target_id": "54",
+                "strength": 9.0
+            },
+            {
+                "source_id": "52",
+                "target_id": "51",
+                "strength": 1.0
+            },
+            {
+                "source_id": "52",
+                "target_id": "55",
+                "strength": 1.0
+            },
+            {
+                "source_id": "53",
+                "target_id": "51",
+                "strength": 1.0
+            },
+            {
+                "source_id": "56",
+                "target_id": "55",
+                "strength": 1.0
+            },
+            {
+                "source_id": "56",
+                "target_id": "54",
+                "strength": 1.0
+            },
+            {
+                "source_id": "57",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "57",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "57",
+                "target_id": "55",
+                "strength": 1.0
+            },
+            {
+                "source_id": "58",
+                "target_id": "11",
+                "strength": 4.0
+            },
+            {
+                "source_id": "58",
+                "target_id": "27",
+                "strength": 6.0
+            },
+            {
+                "source_id": "58",
+                "target_id": "48",
+                "strength": 7.0
+            },
+            {
+                "source_id": "58",
+                "target_id": "57",
+                "strength": 1.0
+            },
+            {
+                "source_id": "58",
+                "target_id": "55",
+                "strength": 7.0
+            },
+            {
+                "source_id": "59",
+                "target_id": "48",
+                "strength": 6.0
+            },
+            {
+                "source_id": "59",
+                "target_id": "57",
+                "strength": 2.0
+            },
+            {
+                "source_id": "59",
+                "target_id": "58",
+                "strength": 15.0
+            },
+            {
+                "source_id": "59",
+                "target_id": "55",
+                "strength": 5.0
+            },
+            {
+                "source_id": "60",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "60",
+                "target_id": "58",
+                "strength": 4.0
+            },
+            {
+                "source_id": "60",
+                "target_id": "59",
+                "strength": 2.0
+            },
+            {
+                "source_id": "61",
+                "target_id": "48",
+                "strength": 2.0
+            },
+            {
+                "source_id": "61",
+                "target_id": "57",
+                "strength": 1.0
+            },
+            {
+                "source_id": "61",
+                "target_id": "58",
+                "strength": 6.0
+            },
+            {
+                "source_id": "61",
+                "target_id": "59",
+                "strength": 5.0
+            },
+            {
+                "source_id": "61",
+                "target_id": "60",
+                "strength": 2.0
+            },
+            {
+                "source_id": "61",
+                "target_id": "55",
+                "strength": 1.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "48",
+                "strength": 7.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "57",
+                "strength": 2.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "58",
+                "strength": 17.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "59",
+                "strength": 13.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "60",
+                "strength": 3.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "61",
+                "strength": 6.0
+            },
+            {
+                "source_id": "62",
+                "target_id": "55",
+                "strength": 9.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "48",
+                "strength": 5.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "57",
+                "strength": 2.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "58",
+                "strength": 4.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "59",
+                "strength": 5.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "60",
+                "strength": 2.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "61",
+                "strength": 3.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "62",
+                "strength": 6.0
+            },
+            {
+                "source_id": "63",
+                "target_id": "55",
+                "strength": 1.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "48",
+                "strength": 5.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "57",
+                "strength": 1.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "58",
+                "strength": 10.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "59",
+                "strength": 9.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "60",
+                "strength": 2.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "61",
+                "strength": 6.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "62",
+                "strength": 12.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "63",
+                "strength": 4.0
+            },
+            {
+                "source_id": "64",
+                "target_id": "55",
+                "strength": 5.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "48",
+                "strength": 3.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "57",
+                "strength": 1.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "58",
+                "strength": 5.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "59",
+                "strength": 5.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "60",
+                "strength": 2.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "61",
+                "strength": 5.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "62",
+                "strength": 5.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "63",
+                "strength": 5.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "64",
+                "strength": 7.0
+            },
+            {
+                "source_id": "65",
+                "target_id": "55",
+                "strength": 2.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "58",
+                "strength": 3.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "59",
+                "strength": 1.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "60",
+                "strength": 1.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "61",
+                "strength": 1.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "62",
+                "strength": 2.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "63",
+                "strength": 1.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "64",
+                "strength": 3.0
+            },
+            {
+                "source_id": "66",
+                "target_id": "65",
+                "strength": 2.0
+            },
+            {
+                "source_id": "67",
+                "target_id": "57",
+                "strength": 3.0
+            },
+            {
+                "source_id": "68",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "68",
+                "target_id": "24",
+                "strength": 1.0
+            },
+            {
+                "source_id": "68",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "68",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "68",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "68",
+                "target_id": "25",
+                "strength": 5.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "24",
+                "strength": 1.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "27",
+                "strength": 2.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "68",
+                "strength": 6.0
+            },
+            {
+                "source_id": "69",
+                "target_id": "25",
+                "strength": 6.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "24",
+                "strength": 1.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "58",
+                "strength": 1.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "68",
+                "strength": 4.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "69",
+                "strength": 4.0
+            },
+            {
+                "source_id": "70",
+                "target_id": "25",
+                "strength": 4.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "68",
+                "strength": 2.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "69",
+                "strength": 2.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "70",
+                "strength": 2.0
+            },
+            {
+                "source_id": "71",
+                "target_id": "25",
+                "strength": 1.0
+            },
+            {
+                "source_id": "72",
+                "target_id": "11",
+                "strength": 1.0
+            },
+            {
+                "source_id": "72",
+                "target_id": "26",
+                "strength": 2.0
+            },
+            {
+                "source_id": "72",
+                "target_id": "27",
+                "strength": 1.0
+            },
+            {
+                "source_id": "73",
+                "target_id": "48",
+                "strength": 2.0
+            },
+            {
+                "source_id": "74",
+                "target_id": "48",
+                "strength": 2.0
+            },
+            {
+                "source_id": "74",
+                "target_id": "73",
+                "strength": 3.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "41",
+                "strength": 1.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "68",
+                "strength": 3.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "69",
+                "strength": 3.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "70",
+                "strength": 1.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "71",
+                "strength": 1.0
+            },
+            {
+                "source_id": "75",
+                "target_id": "25",
+                "strength": 3.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "48",
+                "strength": 1.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "58",
+                "strength": 1.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "62",
+                "strength": 1.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "63",
+                "strength": 1.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "64",
+                "strength": 1.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "65",
+                "strength": 1.0
+            },
+            {
+                "source_id": "76",
+                "target_id": "66",
+                "strength": 1.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "11",
+                "strength": 19.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "16",
+                "strength": 1.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "26",
+                "strength": 21.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "41",
+                "strength": 5.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "48",
+                "strength": 4.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "51",
+                "strength": 6.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "25",
+                "strength": 2.0
+            },
+            {
+                "source_id": "55",
+                "target_id": "54",
+                "strength": 12.0
+            },
+            {
+                "source_id": "25",
+                "target_id": "11",
+                "strength": 12.0
+            },
+            {
+                "source_id": "25",
+                "target_id": "23",
+                "strength": 1.0
+            },
+            {
+                "source_id": "25",
+                "target_id": "24",
+                "strength": 13.0
+            },
+            {
+                "source_id": "54",
+                "target_id": "11",
+                "strength": 2.0
+            },
+            {
+                "source_id": "54",
+                "target_id": "26",
+                "strength": 3.0
+            }
+        ]
+    },
+    "config": {
+        "terminology": {
+            "item": "item_name",
+            "items": "",
+            "link": "link_name",
+            "links": "",
+            "link_strength": "link strength name",
+            "total_link_strength": ""
+        },
+        "templates": {
+            "item_description": "<div class='description_heading'>item_name</div><div class='description_label'>{label}</div><div class='description_text'>id: {id}, label: {label}, gender: {gender}</div>",
+            "link_description": "<div class='description_heading'>link_name</div>"
+        }
+    }
+}

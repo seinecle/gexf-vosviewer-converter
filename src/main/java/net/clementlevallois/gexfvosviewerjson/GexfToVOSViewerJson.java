@@ -244,7 +244,7 @@ public class GexfToVOSViewerJson {
             }
         }
 
-        if (counterZeroForX > 5 && counterZeroForY > 5) {
+        if (counterZeroForX +1 >= toArray.length && counterZeroForY + 1 >= toArray.length) {
             for (Object nodeObject : toArray) {
                 Node node = (Node) nodeObject;
                 node.setX((float) Math.random() * 20);
