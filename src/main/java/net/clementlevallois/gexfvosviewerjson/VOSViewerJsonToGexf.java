@@ -22,14 +22,13 @@ import it.uniroma1.dis.wsngroup.gexf4j.core.impl.data.AttributeValueImpl;
 import it.uniroma1.dis.wsngroup.gexf4j.core.impl.viz.PositionImpl;
 import it.uniroma1.dis.wsngroup.gexf4j.core.viz.Position;
 import java.io.BufferedReader;
-import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
+import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -37,12 +36,13 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.UUID;
+import static java.util.stream.Collectors.toList;
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.json.JsonValue;
+import net.clementlevallois.utils.UnicodeBOMInputStream;
 import org.openide.util.Exceptions;
 
 /**
@@ -87,30 +87,44 @@ public class VOSViewerJsonToGexf {
         getNodeAttributes();
         turnNodeJsonValuesToGexf();
         turnEdgeJsonValuesToGexf();
-        
+
         return gexf;
     }
 
     private void load() throws FileNotFoundException {
-        JsonReader jsonReader = null;
-        if (is == null) {
-            BufferedReader br = null;
-            try {
-                br = Files.newBufferedReader(filePath, StandardCharsets.UTF_8);
-                jsonReader = Json.createReader(br);
-            } catch (IOException ex) {
-                Exceptions.printStackTrace(ex);
-            } finally {
+        try {
+            JsonReader jsonReader = null;
+            UnicodeBOMInputStream ubis = null;
+            if (is == null) {
                 try {
-                    br.close();
-                } catch (IOException ex) {
+                    FileInputStream fis = new FileInputStream(filePath.toString());
+                    ubis = new UnicodeBOMInputStream(fis);
+                } catch (NullPointerException | IOException ex) {
                     Exceptions.printStackTrace(ex);
                 }
+            } else {
+                try {
+                    ubis = new UnicodeBOMInputStream(is);
+                } catch (NullPointerException | IOException ex) {
+                    Exceptions.printStackTrace(ex);
+                }
+
             }
-        } else {
-            jsonReader = Json.createReader(is);
+            InputStreamReader isr = new InputStreamReader(ubis);
+            BufferedReader br = new BufferedReader(isr);
+
+            ubis.skipBOM();
+
+            List<String> lines = br.lines().collect(toList());
+
+            String jsonFixed = String.join("\n", lines).replace("\"\"", "\\\"");
+            System.out.println("jsonFixed: " + jsonFixed);
+            jsonReader = Json.createReader(new StringReader(jsonFixed));
+            jsonObject = jsonReader.readObject();
+        } catch (IOException ex) {
+            Exceptions.printStackTrace(ex);
         }
-        jsonObject = jsonReader.readObject();
+
     }
 
     private void gexfInitiate() {
@@ -226,13 +240,21 @@ public class VOSViewerJsonToGexf {
             }
             if (keySet.contains("description")) {
                 AttributeValue att = new AttributeValueImpl(mapAttributeIdToNodeAttribute.get("description"));
-                att.setValue(item.getString("description"));
+                if (item.isNull("description")) {
+                    att.setValue("");
+                } else {
+                    att.setValue(item.getString("description"));
+                }
                 nodeGexf.getAttributeValues().add(att);
             }
 
             if (keySet.contains("url")) {
                 AttributeValue att = new AttributeValueImpl(mapAttributeIdToNodeAttribute.get("url"));
-                att.setValue(item.getString("url"));
+                if (item.isNull("url")) {
+                    att.setValue("");
+                } else {
+                    att.setValue(item.getString("url"));
+                }
                 nodeGexf.getAttributeValues().add(att);
             }
 
@@ -251,7 +273,11 @@ public class VOSViewerJsonToGexf {
 
             if (keySet.contains("cluster")) {
                 AttributeValue att = new AttributeValueImpl(mapAttributeIdToNodeAttribute.get("cluster"));
-                att.setValue(String.valueOf(item.getInt("cluster")));
+                if (item.isNull("cluster")) {
+                    att.setValue("");
+                } else {
+                    att.setValue(String.valueOf(item.getInt("cluster")));
+                }
                 nodeGexf.getAttributeValues().add(att);
             }
 
@@ -259,7 +285,11 @@ public class VOSViewerJsonToGexf {
                 JsonObject scoresObject = item.getJsonObject("scores");
                 for (String key : scoresObject.keySet()) {
                     AttributeValue att = new AttributeValueImpl(mapAttributeIdToScoreAttribute.get(key));
-                    att.setValue(scoresObject.getJsonNumber(key).toString());
+                    if (scoresObject.isNull(key)) {
+                        att.setValue("");
+                    } else {
+                        att.setValue(String.valueOf(scoresObject.getJsonNumber(key).doubleValue()));
+                    }
                     nodeGexf.getAttributeValues().add(att);
                 }
             }
@@ -268,7 +298,11 @@ public class VOSViewerJsonToGexf {
                 JsonObject weightsObject = item.getJsonObject("weights");
                 for (String key : weightsObject.keySet()) {
                     AttributeValue att = new AttributeValueImpl(mapAttributeIdToWeightAttribute.get(key));
-                    att.setValue(weightsObject.getJsonNumber(key).toString());
+                    if (weightsObject.isNull(key)) {
+                        att.setValue("");
+                    } else {
+                        att.setValue(weightsObject.getJsonNumber(key).toString());
+                    }
                     nodeGexf.getAttributeValues().add(att);
                 }
             }
