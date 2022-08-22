@@ -118,7 +118,7 @@ public class VOSViewerJsonToGexf {
             List<String> lines = br.lines().collect(toList());
 
             String jsonFixed = String.join("\n", lines).replace("\"\"", "\\\"");
-            System.out.println("jsonFixed: " + jsonFixed);
+//            System.out.println("jsonFixed: " + jsonFixed);
             jsonReader = Json.createReader(new StringReader(jsonFixed));
             jsonObject = jsonReader.readObject();
         } catch (IOException ex) {
@@ -234,7 +234,19 @@ public class VOSViewerJsonToGexf {
         while (iteratorItems.hasNext()) {
             JsonObject item = (JsonObject) iteratorItems.next();
             keySet = item.keySet();
-            Node nodeGexf = graph.createNode(item.getJsonNumber("id").toString());
+            JsonValue valueTypeUnknown = item.get("id");
+            String idString = "";
+            switch (valueTypeUnknown.getValueType()) {
+                case NUMBER:
+                    idString = item.getJsonNumber("id").toString();
+                    break;
+                case STRING:
+                    idString = item.getString("id");
+                    break;
+                default:
+            }
+
+            Node nodeGexf = graph.createNode(idString);
             if (keySet.contains("label")) {
                 nodeGexf.setLabel(item.getString("label"));
             }
@@ -322,11 +334,34 @@ public class VOSViewerJsonToGexf {
         }
 
         Iterator<JsonValue> iteratorLinks = links.iterator();
-        Set<String> keySet;
         while (iteratorLinks.hasNext()) {
             JsonObject link = (JsonObject) iteratorLinks.next();
-            Node node1 = graph.getNode(link.getJsonNumber("source_id").toString());
-            Node node2 = graph.getNode(link.getJsonNumber("target_id").toString());
+            JsonValue sourceIdValueTypeUnknown = link.get("source_id");
+            String sourceIdString = "";
+            switch (sourceIdValueTypeUnknown.getValueType()) {
+                case NUMBER:
+                    sourceIdString = link.getJsonNumber("source_id").toString();
+                    break;
+                case STRING:
+                    sourceIdString = link.getString("source_id");
+                    break;
+                default:
+            }
+
+            JsonValue targetIdValueTypeUnknown = link.get("target_id");
+            String targetIdString = "";
+            switch (targetIdValueTypeUnknown.getValueType()) {
+                case NUMBER:
+                    targetIdString = link.getJsonNumber("target_id").toString();
+                    break;
+                case STRING:
+                    targetIdString = link.getString("target_id");
+                    break;
+                default:
+            }
+
+            Node node1 = graph.getNode(sourceIdString);
+            Node node2 = graph.getNode(targetIdString);
             Edge edge = node1.connectTo(node2);
             edge.setWeight(link.getJsonNumber("strength").bigDecimalValue().floatValue());
         }

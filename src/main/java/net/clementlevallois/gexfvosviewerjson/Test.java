@@ -43,7 +43,7 @@ public class Test {
 //        bw.write(convertToJson);
 //        bw.close();
 //        
-        VOSViewerJsonToGexf vosToGexf = new VOSViewerJsonToGexf(Path.of("test.json"));
+        VOSViewerJsonToGexf vosToGexf = new VOSViewerJsonToGexf(Path.of("C:\\Users\\levallois\\Downloads\\VOSviewer-network_hnut tan ho.json"));
         Gexf convertToGexf = vosToGexf.convertToGexf();
     }
 
