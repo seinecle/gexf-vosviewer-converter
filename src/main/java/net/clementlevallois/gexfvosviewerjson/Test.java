@@ -5,14 +5,9 @@
  */
 package net.clementlevallois.gexfvosviewerjson;
 
-import it.uniroma1.dis.wsngroup.gexf4j.core.Gexf;
-import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 
 /**
  *
@@ -44,7 +39,7 @@ public class Test {
 //        bw.close();
 //        
         VOSViewerJsonToGexf vosToGexf = new VOSViewerJsonToGexf(Path.of("C:\\Users\\levallois\\Downloads\\VOSviewer-network_hnut tan ho.json"));
-        Gexf convertToGexf = vosToGexf.convertToGexf();
+        String convertToGexf = vosToGexf.convertToGexf();
     }
 
 }

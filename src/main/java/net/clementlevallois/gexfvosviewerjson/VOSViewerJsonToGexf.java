@@ -5,22 +5,11 @@
  */
 package net.clementlevallois.gexfvosviewerjson;
 
-import it.uniroma1.dis.wsngroup.gexf4j.core.Edge;
-import it.uniroma1.dis.wsngroup.gexf4j.core.EdgeType;
-import it.uniroma1.dis.wsngroup.gexf4j.core.Gexf;
-import it.uniroma1.dis.wsngroup.gexf4j.core.Graph;
-import it.uniroma1.dis.wsngroup.gexf4j.core.Mode;
-import it.uniroma1.dis.wsngroup.gexf4j.core.Node;
-import it.uniroma1.dis.wsngroup.gexf4j.core.data.AttributeClass;
-import it.uniroma1.dis.wsngroup.gexf4j.core.data.AttributeList;
-import it.uniroma1.dis.wsngroup.gexf4j.core.data.AttributeType;
-import it.uniroma1.dis.wsngroup.gexf4j.core.data.AttributeValue;
-import it.uniroma1.dis.wsngroup.gexf4j.core.impl.GexfImpl;
-import it.uniroma1.dis.wsngroup.gexf4j.core.impl.data.AttributeImpl;
-import it.uniroma1.dis.wsngroup.gexf4j.core.impl.data.AttributeListImpl;
-import it.uniroma1.dis.wsngroup.gexf4j.core.impl.data.AttributeValueImpl;
-import it.uniroma1.dis.wsngroup.gexf4j.core.impl.viz.PositionImpl;
-import it.uniroma1.dis.wsngroup.gexf4j.core.viz.Position;
+import jakarta.json.Json;
+import jakarta.json.JsonArray;
+import jakarta.json.JsonObject;
+import jakarta.json.JsonReader;
+import jakarta.json.JsonValue;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -37,13 +26,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import static java.util.stream.Collectors.toList;
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-import javax.json.JsonValue;
 import net.clementlevallois.utils.UnicodeBOMInputStream;
+import org.gephi.graph.api.Column;
+import org.gephi.graph.api.Edge;
+import org.gephi.graph.api.Graph;
+import org.gephi.graph.api.GraphController;
+import org.gephi.graph.api.GraphModel;
+import org.gephi.graph.api.Node;
+import org.gephi.project.api.ProjectController;
+import org.gephi.project.api.Workspace;
 import org.openide.util.Exceptions;
+import org.openide.util.Lookup;
 
 /**
  *
@@ -57,16 +50,17 @@ public class VOSViewerJsonToGexf {
     Path filePath;
     InputStream is;
     JsonObject jsonObject;
-    Gexf gexf;
+    String gexf;
     Graph graph;
+    GraphModel model;
     Set<String> scoresKeys = new HashSet();
     Set<String> weightsKeys = new HashSet();
     Set<String> stringAttributes = new HashSet();
     Set<String> defaultNodeAttributes;
-    AttributeList attrListNodes;
-    Map<String, AttributeImpl> mapAttributeIdToNodeAttribute = new HashMap();
-    Map<String, AttributeImpl> mapAttributeIdToScoreAttribute = new HashMap();
-    Map<String, AttributeImpl> mapAttributeIdToWeightAttribute = new HashMap();
+    Set<Column> attrListNodes = new HashSet();
+    Map<String, Column> mapAttributeIdToNodeAttribute = new HashMap();
+    Map<String, Column> mapAttributeIdToScoreAttribute = new HashMap();
+    Map<String, Column> mapAttributeIdToWeightAttribute = new HashMap();
     Set<String> attrListNodesAsString = new HashSet();
     boolean descriptionPresent;
     boolean clusterPresent;
@@ -80,7 +74,7 @@ public class VOSViewerJsonToGexf {
         this.is = is;
     }
 
-    public Gexf convertToGexf() throws FileNotFoundException {
+    public String convertToGexf() throws FileNotFoundException {
         defaultNodeAttributes = Set.of("id", "label", "description", "url", "x", "y", "cluster", "weights", "scores");
         load();
         gexfInitiate();
@@ -128,19 +122,11 @@ public class VOSViewerJsonToGexf {
     }
 
     private void gexfInitiate() {
-        gexf = new GexfImpl();
+        ProjectController pc = Lookup.getDefault().lookup(ProjectController.class);
+        pc.newProject();
+        Workspace workspace = pc.getCurrentWorkspace();
         Calendar date = Calendar.getInstance();
-
-        gexf.getMetadata()
-                .setLastModified(date.getTime())
-                .setCreator("")
-                .setDescription("");
-        gexf.setVisualization(true);
-
-        graph = gexf.getGraph();
-        graph.setDefaultEdgeType(EdgeType.UNDIRECTED).setMode(Mode.STATIC);
-
-        attrListNodes = new AttributeListImpl(AttributeClass.NODE);
+        GraphModel model = Lookup.getDefault().lookup(GraphController.class).getGraphModel();
 
     }
 
@@ -157,35 +143,31 @@ public class VOSViewerJsonToGexf {
         Iterator<JsonValue> iteratorItems = items.iterator();
         while (iteratorItems.hasNext()) {
             JsonObject item = (JsonObject) iteratorItems.next();
-            AttributeImpl stringAttribute;
+            Column stringAttribute;
             for (String key : item.keySet()) {
                 if (!descriptionPresent && key.equals("description")) {
                     descriptionPresent = true;
-                    AttributeImpl descriptionAttribute = new AttributeImpl("description", AttributeType.STRING, "description");
-                    attrListNodes.add(descriptionAttribute);
-                    mapAttributeIdToNodeAttribute.put(key, descriptionAttribute);
+                    Column attribute = model.getNodeTable().addColumn("description", String.class);
+                    attrListNodesAsString.add("description");
+                    mapAttributeIdToNodeAttribute.put(key, attribute);
                 }
 
                 if (!urlPresent && key.equals("url")) {
                     urlPresent = true;
-                    AttributeImpl urlAttribute = new AttributeImpl("url", AttributeType.STRING, "url");
-                    attrListNodes.add(urlAttribute);
-                    mapAttributeIdToNodeAttribute.put(key, urlAttribute);
+                    Column attribute = model.getNodeTable().addColumn("url", String.class);
+                    attrListNodesAsString.add("url");
+                    mapAttributeIdToNodeAttribute.put(key, attribute);
 
                 }
                 if (!clusterPresent && key.equals("cluster")) {
                     clusterPresent = true;
-                    AttributeImpl clusterAttribute = new AttributeImpl("cluster", AttributeType.INTEGER, "cluster");
-                    attrListNodes.add(clusterAttribute);
-                    mapAttributeIdToNodeAttribute.put(key, clusterAttribute);
-
+                    Column attribute = model.getNodeTable().addColumn("cluster", Integer.class);
+                    mapAttributeIdToNodeAttribute.put(key, attribute);
                 }
                 if (!defaultNodeAttributes.contains(key) && !attrListNodesAsString.contains(key)) {
-                    stringAttribute = new AttributeImpl(key, AttributeType.STRING, key);
-                    attrListNodes.add(stringAttribute);
+                    Column attribute = model.getNodeTable().addColumn(key, String.class);
                     attrListNodesAsString.add(key);
-                    mapAttributeIdToNodeAttribute.put(key, stringAttribute);
-
+                    mapAttributeIdToNodeAttribute.put(key, attribute);
                 }
                 if (key.equals("scores")) {
                     JsonObject scores = item.getJsonObject("scores");
@@ -202,20 +184,14 @@ public class VOSViewerJsonToGexf {
             }
         }
 
-        AttributeImpl numberAttribute;
         for (String key : scoresKeys) {
-            numberAttribute = new AttributeImpl(key, AttributeType.DOUBLE, key);
-            attrListNodes.add(numberAttribute);
-            mapAttributeIdToScoreAttribute.put(key, numberAttribute);
+            Column attribute = model.getNodeTable().addColumn(key, Double.class);
+            mapAttributeIdToScoreAttribute.put(key, attribute);
         }
         for (String key : weightsKeys) {
-            numberAttribute = new AttributeImpl(key, AttributeType.DOUBLE, key);
-            attrListNodes.add(numberAttribute);
-            mapAttributeIdToWeightAttribute.put(key, numberAttribute);
+            Column attribute = model.getNodeTable().addColumn(key, Double.class);
+            mapAttributeIdToWeightAttribute.put(key, attribute);
         }
-
-        graph.getAttributeLists().add(attrListNodes);
-
     }
 
     private void turnNodeJsonValuesToGexf() {
@@ -246,81 +222,71 @@ public class VOSViewerJsonToGexf {
                 default:
             }
 
-            Node nodeGexf = graph.createNode(idString);
+            Node nodeGexf = model.factory().newNode(idString);
             if (keySet.contains("label")) {
                 nodeGexf.setLabel(item.getString("label"));
             }
             if (keySet.contains("description")) {
-                AttributeValue att = new AttributeValueImpl(mapAttributeIdToNodeAttribute.get("description"));
+                Column att = mapAttributeIdToNodeAttribute.get("description");
                 if (item.isNull("description")) {
-                    att.setValue("");
+                    nodeGexf.setAttribute(att, "");
                 } else {
-                    att.setValue(item.getString("description"));
+                    nodeGexf.setAttribute(att, item.getString("description"));
                 }
-                nodeGexf.getAttributeValues().add(att);
             }
 
             if (keySet.contains("url")) {
-                AttributeValue att = new AttributeValueImpl(mapAttributeIdToNodeAttribute.get("url"));
+                Column att = mapAttributeIdToNodeAttribute.get("url");
                 if (item.isNull("url")) {
-                    att.setValue("");
+                    nodeGexf.setAttribute(att, "");
                 } else {
-                    att.setValue(item.getString("url"));
+                    nodeGexf.setAttribute(att, item.getString("url"));
                 }
-                nodeGexf.getAttributeValues().add(att);
             }
-
-            Position pos = new PositionImpl();
 
             if (keySet.contains("x")) {
-                pos.setX(item.getJsonNumber("x").bigDecimalValue().floatValue());
+                nodeGexf.setX(item.getJsonNumber("x").bigDecimalValue().floatValue());
             }
             if (keySet.contains("y")) {
-                pos.setY(item.getJsonNumber("y").bigDecimalValue().floatValue());
+                nodeGexf.setY(item.getJsonNumber("y").bigDecimalValue().floatValue());
             }
             if (keySet.contains("x") && keySet.contains("y")) {
-                pos.setZ(0f);
-                nodeGexf.setPosition(pos);
+                nodeGexf.setZ(0.0f);
             }
 
             if (keySet.contains("cluster")) {
-                AttributeValue att = new AttributeValueImpl(mapAttributeIdToNodeAttribute.get("cluster"));
+                Column att = mapAttributeIdToNodeAttribute.get("cluster");
                 if (item.isNull("cluster")) {
-                    att.setValue("");
+                    nodeGexf.setAttribute(att, 0);
                 } else {
-                    att.setValue(String.valueOf(item.getInt("cluster")));
+                    nodeGexf.setAttribute(att, Integer.valueOf(item.getInt("cluster")));
                 }
-                nodeGexf.getAttributeValues().add(att);
             }
 
             if (keySet.contains("scores")) {
                 JsonObject scoresObject = item.getJsonObject("scores");
                 for (String key : scoresObject.keySet()) {
-                    AttributeValue att = new AttributeValueImpl(mapAttributeIdToScoreAttribute.get(key));
+                    Column att = mapAttributeIdToScoreAttribute.get(key);
                     if (scoresObject.isNull(key)) {
-                        att.setValue("");
+                        nodeGexf.setAttribute(att, 0d);
                     } else {
-                        att.setValue(String.valueOf(scoresObject.getJsonNumber(key).doubleValue()));
+                        nodeGexf.setAttribute(att, scoresObject.getJsonNumber(key).doubleValue());
                     }
-                    nodeGexf.getAttributeValues().add(att);
                 }
             }
 
             if (keySet.contains("weights")) {
                 JsonObject weightsObject = item.getJsonObject("weights");
                 for (String key : weightsObject.keySet()) {
-                    AttributeValue att = new AttributeValueImpl(mapAttributeIdToWeightAttribute.get(key));
+                    Column att = mapAttributeIdToWeightAttribute.get(key);
                     if (weightsObject.isNull(key)) {
-                        att.setValue("");
+                        nodeGexf.setAttribute(att, 0d);
                     } else {
-                        att.setValue(weightsObject.getJsonNumber(key).toString());
+                        nodeGexf.setAttribute(att, weightsObject.getJsonNumber(key).doubleValue());
                     }
-                    nodeGexf.getAttributeValues().add(att);
                 }
             }
-
         }
-
     }
 
     private void turnEdgeJsonValuesToGexf() {
@@ -362,7 +328,7 @@ public class VOSViewerJsonToGexf {
 
             Node node1 = graph.getNode(sourceIdString);
             Node node2 = graph.getNode(targetIdString);
-            Edge edge = node1.connectTo(node2);
+            Edge edge = model.factory().newEdge(node1, node2, false);
             edge.setWeight(link.getJsonNumber("strength").bigDecimalValue().floatValue());
         }
     }

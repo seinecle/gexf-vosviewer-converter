@@ -5,8 +5,9 @@
  */
 package net.clementlevallois.gexfvosviewerjson;
 
-import javax.json.Json;
-import javax.json.JsonObjectBuilder;
+import jakarta.json.Json;
+import jakarta.json.JsonObjectBuilder;
+
 
 /**
  *

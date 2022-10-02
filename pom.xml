@@ -10,7 +10,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <gephi.graphstore.version>0.6.1-SNAPSHOT</gephi.graphstore.version>
-        <gephi.version>0.9.3-SNAPSHOT</gephi.version>
+        <gephi.version>0.9.7</gephi.version>
         <netbeans.version>RELEASE121</netbeans.version>
     </properties>
     <dependencies>
@@ -37,11 +37,6 @@
             <version>${gephi.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.gephi</groupId>
-            <artifactId>io-processor-plugin</artifactId>
-            <version>${gephi.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-openide-filesystems</artifactId>
             <version>${netbeans.version}</version>
@@ -64,27 +59,16 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>8.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>javax.json</artifactId>
-            <version>1.1.4</version>
-        </dependency>
-        <dependency>
-            <groupId>it.uniroma1.dis.wsngroup.gexf4j</groupId>
-            <artifactId>gexf4j</artifactId>
-            <version>1.2.0</version>
+            <groupId>jakarta.json</groupId>
+            <artifactId>jakarta.json-api</artifactId>
+            <version>2.1.0</version>
             <type>jar</type>
-            <!--this exclusion is necessary (I think!) as the lib is following Java 9 Modules and 2 dependencies are conflicting-->
-            <exclusions>
-                <exclusion>
-                    <groupId>jakarta.xml.bind</groupId>
-                    <artifactId>jakarta.xml.bind-api</artifactId>
-                </exclusion>
-            </exclusions>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.eclipse.parsson/parsson -->
+        <dependency>
+            <groupId>org.eclipse.parsson</groupId>
+            <artifactId>parsson</artifactId>
+            <version>1.1.0</version>
         </dependency>
     </dependencies>
 </project>

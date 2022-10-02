@@ -5,6 +5,11 @@
  */
 package net.clementlevallois.gexfvosviewerjson;
 
+import jakarta.json.Json;
+import jakarta.json.JsonArrayBuilder;
+import jakarta.json.JsonObjectBuilder;
+import jakarta.json.JsonWriterFactory;
+import jakarta.json.stream.JsonGenerator;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -19,11 +24,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import javax.json.Json;
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonObjectBuilder;
-import javax.json.JsonWriterFactory;
-import javax.json.stream.JsonGenerator;
 import org.gephi.appearance.api.AppearanceController;
 import org.gephi.appearance.api.AppearanceModel;
 import org.gephi.appearance.api.Function;
@@ -378,11 +378,11 @@ public class GexfToVOSViewerJson {
         AppearanceController appearanceController = Lookup.getDefault().lookup(AppearanceController.class);
         AppearanceModel appearanceModel = appearanceController.getModel();
         Column modColumn = gm.getNodeTable().getColumn("modularity_class");
-        Function func = appearanceModel.getNodeFunction(gm.getGraph(), modColumn, PartitionElementColorTransformer.class);
+        Function func = appearanceModel.getNodeFunction(modColumn, PartitionElementColorTransformer.class);
         Partition partition = ((PartitionFunction) func).getPartition();
 
         // iterating through all edges and creating the corresponding links and values in vosviewer json
-        Iterator<Integer> iteratorModularityValues = partition.getValues().iterator();
+        Iterator<Integer> iteratorModularityValues = partition.getValues(gm.getGraph()).iterator();
         while (iteratorModularityValues.hasNext()) {
             Integer modularityClass = iteratorModularityValues.next();
             JsonObjectBuilder clusterBuilder = Json.createObjectBuilder();
