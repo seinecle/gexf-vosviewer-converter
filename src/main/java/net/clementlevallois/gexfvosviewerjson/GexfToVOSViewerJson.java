@@ -13,8 +13,10 @@ import jakarta.json.stream.JsonGenerator;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -61,7 +63,7 @@ public class GexfToVOSViewerJson {
     JsonArrayBuilder clusters;
     JsonObjectBuilder config;
     JsonObjectBuilder terminology;
-    String filePath;
+    Path filePath;
     GraphModel gm;
     boolean graphHasModularityColumn = false;
     Terminology terminologyData;
@@ -72,13 +74,18 @@ public class GexfToVOSViewerJson {
     Set<Node> nodesToKeep = new HashSet();
     boolean keepAll = false;
     InputStream is;
+    String gexf;
 
-    public GexfToVOSViewerJson(String filePath) {
+    public GexfToVOSViewerJson(Path filePath) {
         this.filePath = filePath;
     }
 
     public GexfToVOSViewerJson(GraphModel gm) {
         this.gm = gm;
+    }
+
+    public GexfToVOSViewerJson(String gexf) {
+        this.gexf = gexf;
     }
 
     public GexfToVOSViewerJson(InputStream is) {
@@ -135,12 +142,16 @@ public class GexfToVOSViewerJson {
         projectController.newProject();
         Container container = null;
         if (filePath != null) {
-            File file = new File(filePath).getAbsoluteFile();
+            File file = filePath.toFile();
             container = importController.importFile(file);
             container.closeLoader();
         } else if (is != null) {
             FileImporter fi = new ImporterGEXF();
             container = importController.importFile(is, fi);
+            container.closeLoader();
+        } else if (gexf != null) {
+            FileImporter fi = new ImporterGEXF();
+            container = importController.importFile(new StringReader(gexf), fi);
             container.closeLoader();
         }
         DefaultProcessor processor = new DefaultProcessor();
@@ -244,7 +255,7 @@ public class GexfToVOSViewerJson {
             }
         }
 
-        if (counterZeroForX +1 >= toArray.length && counterZeroForY + 1 >= toArray.length) {
+        if (counterZeroForX + 1 >= toArray.length && counterZeroForY + 1 >= toArray.length) {
             for (Object nodeObject : toArray) {
                 Node node = (Node) nodeObject;
                 node.setX((float) Math.random() * 20);
@@ -325,7 +336,6 @@ public class GexfToVOSViewerJson {
             // but in practice, gexf files can include nodes with a negative size ->  <viz:size value="-0.71428585"></viz:size>
             // these rare cases break the parsing of the VOSviewer json file
             // so we include the node size attribute in scores, which can be negative
-            
             scoresBuilder.add("viz_size", node.size());
 
             if (!node.getAttributeKeys().contains("x") && !node.getAttributeKeys().contains("y")) {
