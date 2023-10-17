@@ -118,15 +118,14 @@ public class VOSViewerJsonToGexf {
         } catch (IOException ex) {
             Exceptions.printStackTrace(ex);
         }
-
     }
 
     private void gexfInitiate() {
         ProjectController pc = Lookup.getDefault().lookup(ProjectController.class);
         pc.newProject();
         Workspace workspace = pc.getCurrentWorkspace();
-        Calendar date = Calendar.getInstance();
-        GraphModel model = Lookup.getDefault().lookup(GraphController.class).getGraphModel();
+        model = Lookup.getDefault().lookup(GraphController.class).getGraphModel();
+        graph = model.getGraph();
 
     }
 
@@ -259,7 +258,7 @@ public class VOSViewerJsonToGexf {
                 if (item.isNull("cluster")) {
                     nodeGexf.setAttribute(att, 0);
                 } else {
-                    nodeGexf.setAttribute(att, Integer.valueOf(item.getInt("cluster")));
+                    nodeGexf.setAttribute(att, item.getInt("cluster"));
                 }
             }
 

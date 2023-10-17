@@ -297,7 +297,8 @@ public class GexfToVOSViewerJson {
                         } else if (nodeAttributesThatCanBeWeight.contains(nodeAttributeKey)) {
                             Object attribute = node.getAttribute(nodeAttributeKey);
                             if (attribute instanceof Double) {
-                                weightsBuilder.add(nodeAttributeTitle, (Double) attribute);
+                                Double value = (Double) attribute;
+                                weightsBuilder.add(nodeAttributeTitle, value);
                             }
                             if (attribute instanceof Float) {
                                 weightsBuilder.add(nodeAttributeTitle, (Float) attribute);
@@ -357,7 +358,6 @@ public class GexfToVOSViewerJson {
         writerFactory.createWriter(writer).write(jsBuilder.build());
 
         String json = writer.toString();
-
         return json;
     }
 
