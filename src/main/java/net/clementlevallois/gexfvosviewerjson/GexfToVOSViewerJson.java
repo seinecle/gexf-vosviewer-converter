@@ -12,6 +12,7 @@ import jakarta.json.JsonWriterFactory;
 import jakarta.json.stream.JsonGenerator;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.InputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
@@ -44,6 +45,7 @@ import org.gephi.io.importer.plugin.file.ImporterGEXF;
 import org.gephi.io.importer.spi.FileImporter;
 import org.gephi.io.processor.plugin.DefaultProcessor;
 import org.gephi.project.api.ProjectController;
+import org.openide.util.Exceptions;
 import org.openide.util.Lookup;
 
 /**
@@ -96,6 +98,9 @@ public class GexfToVOSViewerJson {
         if (gm == null) {
             load();
         }
+        if (gm == null){
+            return "";
+        }
         vvJsonInitiate();
 
         if (maxNumberNodes != null && gm.getGraph().getNodeCount() > maxNumberNodes) {
@@ -135,16 +140,22 @@ public class GexfToVOSViewerJson {
         return string;
     }
 
-    private void load() throws FileNotFoundException {
+    private void load() {
         ProjectController projectController = Lookup.getDefault().lookup(ProjectController.class);
         GraphController graphController = Lookup.getDefault().lookup(GraphController.class);
         ImportController importController = Lookup.getDefault().lookup(ImportController.class);
         projectController.newProject();
         Container container = null;
         if (filePath != null) {
-            File file = filePath.toFile();
-            container = importController.importFile(file);
-            container.closeLoader();
+            try {
+                File file = filePath.toFile();
+                container = importController.importFile(file);
+                container.closeLoader();
+            } catch (FileNotFoundException ex) {
+                Exceptions.printStackTrace(ex);
+                System.out.println("error when loading file path in gexf vv converter");
+                return;
+            }
         } else if (is != null) {
             FileImporter fi = new ImporterGEXF();
             container = importController.importFile(is, fi);
