@@ -397,10 +397,13 @@ public class VOSViewerJsonToGexf {
 
             Node node1 = graph.getNode(sourceIdString);
             Node node2 = graph.getNode(targetIdString);
-            Edge edge = model.factory().newEdge(node1, node2, false);
-            edge.setWeight(link.getJsonNumber("strength").bigDecimalValue().floatValue());
-            graph.addEdge(edge);
-
+            if (node1 != null && node2 != null) {
+                Edge edge = model.factory().newEdge(node1, node2, false);
+                edge.setWeight(link.getJsonNumber("strength").bigDecimalValue().floatValue());
+                graph.addEdge(edge);
+            } else {
+                System.out.println("node 1 or node 2 was null when trying to create edge");
+            }
         }
     }
 }

@@ -12,7 +12,6 @@ import jakarta.json.JsonWriterFactory;
 import jakarta.json.stream.JsonGenerator;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.InputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
@@ -94,11 +93,11 @@ public class GexfToVOSViewerJson {
         this.is = is;
     }
 
-    public String convertToJson() throws FileNotFoundException {
+    public String convertToJson() {
         if (gm == null) {
             load();
         }
-        if (gm == null){
+        if (gm == null) {
             return "";
         }
         vvJsonInitiate();
@@ -158,12 +157,27 @@ public class GexfToVOSViewerJson {
             }
         } else if (is != null) {
             FileImporter fi = new ImporterGEXF();
-            container = importController.importFile(is, fi);
-            container.closeLoader();
+            try {
+                container = importController.importFile(is, fi);
+                container.closeLoader();
+            } catch (Exception e) {
+                System.out.println("error in network converter");
+                System.out.println("malformed gexf in GexfToVOSViewerJson");
+                return;
+            }
         } else if (gexf != null) {
             FileImporter fi = new ImporterGEXF();
-            container = importController.importFile(new StringReader(gexf), fi);
-            container.closeLoader();
+            try {
+                container = importController.importFile(new StringReader(gexf), fi);
+                container.closeLoader();
+            } catch (Exception e) {
+                System.out.println("error in network converter");
+                System.out.println("malformed gexf in GexfToVOSViewerJson");
+                return;
+            }
+        }
+        if (container == null){
+            return;
         }
         DefaultProcessor processor = new DefaultProcessor();
         processor.setWorkspace(projectController.getCurrentWorkspace());
