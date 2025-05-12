@@ -12,7 +12,6 @@ import jakarta.json.JsonReader;
 import jakarta.json.JsonValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.nio.file.Path;
@@ -39,41 +38,36 @@ import org.openide.util.Lookup;
  */
 public class VOSViewerJsonToGexf {
 
-    /**
-     * @param args the command line arguments
-     */
-    Path filePath;
-    InputStream is;
-    JsonObject jsonObject;
-    String jsonVVAsString;
-    Graph graph;
-    GraphModel model;
-    Set<String> scoresKeys = new HashSet();
-    Set<String> weightsKeys = new HashSet();
-    Set<String> stringAttributes = new HashSet();
-    Set<String> defaultNodeAttributes;
-    Set<Column> attrListNodes = new HashSet();
-    Map<String, Column> mapAttributeIdToNodeAttribute = new HashMap();
-    Map<String, Column> mapAttributeIdToScoreAttribute = new HashMap();
-    Map<String, Column> mapAttributeIdToWeightAttribute = new HashMap();
-    Set<String> attrListNodesAsString = new HashSet();
-    boolean descriptionPresent;
-    boolean clusterPresent;
-    boolean urlPresent;
-    ProjectController pc;
-    Workspace workspace;
+    private JsonObject jsonObject;
+    private final String jsonVVAsString;
+    private Graph graph;
+    private GraphModel model;
+    private final Set<String> scoresKeys;
+    private final Set<String> weightsKeys;
+    private final Set<String> defaultNodeAttributes;
+    private final Map<String, Column> mapAttributeIdToNodeAttribute;
+    private final Map<String, Column> mapAttributeIdToScoreAttribute;
+    private final Map<String, Column> mapAttributeIdToWeightAttribute;
+    private final Set<String> attrListNodesAsString;
+    private boolean descriptionPresent;
+    private boolean clusterPresent;
+    private boolean urlPresent;
+    private ProjectController pc;
+    private Workspace workspace;
     private static final Object LOCK = new Object();
 
-    public VOSViewerJsonToGexf(Path filePath) {
-        this.filePath = filePath;
-    }
-
     public VOSViewerJsonToGexf(String jsonVVAsString) {
+        this.attrListNodesAsString = new HashSet();
+        this.mapAttributeIdToWeightAttribute = new HashMap();
+        this.mapAttributeIdToScoreAttribute = new HashMap();
+        this.mapAttributeIdToNodeAttribute = new HashMap();
+        this.weightsKeys = new HashSet();
+        this.scoresKeys = new HashSet();
         this.jsonVVAsString = jsonVVAsString;
+        this.defaultNodeAttributes = Set.of("id", "label", "description", "url", "x", "y", "cluster", "weights", "scores");
     }
 
     public String convertToGexf() throws FileNotFoundException {
-        defaultNodeAttributes = Set.of("id", "label", "description", "url", "x", "y", "cluster", "weights", "scores");
         try {
             load();
             gexfInitiate();
