@@ -56,26 +56,27 @@ public class GexfToVOSViewerJson {
     /**
      * @param args the command line arguments
      */
-    JsonObjectBuilder vosviewerJson;
-    JsonObjectBuilder network;
-    JsonObjectBuilder metadata;
-    JsonArrayBuilder items;
-    JsonArrayBuilder links;
-    JsonArrayBuilder clusters;
-    JsonObjectBuilder config;
-    JsonObjectBuilder terminology;
-    Path filePath;
-    GraphModel gm;
-    boolean graphHasModularityColumn = false;
-    Terminology terminologyData;
-    Metadata metadataData;
-    TemplateItem templateItemData;
-    TemplateLink templateLinkData;
-    Integer maxNumberNodes;
-    Set<Node> nodesToKeep = new HashSet();
-    boolean keepAll = false;
-    InputStream is;
-    String gexf;
+    private JsonObjectBuilder vosviewerJson;
+    private JsonObjectBuilder network;
+    private JsonObjectBuilder metadata;
+    private JsonArrayBuilder items;
+    private JsonArrayBuilder links;
+    private JsonArrayBuilder clusters;
+    private JsonObjectBuilder config;
+    private JsonObjectBuilder terminology;
+    private Path filePath;
+    private volatile GraphModel gm;
+    private boolean graphHasModularityColumn = false;
+    private Terminology terminologyData;
+    private Metadata metadataData;
+    private TemplateItem templateItemData;
+    private TemplateLink templateLinkData;
+    private Integer maxNumberNodes;
+    private Set<Node> nodesToKeep;
+    private boolean keepAll = false;
+    private InputStream is;
+    private String gexf;
+    private final Object lock = new Object();
 
     public GexfToVOSViewerJson(Path filePath) {
         this.filePath = filePath;
@@ -140,50 +141,64 @@ public class GexfToVOSViewerJson {
     }
 
     private void load() {
-        ProjectController projectController = Lookup.getDefault().lookup(ProjectController.class);
-        GraphController graphController = Lookup.getDefault().lookup(GraphController.class);
-        ImportController importController = Lookup.getDefault().lookup(ImportController.class);
-        projectController.newProject();
+        ProjectController projectController = null;
         Container container = null;
-        if (filePath != null) {
+
+        synchronized (lock) {
             try {
-                File file = filePath.toFile();
-                container = importController.importFile(file);
-                container.closeLoader();
+                projectController = Lookup.getDefault().lookup(ProjectController.class);
+                GraphController graphController = Lookup.getDefault().lookup(GraphController.class);
+                ImportController importController = Lookup.getDefault().lookup(ImportController.class);
+
+                projectController.newProject();
+
+                if (filePath != null) {
+                    File file = filePath.toFile();
+                    container = importController.importFile(file);
+                    if (container != null) {
+                        container.closeLoader();
+                    }
+                } else if (is != null) {
+                    FileImporter fi = new ImporterGEXF();
+                    container = importController.importFile(is, fi);
+                    if (container != null) {
+                        container.closeLoader();
+                    }
+                } else if (gexf != null) {
+                    FileImporter fi = new ImporterGEXF();
+                    container = importController.importFile(new StringReader(gexf), fi);
+                    if (container != null) {
+                        container.closeLoader();
+                    }
+                }
+
+                if (container == null) {
+                    return;
+                }
+
+                DefaultProcessor processor = new DefaultProcessor();
+                processor.setWorkspace(projectController.getCurrentWorkspace());
+                processor.setContainers(new ContainerUnloader[]{container.getUnloader()});
+                processor.process();
+
+                gm = graphController.getGraphModel();
+
             } catch (FileNotFoundException ex) {
                 Exceptions.printStackTrace(ex);
                 System.out.println("error when loading file path in gexf vv converter");
-                return;
-            }
-        } else if (is != null) {
-            FileImporter fi = new ImporterGEXF();
-            try {
-                container = importController.importFile(is, fi);
-                container.closeLoader();
             } catch (Exception e) {
                 System.out.println("error in network converter");
                 System.out.println("malformed gexf in GexfToVOSViewerJson");
-                return;
-            }
-        } else if (gexf != null) {
-            FileImporter fi = new ImporterGEXF();
-            try {
-                container = importController.importFile(new StringReader(gexf), fi);
-                container.closeLoader();
-            } catch (Exception e) {
-                System.out.println("error in network converter");
-                System.out.println("malformed gexf in GexfToVOSViewerJson");
-                return;
+            } finally {
+                if (projectController != null) {
+                    projectController.closeCurrentWorkspace();
+                    projectController.closeCurrentProject();
+                }
+                if (container != null) {
+                    container.closeLoader();
+                }
             }
         }
-        if (container == null){
-            return;
-        }
-        DefaultProcessor processor = new DefaultProcessor();
-        processor.setWorkspace(projectController.getCurrentWorkspace());
-        processor.setContainers(new ContainerUnloader[]{container.getUnloader()});
-        processor.process();
-        gm = graphController.getGraphModel();
     }
 
     private void vvJsonInitiate() {
@@ -446,6 +461,7 @@ public class GexfToVOSViewerJson {
     }
 
     private void listNodesToKeep(Integer maxNumberNodes) {
+        nodesToKeep = new HashSet(maxNumberNodes);
         Map<Edge, Double> edgesAndWeight = new HashMap();
         Object[] toArray = gm.getGraph().getEdges().toCollection().toArray();
         for (Object o : toArray) {

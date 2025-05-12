@@ -10,24 +10,17 @@ import jakarta.json.JsonArray;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;
 import jakarta.json.JsonValue;
-import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.nio.file.Path;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import static java.util.stream.Collectors.toList;
-import net.clementlevallois.utils.UnicodeBOMInputStream;
 import org.gephi.graph.api.Column;
 import org.gephi.graph.api.Edge;
 import org.gephi.graph.api.Graph;
@@ -38,7 +31,6 @@ import org.gephi.io.exporter.api.ExportController;
 import org.gephi.io.exporter.plugin.ExporterGEXF;
 import org.gephi.project.api.ProjectController;
 import org.gephi.project.api.Workspace;
-import org.openide.util.Exceptions;
 import org.openide.util.Lookup;
 
 /**
@@ -68,7 +60,9 @@ public class VOSViewerJsonToGexf {
     boolean descriptionPresent;
     boolean clusterPresent;
     boolean urlPresent;
+    ProjectController pc;
     Workspace workspace;
+    private static final Object LOCK = new Object();
 
     public VOSViewerJsonToGexf(Path filePath) {
         this.filePath = filePath;
@@ -79,31 +73,36 @@ public class VOSViewerJsonToGexf {
     }
 
     public String convertToGexf() throws FileNotFoundException {
-        String resultGexf = "";
+        defaultNodeAttributes = Set.of("id", "label", "description", "url", "x", "y", "cluster", "weights", "scores");
         try {
-            defaultNodeAttributes = Set.of("id", "label", "description", "url", "x", "y", "cluster", "weights", "scores");
             load();
             gexfInitiate();
             getNodeAttributes();
             turnNodeJsonValuesToGexf();
             turnEdgeJsonValuesToGexf();
-
-            ExportController ec = Lookup.getDefault().lookup(ExportController.class);
-            ExporterGEXF exporterGexf = (ExporterGEXF) ec.getExporter("gexf");
-            exporterGexf.setWorkspace(workspace);
-            exporterGexf.setExportDynamic(false);
-            exporterGexf.setExportPosition(true);
-            exporterGexf.setExportSize(true);
-            exporterGexf.setExportColors(true);
-            exporterGexf.setExportMeta(true);
-            StringWriter stringWriter = new StringWriter();
-            ec.exportWriter(stringWriter, exporterGexf);
-            stringWriter.close();
-            resultGexf = stringWriter.toString();
-        } catch (IOException ex) {
-            Exceptions.printStackTrace(ex);
+            synchronized (LOCK) {
+                ExportController ec = Lookup.getDefault().lookup(ExportController.class);
+                ExporterGEXF exporterGexf = (ExporterGEXF) ec.getExporter("gexf");
+                exporterGexf.setWorkspace(workspace);
+                exporterGexf.setExportDynamic(false);
+                exporterGexf.setExportPosition(true);
+                exporterGexf.setExportSize(true);
+                exporterGexf.setExportColors(true);
+                exporterGexf.setExportMeta(true);
+                try (StringWriter stringWriter = new StringWriter()) {
+                    ec.exportWriter(stringWriter, exporterGexf);
+                    return stringWriter.toString();
+                } catch (IOException e) {
+                    System.out.println("Failed to export GEXF");
+                    return "";
+                }
+            }
+        } finally {
+            if (workspace != null) {
+                pc.closeCurrentWorkspace();
+                pc.closeCurrentProject();
+            }
         }
-        return resultGexf;
     }
 
     private void load() throws FileNotFoundException {
@@ -112,13 +111,14 @@ public class VOSViewerJsonToGexf {
     }
 
     private void gexfInitiate() {
-        ProjectController pc = Lookup.getDefault().lookup(ProjectController.class);
-        pc.newProject();
-        workspace = pc.getCurrentWorkspace();
+        pc = Lookup.getDefault().lookup(ProjectController.class);
+        workspace = pc.newWorkspace(pc.newProject());
+        pc.openWorkspace(workspace);  // Open this specific workspace
         workspace.getProject().getProjectMetadata().setAuthor("created with nocodefunctions.com");
+
+        // Get graph model for THIS workspace specifically
         model = Lookup.getDefault().lookup(GraphController.class).getGraphModel(workspace);
         graph = model.getGraph();
-
     }
 
     private void getNodeAttributes() {
@@ -235,20 +235,31 @@ public class VOSViewerJsonToGexf {
             JsonValue valueTypeUnknown = item.get("id");
             String idString = "";
             switch (valueTypeUnknown.getValueType()) {
-                case NUMBER:
+                case NUMBER ->
                     idString = item.getJsonNumber("id").toString();
-                    break;
-                case STRING:
+                case STRING ->
                     idString = item.getString("id");
-                    break;
-                default:
+                case ARRAY -> {
+                }
+                case OBJECT -> {
+                }
+                case TRUE -> {
+                }
+                case FALSE -> {
+                }
+                case NULL -> {
+                }
+                default -> {
+                }
             }
 
             Node nodeGexf = model.factory().newNode(idString);
             if (keySet.contains("x") && keySet.contains("y")) {
                 nodeGexf.setZ(0.0f);
             }
+            int counter = 0;
             for (String key : keySet) {
+
                 if (key.equals("Id")) {
                     key = "id-attribute-from-gexf";
                 } else if (key.equals("Label")) {
@@ -256,34 +267,31 @@ public class VOSViewerJsonToGexf {
                 }
 
                 switch (key) {
-                    case "label" ->
-                        nodeGexf.setLabel(item.getString("label"));
-                    case "description" -> {
-                        Column att = mapAttributeIdToNodeAttribute.get("description");
-                        if (item.isNull("description")) {
-                            nodeGexf.setAttribute(att, "");
+                    case "label" -> {
+                        if (item.isNull(key)) {
+                            nodeGexf.setLabel(key + " was null in json file - " + counter++);
                         } else {
-                            nodeGexf.setAttribute(att, item.getString("description"));
+                            nodeGexf.setLabel(item.getString(key));
                         }
                     }
-                    case "url" -> {
-                        Column att = mapAttributeIdToNodeAttribute.get("url");
-                        if (item.isNull("url")) {
-                            nodeGexf.setAttribute(att, "");
+                    case "description", "url" -> {
+                        Column att = mapAttributeIdToNodeAttribute.get(key);
+                        if (item.isNull(key)) {
+                            nodeGexf.setAttribute(att, key + " was null in json file");
                         } else {
-                            nodeGexf.setAttribute(att, item.getString("url"));
+                            nodeGexf.setAttribute(att, item.getString(key));
                         }
                     }
                     case "cluster" -> {
-                        Column att = mapAttributeIdToNodeAttribute.get("cluster");
-                        if (item.isNull("cluster")) {
+                        Column att = mapAttributeIdToNodeAttribute.get(key);
+                        if (item.isNull(key)) {
                             nodeGexf.setAttribute(att, 0);
                         } else {
-                            nodeGexf.setAttribute(att, item.getInt("cluster"));
+                            nodeGexf.setAttribute(att, item.getInt(key));
                         }
                     }
                     case "scores" -> {
-                        JsonObject scoresObject = item.getJsonObject("scores");
+                        JsonObject scoresObject = item.getJsonObject(key);
                         for (String keyScore : scoresObject.keySet()) {
                             Column att = mapAttributeIdToScoreAttribute.get(keyScore);
                             if (scoresObject.isNull(keyScore)) {
@@ -294,7 +302,7 @@ public class VOSViewerJsonToGexf {
                         }
                     }
                     case "weights" -> {
-                        JsonObject weightsObject = item.getJsonObject("weights");
+                        JsonObject weightsObject = item.getJsonObject(key);
                         for (String keyWeight : weightsObject.keySet()) {
                             Column att = mapAttributeIdToWeightAttribute.get(keyWeight);
                             if (weightsObject.isNull(keyWeight)) {
