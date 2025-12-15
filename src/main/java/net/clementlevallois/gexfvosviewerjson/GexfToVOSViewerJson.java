@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.clementlevallois.gexfvosviewerjson;
 
 import jakarta.json.Json;
@@ -26,422 +21,78 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import org.gephi.appearance.api.AppearanceController;
-import org.gephi.appearance.api.AppearanceModel;
-import org.gephi.appearance.api.Function;
-import org.gephi.appearance.api.Partition;
-import org.gephi.appearance.api.PartitionFunction;
-import org.gephi.appearance.plugin.PartitionElementColorTransformer;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.locks.ReentrantLock;
 import org.gephi.graph.api.Column;
 import org.gephi.graph.api.Edge;
+import org.gephi.graph.api.EdgeIterable;
+import org.gephi.graph.api.Graph;
 import org.gephi.graph.api.GraphController;
 import org.gephi.graph.api.GraphModel;
 import org.gephi.graph.api.Node;
+import org.gephi.graph.api.NodeIterable;
 import org.gephi.io.importer.api.Container;
-import org.gephi.io.importer.api.ContainerUnloader;
 import org.gephi.io.importer.api.ImportController;
 import org.gephi.io.importer.plugin.file.ImporterGEXF;
 import org.gephi.io.importer.spi.FileImporter;
 import org.gephi.io.processor.plugin.DefaultProcessor;
 import org.gephi.project.api.ProjectController;
+import org.gephi.project.api.Workspace;
 import org.openide.util.Exceptions;
 import org.openide.util.Lookup;
 
-/**
- *
- * @author LEVALLOIS
- */
 public class GexfToVOSViewerJson {
 
     /**
-     * @param args the command line arguments
+     * Gephi Toolkit (Lookup/ProjectController/ImportController/Workspace) n'est
+     * pas fait pour être utilisé "pleinement" en concurrence dans la même JVM.
+     * En backend web, le plus robuste est de sérialiser ces opérations.
      */
-    private JsonObjectBuilder vosviewerJson;
-    private JsonObjectBuilder network;
-    private JsonObjectBuilder metadata;
-    private JsonArrayBuilder items;
-    private JsonArrayBuilder links;
-    private JsonArrayBuilder clusters;
-    private JsonObjectBuilder config;
-    private JsonObjectBuilder terminology;
-    private Path filePath;
-    private volatile GraphModel gm;
-    private boolean graphHasModularityColumn = false;
+    private static final ReentrantLock GEPHI_TOOLKIT_LOCK = new ReentrantLock(true);
+
+    private static final String MODULARITY_COLUMN_ID = "modularity_class";
+
+    // Inputs (un seul à la fois)
+    private final Path filePath;
+    private final GraphModel providedGraphModel;
+    private final String gexf;
+    private final InputStream inputStream;
+
+    // Options / metadata (attention : ne pas muter en parallèle d'une conversion)
     private Terminology terminologyData;
     private Metadata metadataData;
-    private TemplateItem templateItemData;
-    private TemplateLink templateLinkData;
     private Integer maxNumberNodes;
-    private Set<Node> nodesToKeep;
-    private boolean keepAll = false;
-    private InputStream is;
-    private String gexf;
-    private final Object lock = new Object();
 
     public GexfToVOSViewerJson(Path filePath) {
         this.filePath = filePath;
+        this.providedGraphModel = null;
+        this.gexf = null;
+        this.inputStream = null;
     }
 
     public GexfToVOSViewerJson(GraphModel gm) {
-        this.gm = gm;
+        this.providedGraphModel = gm;
+        this.filePath = null;
+        this.gexf = null;
+        this.inputStream = null;
     }
 
     public GexfToVOSViewerJson(String gexf) {
         this.gexf = gexf;
+        this.filePath = null;
+        this.providedGraphModel = null;
+        this.inputStream = null;
     }
 
     public GexfToVOSViewerJson(InputStream is) {
-        this.is = is;
+        this.inputStream = is;
+        this.filePath = null;
+        this.providedGraphModel = null;
+        this.gexf = null;
     }
 
-    public String convertToJson() {
-        if (gm == null) {
-            load();
-        }
-        if (gm == null) {
-            return "";
-        }
-        vvJsonInitiate();
-
-        if (maxNumberNodes != null && gm.getGraph().getNodeCount() > maxNumberNodes) {
-            listNodesToKeep(maxNumberNodes);
-        }
-
-        if (maxNumberNodes != null && gm.getGraph().getNodeCount() <= maxNumberNodes) {
-            keepAll = true;
-        }
-
-        templateItemData = new TemplateItem();
-        templateLinkData = new TemplateLink();
-        addItems();
-        addLinks();
-        if (metadataData != null) {
-            vosviewerJson.add("metadata", metadataData.getMetadata());
-        }
-        if (terminologyData != null) {
-            config.add("terminology", terminologyData.getTerminology());
-            templateItemData.setDescriptionHeading(terminologyData.getItem());
-            templateLinkData.setDescriptionHeading(terminologyData.getLink());
-        }
-
-        JsonObjectBuilder templates = Json.createObjectBuilder();
-        templates.add("item_description", templateItemData.fullDescriptionItem());
-        templates.add("link_description", templateLinkData.fullDescriptionLink());
-        config.add("templates", templates);
-
-        if (graphHasModularityColumn) {
-            addClusters();
-        }
-        vosviewerJson.add("network", network);
-        vosviewerJson.add("config", config);
-
-        String string = writeJsonObjectBuilderToString(vosviewerJson);
-
-        return string;
-    }
-
-    private void load() {
-        ProjectController projectController = null;
-        Container container = null;
-
-        synchronized (lock) {
-            try {
-                projectController = Lookup.getDefault().lookup(ProjectController.class);
-                GraphController graphController = Lookup.getDefault().lookup(GraphController.class);
-                ImportController importController = Lookup.getDefault().lookup(ImportController.class);
-
-                projectController.newProject();
-
-                if (filePath != null) {
-                    File file = filePath.toFile();
-                    container = importController.importFile(file);
-                    if (container != null) {
-                        container.closeLoader();
-                    }
-                } else if (is != null) {
-                    FileImporter fi = new ImporterGEXF();
-                    container = importController.importFile(is, fi);
-                    if (container != null) {
-                        container.closeLoader();
-                    }
-                } else if (gexf != null) {
-                    FileImporter fi = new ImporterGEXF();
-                    container = importController.importFile(new StringReader(gexf), fi);
-                    if (container != null) {
-                        container.closeLoader();
-                    }
-                }
-
-                if (container == null) {
-                    return;
-                }
-
-                DefaultProcessor processor = new DefaultProcessor();
-                processor.setWorkspace(projectController.getCurrentWorkspace());
-                processor.setContainers(new ContainerUnloader[]{container.getUnloader()});
-                processor.process();
-
-                gm = graphController.getGraphModel();
-
-            } catch (FileNotFoundException ex) {
-                Exceptions.printStackTrace(ex);
-                System.out.println("error when loading file path in gexf vv converter");
-            } catch (Exception e) {
-                System.out.println("error in network converter");
-                System.out.println("malformed gexf in GexfToVOSViewerJson");
-            } finally {
-                if (projectController != null) {
-                    projectController.closeCurrentWorkspace();
-                    projectController.closeCurrentProject();
-                }
-                if (container != null) {
-                    container.closeLoader();
-                }
-            }
-        }
-    }
-
-    private void vvJsonInitiate() {
-        vosviewerJson = Json.createObjectBuilder();
-        network = Json.createObjectBuilder();
-        metadata = Json.createObjectBuilder();
-        config = Json.createObjectBuilder();
-        terminology = Json.createObjectBuilder();
-        items = Json.createArrayBuilder();
-        links = Json.createArrayBuilder();
-        clusters = Json.createArrayBuilder();
-    }
-
-    private void addItems() {
-        JsonObjectBuilder itemBuilder;
-        JsonObjectBuilder weightsBuilder;
-        JsonObjectBuilder scoresBuilder;
-
-        String modularityColumnName = "modularity_class";
-
-        //Preparing the description template for item attributes:
-        StringBuilder sbItems = new StringBuilder();
-
-        // collecting all node attributes in a set which will correspond to "weight" in vosviewer json.
-        Set<String> nodeAttributesThatCanBeWeight = new HashSet();
-        int countNodeColumns = gm.getNodeTable().countColumns();
-        for (int i = 0; i < countNodeColumns; i++) {
-            Column nodeColumn = gm.getNodeTable().getColumn(i);
-            if (!nodeColumn.getId().equals("modularity_class") && nodeColumn.isNumber()) {
-                nodeAttributesThatCanBeWeight.add(nodeColumn.getId());
-            }
-            if (nodeColumn.getId().equals("modularity_class")) {
-                graphHasModularityColumn = true;
-            }
-            if (nodeColumn.getTypeClass() == String.class) {
-                sbItems.append(nodeColumn.getId()).append(": {").append(nodeColumn.getId()).append("}, ");
-            }
-        }
-        if (!sbItems.toString().isBlank()) {
-            sbItems.delete(sbItems.length() - 2, sbItems.length()); // to remove the last comma
-            templateItemData.setDescriptionText(sbItems.toString());
-        }
-
-        // removing node attributes from the set if they have any negative value, because "weight" in vosviewer json accepts only non negative values.
-        Object[] toArray = gm.getGraph().getNodes().toCollection().toArray();
-        for (Object nodeObject : toArray) {
-            Node node = (Node) nodeObject;
-            Iterator<String> nodeAttributeKeysIterator = node.getAttributeKeys().iterator();
-            while (nodeAttributeKeysIterator.hasNext()) {
-                String nodeAttributeKey = nodeAttributeKeysIterator.next();
-
-                Object attribute = node.getAttribute(nodeAttributeKey);
-                if (attribute instanceof Number) {
-                    Number attNumber = (Number) attribute;
-                    if (attNumber instanceof Double && (double) attNumber < 0) {
-                        nodeAttributesThatCanBeWeight.remove(nodeAttributeKey);
-                    }
-                    if (attNumber instanceof Short && (short) attNumber < 0) {
-                        nodeAttributesThatCanBeWeight.remove(nodeAttributeKey);
-                    }
-                    if (attNumber instanceof Float && (float) attNumber < 0) {
-                        nodeAttributesThatCanBeWeight.remove(nodeAttributeKey);
-                    }
-                    if (attNumber instanceof Integer && (int) attNumber < 0) {
-                        nodeAttributesThatCanBeWeight.remove(nodeAttributeKey);
-                    }
-                    if (attNumber instanceof Long && (long) attNumber < 0) {
-                        nodeAttributesThatCanBeWeight.remove(nodeAttributeKey);
-                    }
-                } else {
-                    nodeAttributesThatCanBeWeight.remove(nodeAttributeKey);
-                }
-
-            }
-        }
-
-        // iterating through all nodes and check whether they have zero as a value for x and y coordinates: in this case it needs to be randomized
-        int counterZeroForX = 0;
-        int counterZeroForY = 0;
-        float pastX = 0;
-        float pastY = 0;
-        int count = 0;
-        for (Object nodeObject : toArray) {
-            Node node = (Node) nodeObject;
-            if (node.x() == pastX) {
-                counterZeroForX++;
-            } else {
-                pastX = node.x();
-            }
-            if (node.y() == pastY) {
-                counterZeroForY++;
-            } else {
-                pastY = node.y();
-            }
-        }
-
-        if (counterZeroForX + 1 >= toArray.length && counterZeroForY + 1 >= toArray.length) {
-            for (Object nodeObject : toArray) {
-                Node node = (Node) nodeObject;
-                node.setX((float) Math.random() * 20);
-                node.setY((float) Math.random() * 20);
-            }
-        }
-
-        // iterating through all nodes and their attributes and creating the corresponding items and values in vosviewer json
-        for (Object nodeObject : toArray) {
-            Node node = (Node) nodeObject;
-            if (maxNumberNodes != null && !keepAll && !nodesToKeep.contains(node)) {
-                continue;
-            }
-            itemBuilder = Json.createObjectBuilder();
-            weightsBuilder = Json.createObjectBuilder();
-            scoresBuilder = Json.createObjectBuilder();
-
-            itemBuilder.add("id", (String) node.getId());
-            if (node.getLabel() == null || node.getLabel().isBlank()) {
-                itemBuilder.add("label", (String) node.getId());
-            } else {
-                itemBuilder.add("label", node.getLabel());
-            }
-
-            Iterator<Column> nodeAttributeColumnsIterator = node.getAttributeColumns().iterator();
-            while (nodeAttributeColumnsIterator.hasNext()) {
-                Column nodeAttributeColumn = nodeAttributeColumnsIterator.next();
-                String nodeAttributeKey = nodeAttributeColumn.getId();
-                String nodeAttributeTitle = nodeAttributeColumn.getTitle();
-
-                switch (nodeAttributeKey) {
-                    case "x":
-                    case "y":
-                        itemBuilder.add(nodeAttributeKey, (Float) node.getAttribute(nodeAttributeKey));
-                        break;
-                    default:
-                        if (node.getAttribute(nodeAttributeKey) instanceof String) {
-                            itemBuilder.add(nodeAttributeTitle, (String) node.getAttribute(nodeAttributeKey));
-                        } else if (nodeAttributesThatCanBeWeight.contains(nodeAttributeKey)) {
-                            Object attribute = node.getAttribute(nodeAttributeKey);
-                            if (attribute instanceof Double) {
-                                Double value = (Double) attribute;
-                                weightsBuilder.add(nodeAttributeTitle, value);
-                            }
-                            if (attribute instanceof Float) {
-                                weightsBuilder.add(nodeAttributeTitle, (Float) attribute);
-                            }
-                            if (attribute instanceof Long) {
-                                weightsBuilder.add(nodeAttributeTitle, (Long) attribute);
-                            }
-                            if (attribute instanceof Integer && !nodeAttributeKey.equals(modularityColumnName)) {
-                                weightsBuilder.add(nodeAttributeTitle, (Integer) attribute);
-                            }
-                        } else {
-                            Object attribute = node.getAttribute(nodeAttributeKey);
-                            if (attribute instanceof Double) {
-                                scoresBuilder.add(nodeAttributeTitle, (Double) attribute);
-                            }
-                            if (attribute instanceof Float) {
-                                scoresBuilder.add(nodeAttributeTitle, (Float) attribute);
-                            }
-                            if (attribute instanceof Long) {
-                                scoresBuilder.add(nodeAttributeTitle, (Long) attribute);
-                            }
-                            if (attribute instanceof Integer && !nodeAttributeKey.equals(modularityColumnName)) {
-                                scoresBuilder.add(nodeAttributeTitle, (Integer) attribute);
-                            }
-                            // if the attribute corresponds to the modularity_class column in Gephi, this should convert to the "cluster" attribute in vosviewer.
-                            // +1 because the Gephi communities are zero-based, vosviewer clusters are 1-based.
-                            if (attribute instanceof Integer && graphHasModularityColumn && nodeAttributeKey.equals(modularityColumnName)) {
-                                itemBuilder.add("cluster", (Integer) attribute + 1);
-                            }
-                        }
-                        break;
-                }
-            }
-
-            // size of the node is supposed to be a positive number, so it should be included in "weights"
-            // but in practice, gexf files can include nodes with a negative size ->  <viz:size value="-0.71428585"></viz:size>
-            // these rare cases break the parsing of the VOSviewer json file
-            // so we include the node size attribute in scores, which can be negative
-            scoresBuilder.add("viz_size", node.size());
-
-            if (!node.getAttributeKeys().contains("x") && !node.getAttributeKeys().contains("y")) {
-                itemBuilder.add("x", (Float) node.x());
-                itemBuilder.add("y", (Float) node.y());
-            }
-            itemBuilder.add("weights", weightsBuilder);
-            itemBuilder.add("scores", scoresBuilder);
-            items.add(itemBuilder);
-        }
-        network.add("items", items);
-    }
-
-    private String writeJsonObjectBuilderToString(JsonObjectBuilder jsBuilder) {
-        Map<String, Boolean> configJsonWriter = new HashMap();
-        configJsonWriter.put(JsonGenerator.PRETTY_PRINTING, true);
-        JsonWriterFactory writerFactory = Json.createWriterFactory(configJsonWriter);
-        Writer writer = new StringWriter();
-        writerFactory.createWriter(writer).write(jsBuilder.build());
-
-        String json = writer.toString();
-        return json;
-    }
-
-    private void addLinks() {
-        JsonObjectBuilder linkBuilder;
-
-        // iterating through all edges and creating the corresponding links and values in vosviewer json
-        Object[] toArray = gm.getGraph().getEdges().toCollection().toArray();
-        for (Object edgeObject : toArray) {
-            Edge edge = (Edge) edgeObject;
-            if (maxNumberNodes != null && !keepAll && (!nodesToKeep.contains(edge.getSource()) | !nodesToKeep.contains(edge.getTarget()))) {
-                continue;
-            }
-
-            linkBuilder = Json.createObjectBuilder();
-
-            linkBuilder.add("source_id", (String) edge.getSource().getId());
-            linkBuilder.add("target_id", (String) edge.getTarget().getId());
-            linkBuilder.add("strength", (float) edge.getWeight());
-
-            links.add(linkBuilder);
-        }
-        network.add("links", links);
-    }
-
-    private void addClusters() {
-        gm.getGraph().readUnlockAll();
-        AppearanceController appearanceController = Lookup.getDefault().lookup(AppearanceController.class);
-        AppearanceModel appearanceModel = appearanceController.getModel();
-        Column modColumn = gm.getNodeTable().getColumn("modularity_class");
-        Function func = appearanceModel.getNodeFunction(modColumn, PartitionElementColorTransformer.class);
-        Partition partition = ((PartitionFunction) func).getPartition();
-
-        // iterating through all edges and creating the corresponding links and values in vosviewer json
-        Iterator<Integer> iteratorModularityValues = partition.getValues(gm.getGraph()).iterator();
-        while (iteratorModularityValues.hasNext()) {
-            Integer modularityClass = iteratorModularityValues.next();
-            JsonObjectBuilder clusterBuilder = Json.createObjectBuilder();
-            clusterBuilder.add("cluster", modularityClass);
-            clusterBuilder.add("label", String.valueOf(modularityClass));
-
-            clusters.add(clusterBuilder);
-        }
-        network.add("clusters", clusters);
+    public void setMaxNumberNodes(Integer maxNumberNodes) {
+        this.maxNumberNodes = maxNumberNodes;
     }
 
     public Terminology getTerminologyData() {
@@ -460,29 +111,436 @@ public class GexfToVOSViewerJson {
         this.metadataData = metadataData;
     }
 
-    private void listNodesToKeep(Integer maxNumberNodes) {
-        nodesToKeep = new HashSet(maxNumberNodes);
-        Map<Edge, Double> edgesAndWeight = new HashMap();
-        Object[] toArray = gm.getGraph().getEdges().toCollection().toArray();
-        for (Object o : toArray) {
-            Edge next = (Edge) o;
-            edgesAndWeight.put(next, next.getWeight());
+    public String convertToJson() {
+        // Cas où vous fournissez déjà un GraphModel : on ne touche pas au cycle de vie Gephi
+        if (providedGraphModel != null) {
+            return convertLoadedGraphToJson(providedGraphModel);
         }
 
-        List<Entry<Edge, Double>> list = new ArrayList<>(edgesAndWeight.entrySet());
-        list.sort(Entry.comparingByValue(Comparator.reverseOrder()));
-
-        for (Entry<Edge, Double> entry : list) {
-            nodesToKeep.add(entry.getKey().getSource());
-            nodesToKeep.add(entry.getKey().getTarget());
-            if (nodesToKeep.size() >= maxNumberNodes) {
-                break;
+        // Sinon on charge via Gephi ImportController dans un workspace dédié, puis on ferme proprement.
+        LoadedGephiContext ctx = null;
+        GEPHI_TOOLKIT_LOCK.lock();
+        try {
+            ctx = loadIntoNewWorkspace();
+            if (ctx == null || ctx.graphModel == null) {
+                return "";
+            }
+            return convertLoadedGraphToJson(ctx.graphModel);
+        } finally {
+            try {
+                if (ctx != null) {
+                    ctx.close();
+                }
+            } finally {
+                GEPHI_TOOLKIT_LOCK.unlock();
             }
         }
     }
 
-    public void setMaxNumberNodes(Integer maxNumberNodes) {
-        this.maxNumberNodes = maxNumberNodes;
+    /**
+     * Construit le JSON VOSviewer à partir d'un GraphModel déjà chargé. Aucun
+     * accès aux API "Project/Workspace" ici, donc thread-safe au niveau du
+     * Toolkit.
+     */
+    private String convertLoadedGraphToJson(GraphModel gm) {
+        final Graph graph = gm.getGraph();
+
+        // Builders JSON (locaux, pas d'état partagé)
+        JsonObjectBuilder vosviewerJson = Json.createObjectBuilder();
+        JsonObjectBuilder network = Json.createObjectBuilder();
+        JsonObjectBuilder config = Json.createObjectBuilder();
+
+        JsonArrayBuilder items = Json.createArrayBuilder();
+        JsonArrayBuilder links = Json.createArrayBuilder();
+        JsonArrayBuilder clusters = Json.createArrayBuilder();
+
+        // Gestion max nodes
+        boolean keepAll = true;
+        Set<Node> nodesToKeep = null;
+        if (maxNumberNodes != null && graph.getNodeCount() > maxNumberNodes) {
+            keepAll = false;
+            nodesToKeep = listNodesToKeep(graph, maxNumberNodes);
+        }
+
+        // Templates
+        TemplateItem templateItemData = new TemplateItem();
+        TemplateLink templateLinkData = new TemplateLink();
+
+        // Terminology / metadata
+        if (metadataData != null) {
+            vosviewerJson.add("metadata", metadataData.getMetadata());
+        }
+        if (terminologyData != null) {
+            config.add("terminology", terminologyData.getTerminology());
+            templateItemData.setDescriptionHeading(terminologyData.getItem());
+            templateLinkData.setDescriptionHeading(terminologyData.getLink());
+        }
+
+        // Items + Links + Clusters (Option A)
+        boolean graphHasModularityColumn = gm.getNodeTable().hasColumn(MODULARITY_COLUMN_ID);
+
+        addItems(gm, graph, items, templateItemData, keepAll, nodesToKeep, graphHasModularityColumn);
+        addLinks(graph, links, keepAll, nodesToKeep);
+
+        if (graphHasModularityColumn) {
+            addClustersFromModularity(graph, clusters);
+            network.add("clusters", clusters);
+        }
+
+        network.add("items", items);
+        network.add("links", links);
+        vosviewerJson.add("network", network);
+
+        JsonObjectBuilder templates = Json.createObjectBuilder()
+                .add("item_description", templateItemData.fullDescriptionItem())
+                .add("link_description", templateLinkData.fullDescriptionLink());
+        config.add("templates", templates);
+
+        vosviewerJson.add("config", config);
+
+        return writeJsonObjectBuilderToString(vosviewerJson);
     }
 
+    private LoadedGephiContext loadIntoNewWorkspace() {
+        ProjectController projectController = null;
+        ImportController importController = null;
+        GraphController graphController = null;
+
+        Container container = null;
+
+        try {
+            projectController = Lookup.getDefault().lookup(ProjectController.class);
+            importController = Lookup.getDefault().lookup(ImportController.class);
+            graphController = Lookup.getDefault().lookup(GraphController.class);
+
+            projectController.newProject();
+            Workspace workspace = projectController.getCurrentWorkspace();
+
+            if (filePath != null) {
+                File file = filePath.toFile();
+                container = importController.importFile(file);
+            } else if (inputStream != null) {
+                FileImporter fi = new ImporterGEXF();
+                container = importController.importFile(inputStream, fi);
+            } else if (gexf != null) {
+                FileImporter fi = new ImporterGEXF();
+                container = importController.importFile(new StringReader(gexf), fi);
+            } else {
+                return null;
+            }
+
+            if (container == null) {
+                return null;
+            }
+
+            // Le process correct en Toolkit 0.10.x
+            DefaultProcessor processor = new DefaultProcessor();
+            importController.process(container, processor, workspace);
+
+            GraphModel gm = graphController.getGraphModel(workspace);
+            return new LoadedGephiContext(projectController, workspace, gm);
+
+        } catch (FileNotFoundException ex) {
+            Exceptions.printStackTrace(ex);
+            System.out.println("error when loading file path in gexf vv converter");
+            return null;
+        } catch (Exception e) {
+            System.out.println("error in network converter");
+            System.out.println("malformed gexf in GexfToVOSViewerJson");
+            return null;
+        } finally {
+            if (container != null) {
+                try {
+                    container.closeLoader();
+                } catch (Exception ignore) {
+                }
+            }
+        }
+    }
+
+    private void addItems(
+            GraphModel gm,
+            Graph graph,
+            JsonArrayBuilder items,
+            TemplateItem templateItemData,
+            boolean keepAll,
+            Set<Node> nodesToKeep,
+            boolean graphHasModularityColumn
+    ) {
+        // Préparer template description pour attributs String
+        StringBuilder sbItems = new StringBuilder();
+
+        // Déterminer colonnes numériques candidates aux weights (non négatives pour tous les nodes)
+        Set<String> numericCandidateIds = new HashSet<>();
+        List<Column> columns = new ArrayList<>();
+        for (Column c : gm.getNodeTable()) {
+            columns.add(c);
+            if (c.getTypeClass() == String.class) {
+                // On utilise l'ID comme clé JSON => placeholder stable
+                sbItems.append(c.getId()).append(": {").append(c.getId()).append("}, ");
+            }
+            if (!MODULARITY_COLUMN_ID.equals(c.getId()) && c.isNumber()) {
+                numericCandidateIds.add(c.getId());
+            }
+        }
+
+        if (!sbItems.toString().isBlank()) {
+            sbItems.delete(sbItems.length() - 2, sbItems.length());
+            templateItemData.setDescriptionText(sbItems.toString());
+        }
+
+        // Filtrer les candidates : doivent être (Number >= 0) sur tous les nodes non filtrés
+        Set<String> weightsColumnIds = new HashSet<>(numericCandidateIds);
+        if (!weightsColumnIds.isEmpty()) {
+            NodeIterable nodes = graph.getNodes();
+            for (Node n : nodes) {
+                if (!keepAll && nodesToKeep != null && !nodesToKeep.contains(n)) {
+                    continue;
+                }
+                Iterator<String> it = new HashSet<>(weightsColumnIds).iterator();
+                while (it.hasNext()) {
+                    String colId = it.next();
+                    Object v = n.getAttribute(colId);
+                    if (!(v instanceof Number num)) {
+                        weightsColumnIds.remove(colId);
+                        continue;
+                    }
+                    // exclure NaN/Inf et négatifs
+                    double d = num.doubleValue();
+                    if (!Double.isFinite(d) || d < 0d) {
+                        weightsColumnIds.remove(colId);
+                    }
+                }
+                if (weightsColumnIds.isEmpty()) {
+                    // IMPORTANT: Break detected, unlock manually
+                    nodes.doBreak();
+                    break;
+                }
+            }
+        }
+
+        // Randomiser coords si tous identiques (souvent 0,0 partout)
+        if (graph.getNodeCount() > 1 && allNodesShareSameCoordinates(graph)) {
+            randomizeCoordinates(graph, 20f);
+        }
+
+        // Construire items
+        NodeIterable nodes = graph.getNodes();
+        for (Node node : nodes) {
+            if (!keepAll && nodesToKeep != null && !nodesToKeep.contains(node)) {
+                continue;
+            }
+
+            JsonObjectBuilder itemBuilder = Json.createObjectBuilder();
+            JsonObjectBuilder weightsBuilder = Json.createObjectBuilder();
+            JsonObjectBuilder scoresBuilder = Json.createObjectBuilder();
+
+            String id = String.valueOf(node.getId());
+            itemBuilder.add("id", id);
+
+            String label = node.getLabel();
+            itemBuilder.add("label", (label == null || label.isBlank()) ? id : label);
+
+            // Attributs de table
+            for (Column c : columns) {
+                String colId = c.getId();
+                Object v = node.getAttribute(colId);
+                if (v == null) {
+                    continue;
+                }
+
+                // modularity -> cluster (1-based)
+                if (graphHasModularityColumn && MODULARITY_COLUMN_ID.equals(colId) && v instanceof Integer mc) {
+                    itemBuilder.add("cluster", mc + 1);
+                    continue;
+                }
+
+                if (v instanceof String s) {
+                    itemBuilder.add(colId, s);
+                    continue;
+                }
+
+                if (v instanceof Number num) {
+                    if (weightsColumnIds.contains(colId)) {
+                        addNumber(weightsBuilder, colId, num);
+                    } else {
+                        addNumber(scoresBuilder, colId, num);
+                    }
+                }
+            }
+
+            // Position : VOSviewer attend x/y au niveau item
+            itemBuilder.add("x", (double) node.x());
+            itemBuilder.add("y", (double) node.y());
+
+            // Taille : peut être négative dans certains GEXF => scores
+            scoresBuilder.add("viz_size", (double) node.size());
+
+            itemBuilder.add("weights", weightsBuilder);
+            itemBuilder.add("scores", scoresBuilder);
+
+            items.add(itemBuilder);
+        }
+    }
+
+    private void addLinks(Graph graph, JsonArrayBuilder links, boolean keepAll, Set<Node> nodesToKeep) {
+        EdgeIterable edges = graph.getEdges();
+        for (Edge edge : edges) {
+            if (!keepAll && nodesToKeep != null
+                    && (!nodesToKeep.contains(edge.getSource()) || !nodesToKeep.contains(edge.getTarget()))) {
+                continue;
+            }
+
+            JsonObjectBuilder linkBuilder = Json.createObjectBuilder();
+            linkBuilder.add("source_id", String.valueOf(edge.getSource().getId()));
+            linkBuilder.add("target_id", String.valueOf(edge.getTarget().getId()));
+            linkBuilder.add("strength", (double) edge.getWeight());
+            links.add(linkBuilder);
+        }
+    }
+
+    /**
+     * Option A : clusters à partir des valeurs distinctes de modularity_class,
+     * sans Appearance/Partition.
+     */
+    private void addClustersFromModularity(Graph graph, JsonArrayBuilder clusters) {
+        Set<Integer> clusterIds = new HashSet<>();
+
+        NodeIterable nodes = graph.getNodes();
+        for (Node n : nodes) {
+            Object v = n.getAttribute(MODULARITY_COLUMN_ID);
+            if (v instanceof Integer mc) {
+                clusterIds.add(mc + 1);
+            }
+        }
+
+        clusterIds.stream().sorted().forEach(cid
+                -> clusters.add(Json.createObjectBuilder()
+                        .add("cluster", cid)
+                        .add("label", String.valueOf(cid)))
+        );
+    }
+
+    private Set<Node> listNodesToKeep(Graph graph, int maxNodes) {
+        Set<Node> nodesToKeep = new HashSet<>(maxNodes);
+
+        Map<Edge, Double> edgesAndWeight = new HashMap<>();
+        EdgeIterable edges = graph.getEdges();
+        for (Edge e : edges) {
+            edgesAndWeight.put(e, (double) e.getWeight());
+        }
+        List<Entry<Edge, Double>> list = new ArrayList<>(edgesAndWeight.entrySet());
+        list.sort(Entry.comparingByValue(Comparator.reverseOrder()));
+
+        for (Entry<Edge, Double> entry : list) {
+            Edge e = entry.getKey();
+            nodesToKeep.add(e.getSource());
+            nodesToKeep.add(e.getTarget());
+            if (nodesToKeep.size() >= maxNodes) {
+                break;
+            }
+        }
+        return nodesToKeep;
+    }
+
+    private boolean allNodesShareSameCoordinates(Graph graph) {
+        NodeIterable nodes = graph.getNodes();
+        boolean first = true;
+        float x0 = 0f;
+        float y0 = 0f;
+
+        for (Node n : nodes) {
+            if (first) {
+                x0 = n.x();
+                y0 = n.y();
+                first = false;
+            } else {
+                if (n.x() != x0 || n.y() != y0) {
+                    // IMPORTANT: We are leaving early, so we must unlock manually
+                    nodes.doBreak();
+                    return false;
+                }
+            }
+        }
+        // 0 ou 1 node => "tous identiques" : true (utile pour votre randomize)
+        return true;
+    }
+
+    private boolean hasDifferentCoordinates(Graph graph, float x0, float y0) {
+        NodeIterable nodes = graph.getNodes();
+        try {
+            for (Node n : nodes) {
+                if (n.x() != x0 || n.y() != y0) {
+                    return true;
+                }
+            }
+            return false;
+        } finally {
+            nodes.doBreak();
+        }
+    }
+
+    private void randomizeCoordinates(Graph graph, float span) {
+        ThreadLocalRandom rnd = ThreadLocalRandom.current();
+        NodeIterable nodes = graph.getNodes();
+        try {
+            for (Node n : nodes) {
+                n.setX(rnd.nextFloat() * span);
+                n.setY(rnd.nextFloat() * span);
+            }
+        } finally {
+            nodes.doBreak();
+        }
+    }
+
+    private void addNumber(JsonObjectBuilder builder, String key, Number num) {
+        // Jakarta JSON-P : on choisit des types stables
+        if (num instanceof Integer i) {
+            builder.add(key, i);
+        } else if (num instanceof Long l) {
+            builder.add(key, l);
+        } else {
+            builder.add(key, num.doubleValue());
+        }
+    }
+
+    private String writeJsonObjectBuilderToString(JsonObjectBuilder jsBuilder) {
+        Map<String, Object> configJsonWriter = new HashMap<>();
+        configJsonWriter.put(JsonGenerator.PRETTY_PRINTING, true);
+
+        JsonWriterFactory writerFactory = Json.createWriterFactory(configJsonWriter);
+        Writer writer = new StringWriter();
+        writerFactory.createWriter(writer).write(jsBuilder.build());
+        return writer.toString();
+    }
+
+    /**
+     * Contexte Gephi "workspace-scoped". Doit rester vivant pendant toute la
+     * conversion, puis être fermé.
+     */
+    private static final class LoadedGephiContext implements AutoCloseable {
+
+        private final ProjectController projectController;
+        @SuppressWarnings("unused")
+        private final Workspace workspace;
+        private final GraphModel graphModel;
+
+        private LoadedGephiContext(ProjectController pc, Workspace ws, GraphModel gm) {
+            this.projectController = pc;
+            this.workspace = ws;
+            this.graphModel = gm;
+        }
+
+        @Override
+        public void close() {
+            try {
+                if (projectController != null) {
+                    // On ferme le projet créé pour cette conversion
+                    projectController.closeCurrentWorkspace();
+                    projectController.closeCurrentProject();
+                }
+            } catch (Exception ignore) {
+            }
+        }
+    }
 }
