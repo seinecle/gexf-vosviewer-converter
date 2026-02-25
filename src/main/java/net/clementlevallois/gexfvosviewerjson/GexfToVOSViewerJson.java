@@ -180,7 +180,7 @@ public class GexfToVOSViewerJson {
         boolean graphHasModularityColumn = gm.getNodeTable().hasColumn(MODULARITY_COLUMN_ID);
 
         addItems(gm, graph, items, templateItemData, keepAll, nodesToKeep, graphHasModularityColumn);
-        addLinks(graph, links, keepAll, nodesToKeep);
+        addLinks(gm, graph, links, templateLinkData, keepAll, nodesToKeep);
 
         if (graphHasModularityColumn) {
             addClustersFromModularity(graph, clusters);
@@ -383,7 +383,21 @@ public class GexfToVOSViewerJson {
         }
     }
 
-    private void addLinks(Graph graph, JsonArrayBuilder links, boolean keepAll, Set<Node> nodesToKeep) {
+    private void addLinks(GraphModel gm, Graph graph, JsonArrayBuilder links, TemplateLink templateLinkData, boolean keepAll, Set<Node> nodesToKeep) {
+        StringBuilder sbLinks = new StringBuilder();
+        List<Column> columns = new ArrayList<>();
+        for (Column c : gm.getEdgeTable()) {
+            columns.add(c);
+            if (c.getTypeClass() == String.class && !"id".equals(c.getId()) && !"weight".equals(c.getId()) && !"label".equals(c.getId())) {
+                sbLinks.append(c.getId()).append(": {").append(c.getId()).append("}, ");
+            }
+        }
+        
+        if (!sbLinks.toString().isBlank()) {
+            sbLinks.delete(sbLinks.length() - 2, sbLinks.length());
+            templateLinkData.setDescriptionTextSource(sbLinks.toString());
+        }
+
         EdgeIterable edges = graph.getEdges();
         for (Edge edge : edges) {
             if (!keepAll && nodesToKeep != null
@@ -395,6 +409,20 @@ public class GexfToVOSViewerJson {
             linkBuilder.add("source_id", String.valueOf(edge.getSource().getId()));
             linkBuilder.add("target_id", String.valueOf(edge.getTarget().getId()));
             linkBuilder.add("strength", (double) edge.getWeight());
+            
+            for (Column c : columns) {
+                String colId = c.getId();
+                if ("id".equals(colId) || "weight".equals(colId) || "label".equals(colId)) {
+                    continue;
+                }
+                Object v = edge.getAttribute(colId);
+                if (v instanceof String s) {
+                    linkBuilder.add(colId, s);
+                } else if (v instanceof Number num) {
+                    addNumber(linkBuilder, colId, num);
+                }
+            }
+
             links.add(linkBuilder);
         }
     }

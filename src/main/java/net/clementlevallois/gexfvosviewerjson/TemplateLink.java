@@ -58,7 +58,13 @@ public class TemplateLink {
     }
 
     public String fullDescriptionLink() {
-        String toReturn = "<div class='description_heading'>" + descriptionHeading + "</div>";
+        String toReturn = "";
+        if (descriptionHeading != null && !descriptionHeading.isBlank()) {
+            toReturn += "<div class='description_heading'>" + descriptionHeading + "</div>";
+        }
+        if (descriptionTextSource != null && !descriptionTextSource.isBlank()) {
+            toReturn += "<div class='description_text'>" + descriptionTextSource + "</div>";
+        }
         return toReturn;
     }
 
